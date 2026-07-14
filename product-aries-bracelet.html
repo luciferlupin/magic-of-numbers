@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aries Zodiac Crystal Bracelet - Magic of Numbers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-image-main { cursor: zoom-in; }
+        .thumbnail { cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
+        .thumbnail.active { border-color: #FFD700; }
+        .thumbnail:hover { border-color: #FFD700; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .review-card { border-left: 3px solid #FFD700; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-gem text-3xl text-gold-accent"></i>
+                <span class="text-2xl font-bold text-gray-800">Magic of Numbers</span>
+            </div>
+                                                <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+                <a href="index.html" class="hover:nav-link transition-colors">Home</a>
+                <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="hover:nav-link transition-colors">199 Store</a>
+                <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
+                <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
+            </nav>
+                                                <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-8 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <nav class="text-sm text-gray-600 mb-6">
+                <a href="index.html" class="hover:gold-accent">Home</a>
+                <a href="shop.html" class="hover:gold-accent">Shop</a>
+                <a href="shop.html?category=Bracelets" class="hover:gold-accent">Bracelets</a>
+                <a href="shop.html?category=Crystals" class="hover:gold-accent">Crystals</a>
+                <a href="shop.html?category=Magic of Numberss" class="hover:gold-accent">Magic of Numberss</a>
+                <a href="shop.html?category=Yantras" class="hover:gold-accent">Yantras</a>
+                <a href="shop.html?category=Rudraksha" class="hover:gold-accent">Rudraksha</a>
+            </nav>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div>
+                <div class="product-image-main mb-4 rounded-lg overflow-hidden mandala-frame bg-white">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800" alt="Aries Zodiac Crystal Bracelet" class="w-full" id="main-image">
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800" alt="Front view" class="thumbnail rounded-lg w-full active" onclick="changeImage('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800', this)">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800" alt="Side view" class="thumbnail rounded-lg w-full" onclick="changeImage('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800', this)">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800" alt="Detail view" class="thumbnail rounded-lg w-full" onclick="changeImage('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800', this)">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800" alt="Packaging" class="thumbnail rounded-lg w-full" onclick="changeImage('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800', this)">
+                </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div>
+                <div class="mb-4">
+                    <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Limited Stock</span>
+                    <span class="ml-2 text-gray-600">SKU: ARIES-ZOD-001</span>
+                </div>
+                
+                <h1 class="text-3xl font-bold maroon-accent font-semibold tracking-wide  mb-4">Aries Zodiac Crystal Bracelet</h1>
+                
+                <div class="flex items-center mb-6">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="ml-2 text-gray-600">(4.6) 342 reviews</span>
+                </div>
+                
+                <div class="flex items-center mb-6">
+                    <span class="text-3xl font-bold gold-accent">₹1,399</span>
+                    <span class="text-lg text-gray-500 line-through ml-3">₹999</span>
+                    <span class="ml-3 bg-green-100 text-green-800 px-2 py-1 rounded text-sm">54% OFF</span>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold maroon-accent font-semibold tracking-wide  mb-2">Description:</h3>
+                    <p class="text-gray-600">Stretchable Elastic Handmade Bracelet crafted with harmonious energy from carefully selected crystals tailored for individuals born under the dynamic and passionate Aries sign. This bracelet combines the powerful energies of Red Jasper, Carnelian, and Clear Quartz to enhance Aries' natural leadership qualities and courage.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold maroon-accent font-semibold tracking-wide  mb-2">Key Benefits:</h3>
+                    <ul class="text-gray-600 space-y-1">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Enhances natural leadership abilities and confidence</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Boosts physical energy and vitality</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Promotes courage and decisive action</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Helps channel Aries' dynamic energy positively</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold maroon-accent font-semibold tracking-wide  mb-2">Specifications:</h3>
+                    <table class="text-gray-600 w-full border-collapse"><tr><td class='py-1'><strong>Zodiac Sign:</strong></td><td>Aries (Mesh Rashi)</td></tr><tr><td class='py-1'><strong>Crystals:</strong></td><td>Red Jasper, Hematite, Carnelian</td></tr><tr><td class='py-1'><strong>Bead Size:</strong></td><td>8mm</td></tr><tr><td class='py-1'><strong>Preparation:</strong></td><td>Vedic energized</td></tr><tr><td class='py-1'><strong>Certification:</strong></td><td>Lab Certified Authentic</td></tr></table>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold maroon-accent font-semibold tracking-wide  mb-2">Crystal Properties:</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p><strong>Red Jasper:</strong> Grounding stone that enhances endurance, strength and stamina. Connects deeply to the Earth and provides stability.</p>
+                        <p><strong>Carnelian:</strong> Boosts confidence and creative power. Helps overcome sexual anxiety and promotes positive life choices.</p>
+                        <p><strong>Clear Quartz:</strong> Master healer that amplifies energy and thought. Balances and revitalizes physical, mental, emotional and spiritual planes.</p>
+                    </div>
+                </div>
+                
+                </div>
+                
+                <div class="flex mb-6">
+                    <button class="btn-whatsapp w-full py-4 text-base font-bold shadow-md" onclick="buyOnWhatsApp('Aries Zodiac Crystal Bracelet', '₹1,399')">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Order via WhatsApp
+                    </button>
+                </div>
+                
+                <div class="flex items-center space-x-4 text-gray-600">
+                    <div class="flex items-center">
+                        <i class="fas fa-truck mr-2"></i>
+                        <span class="text-sm">Free Delivery</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        <span class="text-sm">Secure Payment</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-undo mr-2"></i>
+                        <span class="text-sm">7 Days Return</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Tabs -->
+<section class="py-12 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="border-b border-gray-200 mb-8">
+            <nav class="flex space-x-8">
+                <a href="index.html" class="hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Bracelets" class="hover:gold-accent transition-colors">Bracelets</a>
+                <a href="shop.html?category=Crystals" class="hover:gold-accent transition-colors">Crystals</a>
+                <a href="shop.html?category=Magic of Numberss" class="hover:gold-accent transition-colors">Magic of Numberss</a>
+                <a href="shop.html?category=Yantras" class="hover:gold-accent transition-colors">Yantras</a>
+                <a href="shop.html?category=Rudraksha" class="hover:gold-accent transition-colors">Rudraksha</a>
+            </nav>
+        </div>
+        
+        <div id="details" class="tab-content active">
+            <h3 class="text-xl font-semibold mb-4">Detailed Product Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold mb-2">About Aries Zodiac</h4>
+                    <p class="text-gray-600 mb-4">Aries is the first sign of the zodiac, representing new beginnings and fresh starts. Born leaders, Aries individuals are known for their courage, determination, and enthusiasm. This bracelet is specifically designed to enhance these natural Aries qualities while providing balance and grounding.</p>
+                    
+                    <h4 class="font-semibold mb-2">Handcrafted Quality</h4>
+                    <p class="text-gray-600">Each bracelet is handcrafted by skilled artisans using traditional techniques. The crystals are carefully selected, cleansed, and energized before being strung together to create a powerful healing tool.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">Energetic Alignment</h4>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• Aligns with Aries' ruling planet Mars</li>
+                        <li>• Balances the Fire element energy</li>
+                        <li>• Strengthens the Root and Sacral chakras</li>
+                        <li>• Enhances personal power and vitality</li>
+                        <li>• Promotes healthy self-expression</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="zodiac" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Aries Personality Traits</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <i class="fas fa-fire text-2xl gold-accent mb-3"></i>
+                    <h4 class="font-semibold mb-2">Positive Traits</h4>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• Courageous and confident</li>
+                        <li>• Natural leadership abilities</li>
+                        <li>• Enthusiastic and passionate</li>
+                        <li>• Determined and ambitious</li>
+                        <li>• Honest and straightforward</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <i class="fas fa-balance-scale text-2xl gold-accent mb-3"></i>
+                    <h4 class="font-semibold mb-2">Challenges</h4>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• Can be impulsive</li>
+                        <li>• May lack patience</li>
+                        <li>• Sometimes aggressive</li>
+                        <li>• Can be stubborn</li>
+                        <li>• May start projects but not finish</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <i class="fas fa-heart text-2xl gold-accent mb-3"></i>
+                    <h4 class="font-semibold mb-2">Relationships</h4>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• Compatible with Leo, Sagittarius</li>
+                        <li>• Passionate and romantic</li>
+                        <li>• Protective of loved ones</li>
+                        <li>• Values independence</li>
+                        <li>• Direct in communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="benefits" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Crystal Healing Benefits</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <i class="fas fa-bolt text-2xl gold-accent mb-3"></i>
+                    <h4 class="font-semibold mb-2">Physical Benefits</h4>
+                    <p class="text-gray-600 text-sm">Boosts physical energy, improves circulation, strengthens immune system, enhances stamina and endurance.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <i class="fas fa-brain text-2xl gold-accent mb-3"></i>
+                    <h4 class="font-semibold mb-2">Mental Benefits</h4>
+                    <p class="text-gray-600 text-sm">Improves focus and concentration, enhances decision-making, reduces mental stress, promotes clarity of thought.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <i class="fas fa-sun text-2xl gold-accent mb-3"></i>
+                    <h4 class="font-semibold mb-2">Spiritual Benefits</h4>
+                    <p class="text-gray-600 text-sm">Aligns with higher purpose, enhances spiritual growth, strengthens intuition, promotes inner wisdom.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="care" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Care Instructions</h3>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <ul class="text-gray-600 space-y-2">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Clean with soft dry cloth - avoid water and chemicals</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Charge under moonlight overnight once a week</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Remove before swimming, bathing or exercising</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Store in a dry place away from direct sunlight</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Re-energize by placing on selenite plate</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Avoid contact with perfumes and cosmetics</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="reviews" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Customer Reviews</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="review-card pl-4">
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">Rajesh Kumar</span>
+                    </div>
+                    <p class="text-gray-600">Perfect for Aries like me! The energy is amazing and I feel more confident and focused. Quality is excellent.</p>
+                </div>
+                <div class="review-card pl-4">
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">Priya Sharma</span>
+                    </div>
+                    <p class="text-gray-600">Beautiful bracelet with great energy. Fits perfectly and the crystals are high quality. Fast delivery!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Products -->
+<section class="py-12 px-6 md:px-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold maroon-accent font-semibold tracking-wide  mb-8">Other Zodiac Bracelets</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=400" alt="Taurus Zodiac Crystal Bracelet" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Taurus Zodiac</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹528</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=400" alt="Gemini Zodiac Crystal Bracelet" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Gemini Zodiac</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹843</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=400" alt="Cancer Zodiac Crystal Bracelet" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Cancer Zodiac</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹573</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=400" alt="Leo Zodiac Crystal Bracelet" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Leo Zodiac</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹528</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-800 text-white py-8 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <h3 class="text-lg font-bold mb-4">Magic of Numbers</h3>
+            <p class="text-gray-400">Your one-stop solution for spiritual and holistic products.</p>
+        </div>
+        <div>
+            <h4 class="text-md font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+                <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-md font-semibold mb-4">Categories</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white">Crystals</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Vastu Remedies</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Astrology</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Bracelets</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-md font-semibold mb-4">Contact</h4>
+            <p class="text-gray-400">Email: info@magicofnumbers.com</p>
+            <p class="text-gray-400">Phone: +91 98765 43210</p>
+        </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
+            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+function changeImage(src, thumbnail) {
+    document.getElementById('main-image').src = src;
+    document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+    thumbnail.classList.add('active');
+}
+
+function showTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('gold-accent', 'border-gold-accent');
+        btn.classList.add('text-gray-500', 'border-transparent');
+    });
+    
+    document.getElementById(tabName).classList.add('active');
+    event.target.classList.remove('text-gray-500', 'border-transparent');
+    event.target.classList.add('gold-accent', 'border-gold-accent');
+}
+
+ Aries Zodiac Crystal Bracelet to cart!`);
+}
+</script>
+</body>
+</html>

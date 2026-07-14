@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic of Numbers - Spiritual E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sacred-grid-bg bg-[#FDFBF7] text-[#2C1E14] font-lora antialiased selection:bg-[#6B0000] selection:text-white">
+<header class="sticky-header backdrop-blur-xl bg-white/70 shadow-sm py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
+        <div class="flex items-center space-x-4">
+            <div class="text-2xl font-bold tracking-tight bg-clip-text text-transparent header-logo">Magic of Numbers</div>
+                                                                        <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+                <a href="index.html" class="hover:nav-link transition-colors">Home</a>
+                <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="hover:nav-link transition-colors">199 Store</a>
+                <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
+                <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
+            </nav>
+                                                <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
+        </div>
+    </header>
+
+<section class="text-center py-3 px-6 md:px-12 relative z-40" id="flash-banner">
+    <p class="text-xs font-semibold tracking-wide text-[#1D1D1F]">🔥 DIRECT ORDER: WhatsApp to place orders directly & get Free Shipping on all orders! 🔥</p>
+    <button class="absolute top-2 right-4 text-gray-400 hover:text-gray-900 transition-colors" id="close-banner">✕</button>
+</section>
+
+<section class="hero-bg py-24 px-6 md:px-12 relative overflow-hidden flex flex-col items-center justify-center min-h-[85vh] border-b border-gray-100">
+        <div class="max-w-7xl mx-auto z-10 w-full flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2 text-left" data-aos="fade-right" data-aos-duration="1000">
+                <span class="text-xs uppercase font-bold tracking-widest text-gray-400 mb-3 block">Premium Spiritual Remedies</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1D1D1F] mb-6 tracking-tight leading-tight">Spiritual Harmony.<br/><span class="text-gray-400">Elevated.</span></h1>
+                <p class="text-lg md:text-xl text-gray-500 mb-10 leading-relaxed font-light">Discover authentic Vedic energized crystals, rudraksha, and vastu remediations specifically designed to align energy and bring absolute peace to your life.</p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-6">
+                    <button class="btn-primary text-sm font-semibold px-8 py-4 w-full sm:w-auto transition-transform" onclick="window.location.href='shop.html'">Shop Collection</button>
+                    <button class="btn-secondary text-sm font-semibold px-8 py-4 w-full sm:w-auto transition-all" onclick="window.location.href='shop.html?category=Yantras'">Explore Vastu</button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center items-center relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <img src="images/hero_traditional.png" alt="Healing Crystals Composition" class="relative z-10 rounded-2xl shadow-xl object-cover w-full max-w-lg h-auto animate-float border border-gray-100">
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-[#FBFBFD]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center maroon-accent font-semibold tracking-wide  mb-16" data-aos="fade-up">Explore Our Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html?category=Yantras'">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop" alt="Vastu Interior" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Vastu Remedies</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1532968961962-8bfc2ac0bbab?q=80&w=600&auto=format&fit=crop" alt="Astrology Sky" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Astrology Remedies</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop" alt="Numerology Math" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Numerology</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html?category=Crystals'">
+                    <img src="https://images.unsplash.com/photo-1563283182-5bfb3a5bb6b4?q=80&w=600&auto=format&fit=crop" alt="Crystals" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Crystals</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html?category=Rudraksha'">
+                    <img src="https://images.unsplash.com/photo-1582845607315-bb8a68b44919?q=80&w=600&auto=format&fit=crop" alt="Rudraksha Beads" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Rudraksha</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html?category=Yantras'">
+                    <img src="https://images.unsplash.com/photo-1600293245452-f94d07b53982?q=80&w=600&auto=format&fit=crop" alt="Yantras Pattern" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Yantras</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html?category=Bracelets'">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop" alt="Bracelets Jewelry" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Bracelets</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html?category=Magic of Numberss'">
+                    <img src="https://images.unsplash.com/photo-1558227653-a8ee4f375f46?q=80&w=600&auto=format&fit=crop" alt="Magic of Numberss" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Magic of Numberss</h3>
+                    </div>
+                </div>
+                <div class="category-card image-overlay cursor-pointer p-0 h-48 lg:h-56 relative border-0" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?q=80&w=600&auto=format&fit=crop" alt="Healing Products" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-end justify-center pb-6 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide shadow-sm">Healing</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center maroon-accent font-semibold tracking-wide  mb-16" data-aos="fade-up">New Arrivals</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 product-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card group cursor-pointer relative" onclick="window.location.href='product-7-chakra-bracelet.html'">
+                    <span class="absolute top-3 right-3 bg-red-500 text-white text-xs px-2.5 py-1 rounded shadow-sm z-10">Trending</span>
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=400&auto=format&fit=crop" alt="Premium 7 Chakra Healing Bracelet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Premium 7 Chakra Healing Bracelet</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹1,499</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); window.location.href='product-7-chakra-bracelet.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer relative" onclick="window.location.href='product-navratna-bracelet.html'">
+                    <span class="absolute top-3 right-3 bg-orange-500 text-white text-xs px-2.5 py-1 rounded shadow-sm z-10">New</span>
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1599643477874-bc27d142ab1d?q=80&w=400&auto=format&fit=crop" alt="Authentic Navratna Astrology Bracelet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Authentic Navratna Astrology Bracelet</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹3,200</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); window.location.href='product-navratna-bracelet.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer relative" onclick="window.location.href='product-citrine-tree.html'">
+                    <span class="absolute top-3 right-3 bg-green-500 text-white text-xs px-2.5 py-1 rounded shadow-sm z-10">Exclusive</span>
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1574737229562-b915dcc3ba09?q=80&w=400&auto=format&fit=crop" alt="Natural Citrine Wealth Tree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Natural Citrine Wealth Tree</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹2,800</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); window.location.href='product-citrine-tree.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer" onclick="window.location.href='product-evil-eye-bracelet.html'">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1627916960822-2615a6bfa9e9?q=80&w=400&auto=format&fit=crop" alt="Evil Eye & Black Tourmaline Protection Bracelet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Evil Eye Protection Bracelet</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹1,100</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); window.location.href='product-evil-eye-bracelet.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer md:col-span-1 lg:col-span-1" onclick="window.location.href='product-emerald-bracelet.html'">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1610996884172-880628e93297?q=80&w=400&auto=format&fit=crop" alt="Natural Emerald (Panna) Bracelet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Natural Emerald (Panna) Bracelet</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹2,500</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); buyOnWhatsApp('Rare 1 Mukhi Rudraksha Pendant', '₹44,999')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-[#FBFBFD]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center maroon-accent font-semibold tracking-wide  mb-16" data-aos="fade-up">Best Selling Remedies</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 product-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card group cursor-pointer relative" onclick="window.location.href='product-shree-yantra.html'">
+                    <span class="absolute top-3 right-3 bg-red-500 text-white text-xs px-2.5 py-1 rounded shadow-sm z-10">Best Seller</span>
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1600293245452-f94d07b53982?q=80&w=400&auto=format&fit=crop" alt="Sri Kuber Yantra for Wealth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Sri Kuber Yantra</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹1,500</span>
+                            <span class="text-sm text-gray-400 line-through ml-2">₹3,000</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); buyOnWhatsApp('24K Gold Plated Shree Yantra', '₹29,999')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer relative" onclick="window.location.href='product-5-mukhi-rudraksha.html'">
+                    <span class="absolute top-3 right-3 bg-orange-500 text-white text-xs px-2.5 py-1 rounded shadow-sm z-10">Popular</span>
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1582845607315-bb8a68b44919?q=80&w=400&auto=format&fit=crop" alt="Authentic 5 Mukhi Rudraksha Mala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Authentic 5 Mukhi Rudraksha Mala</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹2,100</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); window.location.href='product-5-mukhi-rudraksha.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer" onclick="window.location.href='product-shree-yantra.html'">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1558350171-d65e23c7df48?q=80&w=400&auto=format&fit=crop" alt="Original Shree Yantra" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Original Shree Yantra</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹1,800</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); buyOnWhatsApp('24K Gold Plated Shree Yantra', '₹29,999')">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer" onclick="window.location.href='product-rose-quartz-bracelet.html'">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1563283182-5bfb3a5bb6b4?q=80&w=400&auto=format&fit=crop" alt="Rose Quartz Love Bracelet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Rose Quartz Love Bracelet</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹1,200</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); window.location.href='product-rose-quartz-bracelet.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card group cursor-pointer md:col-span-1 lg:col-span-1" onclick="window.location.href='product-tiger-eye-bracelet.html'">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=400&auto=format&fit=crop" alt="Tiger Eye Confidence Bracelet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2 leading-snug">Tiger Eye Confidence Bracelet</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-lg font-bold text-[#b8860b]">₹1,200</span>
+                        </div>
+                        <button class="btn-primary w-full text-sm font-medium py-2.5" onclick="event.stopPropagation(); buyOnWhatsApp('Tiger Eye Bracelet', '₹1,200')"><i class="fas fa-shopping-cart text-[11px] mr-1"></i> Buy on WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center maroon-accent font-semibold tracking-wide  mb-16" data-aos="fade-up">Featured Remedies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card group cursor-pointer p-6 border-0" onclick="window.location.href='product-amethyst-geode.html'">
+                    <div class="overflow-hidden rounded-2xl mb-6 h-56">
+                        <img src="images/hero_traditional.png" alt="Premium Amethyst Geode" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold maroon-accent font-semibold tracking-wide  mb-3">Premium Amethyst Geode Cluster</h3>
+                    <p class="text-gray-500 mb-5 font-light leading-relaxed">A massive, high-vibration crystal known for profound healing properties, perfect for home purification.</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Purifies environmental energy</li>
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Reduces household stress</li>
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Balances spiritual alignment</li>
+                    </ul>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-2xl font-bold text-[#b8860b]">₹14,999</span>
+                        <span class="text-sm text-gray-400 line-through">₹19,999</span>
+                    </div>
+                    <button class="btn-primary w-full py-3" onclick="event.stopPropagation(); buyOnWhatsApp('Premium Amethyst Geode Cluster', '₹14,999')">Order via WhatsApp</button>
+                </div>
+                <div class="product-card group cursor-pointer p-6 border-0" onclick="window.location.href='product-shree-yantra.html'">
+                    <div class="overflow-hidden rounded-2xl mb-6 h-56">
+                        <img src="https://images.unsplash.com/photo-1600293245452-f94d07b53982?q=80&w=800&auto=format&fit=crop" alt="24K Gold Plated Shree Yantra" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold maroon-accent font-semibold tracking-wide  mb-3">24K Gold Plated Shree Yantra</h3>
+                    <p class="text-gray-500 mb-5 font-light leading-relaxed">The ultimate sacred geometrical engine for attracting massive wealth and cosmic harmony.</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Attracts infinite abundance</li>
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Dissolves Vastu doshas completely</li>
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>24K pure gold finishing</li>
+                    </ul>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-2xl font-bold text-[#b8860b]">₹29,999</span>
+                        <span class="text-sm text-gray-400 line-through">₹39,999</span>
+                    </div>
+                    <button class="btn-primary w-full py-3" onclick="event.stopPropagation(); buyOnWhatsApp('24K Gold Plated Shree Yantra', '₹29,999')">Order via WhatsApp</button>
+                </div>
+                <div class="product-card group cursor-pointer p-6 border-0 md:col-span-2 lg:col-span-1 relative" onclick="window.location.href='product-1-mukhi-rudraksha.html'">
+                    <span class="absolute top-8 right-8 bg-purple-600 text-white text-xs px-3 py-1.5 rounded-full shadow-lg z-10 font-medium tracking-wide uppercase">Rare Find</span>
+                    <div class="overflow-hidden rounded-2xl mb-6 h-56">
+                        <img src="https://images.unsplash.com/photo-1582845607315-bb8a68b44919?q=80&w=800&auto=format&fit=crop" alt="1 Mukhi Rudraksha Pendant" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold maroon-accent font-semibold tracking-wide  mb-3">Rare 1 Mukhi Rudraksha Pendant</h3>
+                    <p class="text-gray-500 mb-5 font-light leading-relaxed">The rarest cashew-shaped Rudraksha directly representing Lord Shiva, set in pure silver.</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Brings supreme focus & peace</li>
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Provides ultimate protection</li>
+                        <li><i class="fas fa-check text-[#D4AF37] mr-2"></i>Authentic lab certified</li>
+                    </ul>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-2xl font-bold text-[#b8860b]">₹44,999</span>
+                        <span class="text-sm text-gray-400 line-through">₹54,999</span>
+                    </div>
+                    <button class="btn-primary w-full py-3" onclick="event.stopPropagation(); buyOnWhatsApp('Rare 1 Mukhi Rudraksha Pendant', '₹44,999')">Order via WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-[#FBFBFD]">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight maroon-accent font-semibold tracking-wide  mb-16">What Our Customers Say</h2>
+            <div class="carousel relative overflow-hidden rounded-2xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white p-10">
+                <div class="carousel-inner flex transition-transform duration-700 ease-in-out" id="testimonial-carousel">
+                    <div class="carousel-item flex-shrink-0 w-full text-center px-8">
+                        <blockquote class="text-lg italic text-gray-700 mb-4">"The Vastu remedies from Magic of Numbers have transformed the energy in my home. I feel more positive and prosperous since using their products."</blockquote>
+                        <cite class="font-semibold text-gray-800">- Dr. Rajesh Sharma, Vastu Consultant</cite>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full text-center px-8">
+                        <blockquote class="text-lg italic text-gray-700 mb-4">"As an astrologer, I recommend Magic of Numbers's crystals to my clients. Their quality and authenticity are unmatched."</blockquote>
+                        <cite class="font-semibold text-gray-800">- Pandit Vikram Singh, Astrologer</cite>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full text-center px-8">
+                        <blockquote class="text-lg italic text-gray-700 mb-4">"The numerology remedies helped me align my life path perfectly. Highly effective and beautifully crafted."</blockquote>
+                        <cite class="font-semibold text-gray-800">- Ms. Priya Patel, Numerologist</cite>
+                    </div>
+                </div>
+                <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gold-accent text-white rounded-full p-2 hover:bg-saffron" id="prev-btn">&#10094;</button>
+                <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gold-accent text-white rounded-full p-2 hover:bg-saffron" id="next-btn">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <div class="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
+                    <img src="https://images.unsplash.com/photo-1545610816-724bc6cf2153?q=80&w=800&auto=format&fit=crop" alt="Woman meditating" class="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105">
+                </div>
+            </div>
+            <div class="md:w-1/2 text-left">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight maroon-accent font-semibold tracking-wide  mb-8">About Magic of Numbers</h2>
+                <p class="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed font-light">Magic of Numbers offers premium Spiritual Holistic Products, Vastu Remedies, Astrological Remedies, Numerology Remedies, Yantras, and Crystal Products.</p>
+                <p class="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed font-light">Our mission is to bring positive energy and profound harmony into your life. Every item in our collection is authentic and carefully selected.</p>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-light">Each piece is energized to ensure maximum effectiveness, providing you the perfect tools for a balanced, luxurious, and prosperous life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Massive Vedic Knowledge & Sacred Geometry Section -->
+    <section class="py-24 px-6 md:px-12 bg-white/50 border-t border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center maroon-accent font-semibold tracking-wide mb-4">Vedic Heritage & The Magic of Numbers</h2>
+            <p class="text-center text-gray-500 text-sm max-w-lg mx-auto font-light mb-8">The complete background of mathematical alignments, planetary geometries, and directional energy balancing.</p>
+            <div class="traditional-divider-dot mb-16"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm text-gray-700 leading-relaxed">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold maroon-accent">The Antiquity of Vedic Numerology</h3>
+                    <p>
+                        In the oldest scrolls of the Indian sub-continent, specifically the Rigveda, numbers were never regarded as simple markers of quantity. Instead, each number represented a coordinate in the cosmic ordering system (Rita). The geometry of the cosmos is mapped onto human biological structures and local spaces. Each planet (Graha) sends a continuous radio-like frequency that influences human consciousness. When your personal birth date or name spelling clashes with these planetary frequencies, it manifests as structural blocks in health, relationship harmony, and professional cash flow.
+                    </p>
+                    <p>
+                        Vedic Numerology (Sankhya Shastra) calculates these parameters using specific planetary grids. By computing your destiny and ruling numbers, a certified scholar can identify the exact energetic blockages. To remedy these clashes, we introduce natural crystalline talismans, authentic Ebomy wood malas, and geometric copper yantras. These physical assets work as energetic lenses, filtering out ambient static noise and reinforcing the user's primary positive frequency.
+                    </p>
+                    <h3 class="text-xl font-bold maroon-accent">The 5 Elements & Vastu Purusha Mandala</h3>
+                    <p>
+                        Vastu Shastra is the traditional science of architecture and layout alignment. It asserts that every dwelling operates as a living organism containing 16 directional zones. The Vastu Purusha Mandala is the cosmic diagram representing this space. Placing a toilet, a staircase, or an entrance cut in an incorrect zone compromises the local coordinate flow, causing unexpected career blocks or disputes.
+                    </p>
+                    <p>
+                        To correct these imbalances without breaking walls or tiles, we apply directional color tapes (Vastu five elements tapes) and solid metal threshold strips (Copper for Fire zones, Brass for Earth zones, Zinc for Water zones). These metal dividers act as threshold shields, preventing toxic drainage fields from leaking into active household spaces.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold maroon-accent">Metaphysical Crystal Healing & Energy Grids</h3>
+                    <p>
+                        Natural crystals are mineral arrangements holding exceptional bio-resonance characteristics. Over millions of years under high pressure, crystal clusters (like Amethyst geodes, Citrine wealth trees, and Pyrite blocks) develop clean, stable grid patterns. This structural perfection makes them ideal filters for ambient electromagnetic field radiation (EMF) and geopathic stress.
+                    </p>
+                    <p>
+                        When placed in wealth corners (South-East for cash flow, North-East for mental focus), crystals continuously emit micro-vibrations that clear negative thought forms. Maintaining the purity of these crystals using rock salt baths, sandalwood smudging, and full moon charging ensures their active node resonance remains at its maximum potential.
+                    </p>
+                    <h3 class="text-xl font-bold maroon-accent">The Philosophy of Personalized Vedic Consultations</h3>
+                    <p>
+                        Consulting with professional Vedic scholars and Vastu auditors transforms a basic home into a high-vibrational sanctuary. Through detailed floor plan scanning and coordinate calculations, our experts can pinpoint exact fault coordinates. Recommending targeted placements of zinc helix elements, clockwise springs, and copper studs creates a continuous auric shield, supporting the owner's material prosperity and physical vitality.
+                    </p>
+                    <p>
+                        By combining the ancient sciences of Sankhya Shastra (Numerology), Rashi Ratna (Gemology), and Vastu, Magic of Numbers provides a complete, unified system of spiritual remediation. We invite you to explore our lucky calculator, read our detailed guides, and experience the transformative energy of authentic, energized remedies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-6 md:px-12 bg-[#FBFBFD]">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight maroon-accent font-semibold tracking-wide  mb-6">Stay Connected for Exclusive Offers</h2>
+        <p class="text-lg md:text-xl font-light text-gray-600 mb-10">Subscribe to our newsletter and get 10% off your first order, plus insider tips on Vastu and astrology!</p>
+        <form class="flex flex-col sm:flex-row justify-center max-w-2xl mx-auto gap-4 sm:gap-0">
+            <input type="email" placeholder="Enter your email address" class="w-full sm:w-2/3 px-6 py-4 border border-gray-200 rounded-full sm:rounded-r-none sm:rounded-l-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-gray-700 bg-white" required>
+            <button type="submit" class="bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-white font-medium px-8 py-4 rounded-full sm:rounded-l-none sm:rounded-r-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<section class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center maroon-accent font-semibold tracking-wide  mb-16" data-aos="fade-up">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold maroon-accent font-semibold tracking-wide  mb-8">Get in Touch</h3>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-gold-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Address</p>
+                                <p class="text-gray-600">123 Spiritual Lane, Harmony City, India 400001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-phone text-gold-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p class="text-gray-600">+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-envelope text-gold-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600">info@magicofnumbers.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0000000000005!2d72.8777!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63000000000%3A0x0000000000000000!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1630000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold maroon-accent font-semibold tracking-wide  mb-8">Send us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gold-accent focus:border-gold-accent" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gold-accent focus:border-gold-accent" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gold-accent focus:border-gold-accent" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 mt-20" data-aos="fade-up">
+                <div class="text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-[#FBFBFD] rounded-full flex items-center justify-center mb-4 shadow-sm border border-gray-100">
+                        <i class="fas fa-shield-alt text-2xl text-[#D4AF37]"></i>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">Secure Payment</p>
+                </div>
+                <div class="text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-[#FBFBFD] rounded-full flex items-center justify-center mb-4 shadow-sm border border-gray-100">
+                        <i class="fas fa-truck text-2xl text-[#D4AF37]"></i>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">Free Shipping</p>
+                </div>
+                <div class="text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-[#FBFBFD] rounded-full flex items-center justify-center mb-4 shadow-sm border border-gray-100">
+                        <i class="fas fa-undo text-2xl text-[#D4AF37]"></i>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">Easy Returns</p>
+                </div>
+                <div class="text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-[#FBFBFD] rounded-full flex items-center justify-center mb-4 shadow-sm border border-gray-100">
+                        <i class="fas fa-certificate text-2xl text-[#D4AF37]"></i>
+                    </div>
+                    <p class="text-sm font-medium text-gray-900">100% Authentic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#111113] text-white py-12 px-6 md:px-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-6 tracking-tight bg-clip-text text-transparent header-logo">Magic of Numbers</h3>
+                <p class="text-gray-400 font-light leading-relaxed">Your one-stop solution for spiritual and holistic products designed for harmony.</p>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Shop</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4">Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Crystals</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Vastu Remedies</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Astrology</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Bracelets</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4">Contact</h4>
+                <p class="text-gray-400">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400">Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
+            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

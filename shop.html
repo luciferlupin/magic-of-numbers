@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Magic of Numbers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800 font-lora">
+<header class="sticky-header bg-white shadow-lg py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200">
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-2xl font-bold gold-accent">Magic of Numbers</a>
+                                                <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+                <a href="index.html" class="hover:nav-link transition-colors">Home</a>
+                <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="hover:nav-link transition-colors">199 Store</a>
+                <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
+                <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
+            </nav>
+                                                <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
+        </div>
+    </header>
+
+<section class="text-center py-3 px-6 md:px-12 relative z-40" id="flash-banner">
+    <p class="text-xs font-semibold tracking-wide text-[#1D1D1F]">🔥 DIRECT ORDER: WhatsApp to place orders directly & get Free Shipping on all orders! 🔥</p>
+    <button class="absolute top-2 right-4 text-gray-400 hover:text-gray-900 transition-colors" id="close-banner">✕</button>
+</section>
+
+<section class="py-16 px-6 md:px-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold text-center maroon-accent font-semibold tracking-wide  mb-12">Shop Our Collection</h1>
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Filters Sidebar -->
+                <div class="md:w-1/4 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-24">
+                    <h3 class="text-xl font-bold maroon-accent font-semibold tracking-wide  mb-6 pb-4 border-b border-gray-100">Filters</h3>
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block text-base font-semibold text-gray-800 mb-4">Category</label>
+                            <ul class="space-y-3" id="category-filter-list">
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="All Categories">All Categories</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Bracelets">Bracelets</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Crystals">Crystals</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Magic of Numberss">Magic of Numberss</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Yantras">Yantras</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Rudraksha">Rudraksha</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu">Vastu Remedies</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu Helix">Vastu Helix</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu Springs">Vastu Springs</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu Studs">Vastu Studs</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Pendants">Pendants</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Rings">Rings</button></li>
+                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Services">Consultations & Services</button></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <label class="block text-base font-semibold text-gray-800 mb-4">Price Range</label>
+                            <div class="flex items-center space-x-3 mb-4">
+                                <input type="number" id="min-price" placeholder="Min ₹" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:bg-white transition-all text-sm">
+                                <span class="text-gray-400">-</span>
+                                <input type="number" id="max-price" placeholder="Max ₹" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:bg-white transition-all text-sm">
+                            </div>
+                            <button id="apply-price-filter" class="w-full btn-primary w-full py-2.5 shadow-sm text-sm">Apply Filter</button>
+                            <button id="clear-price-filter" class="w-full bg-white text-gray-500 font-medium py-2 rounded-lg hover:text-gray-800 transition-colors mt-2 text-sm hidden">Clear Price Filter</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Grid -->
+                <div class="md:w-3/4">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 product-grid" id="shop-product-grid">
+                        <!-- Products will be dynamically injected here by shop-render.js -->
+                    </div>
+                    <!-- Pagination -->
+                    <div class="flex justify-center mt-12">
+                        <nav class="flex items-center space-x-2">
+                <a href="index.html" class="hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Bracelets" class="hover:gold-accent transition-colors">Bracelets</a>
+                <a href="shop.html?category=Crystals" class="hover:gold-accent transition-colors">Crystals</a>
+                <a href="shop.html?category=Magic of Numberss" class="hover:gold-accent transition-colors">Magic of Numberss</a>
+                <a href="shop.html?category=Yantras" class="hover:gold-accent transition-colors">Yantras</a>
+                <a href="shop.html?category=Rudraksha" class="hover:gold-accent transition-colors">Rudraksha</a>
+            </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4">Magic of Numbers</h3>
+                <p class="text-gray-400">Your one-stop solution for spiritual and holistic products.</p>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4">Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Crystals</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Vastu Remedies</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Astrology</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Bracelets</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4">Contact</h4>
+                <p class="text-gray-400">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400">Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
+            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+        </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/shop-render.js"></script>
+</body>
+</html>

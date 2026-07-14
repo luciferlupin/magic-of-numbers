@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedywala Vastu Metal Strip - Magic of Numbers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-image-main { cursor: zoom-in; }
+        .thumbnail { cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
+        .thumbnail.active { border-color: #FFD700; }
+        .thumbnail:hover { border-color: #FFD700; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .review-card { border-left: 3px solid #FFD700; }
+        .option-card { cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
+        .option-card:hover { border-color: #FFD700; }
+        .option-card.selected { border-color: #FFD700; background-color: #FFF8DC; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-gem text-3xl text-gold-accent"></i>
+                <span class="text-2xl font-bold text-gray-800">Magic of Numbers</span>
+            </div>
+                                                <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+                <a href="index.html" class="hover:nav-link transition-colors">Home</a>
+                <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="hover:nav-link transition-colors">199 Store</a>
+                <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
+                <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
+            </nav>
+                                                <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-8 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <nav class="text-sm text-gray-600 mb-6">
+                <a href="index.html" class="hover:gold-accent">Home</a>
+                <a href="shop.html" class="hover:gold-accent">Shop</a>
+                <a href="shop.html?category=Bracelets" class="hover:gold-accent">Bracelets</a>
+                <a href="shop.html?category=Crystals" class="hover:gold-accent">Crystals</a>
+                <a href="shop.html?category=Magic of Numberss" class="hover:gold-accent">Magic of Numberss</a>
+                <a href="shop.html?category=Yantras" class="hover:gold-accent">Yantras</a>
+                <a href="shop.html?category=Rudraksha" class="hover:gold-accent">Rudraksha</a>
+            </nav>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div>
+                <div class="product-image-main mb-4 rounded-lg overflow-hidden mandala-frame bg-white">
+                    <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800" alt="Remedywala Vastu Metal Strip" class="w-full" id="main-image">
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                    <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800" alt="Copper Strip" class="thumbnail rounded-lg w-full active" onclick="changeImage('https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800', this)">
+                    <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800" alt="Installation" class="thumbnail rounded-lg w-full" onclick="changeImage('https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800', this)">
+                    <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800" alt="Different Sizes" class="thumbnail rounded-lg w-full" onclick="changeImage('https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800', this)">
+                    <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800" alt="Packaging" class="thumbnail rounded-lg w-full" onclick="changeImage('https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=800', this)">
+                </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div>
+                <div class="mb-4">
+                    <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Calligraphy Stone</span>
+                    <span class="ml-2 text-gray-600">SKU: BRC-MRY-JSP</span>
+                </div>
+                
+                <h1 class="text-3xl font-bold maroon-accent font-semibold tracking-wide  mb-4">Natural Mariyam Jasper Bracelet 8mm</h1>
+                
+                <div class="flex items-center mb-6">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="ml-2 text-gray-600">(4.7) 1,256 reviews</span>
+                </div>
+                
+                <div class="flex items-center mb-6">
+                    <span class="text-3xl font-bold gold-accent">₹557</span>
+                    <span class="ml-3 bg-green-100 text-green-800 px-2 py-1 rounded text-sm">49% OFF</span>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold maroon-accent font-semibold tracking-wide  mb-2">Description:</h3>
+                    <p class="text-gray-600">Handcrafted from natural Mariyam Jasper (Miriam Jasper / Calligraphy Stone) with polished 8mm beads. Displays beautiful script-like calligraphy patterns in shades of brown, cream, and beige, symbolizing ancient wisdom and grounding.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold maroon-accent font-semibold tracking-wide  mb-2">Key Benefits:</h3>
+                    <ul class="text-gray-600 space-y-1"><li><i class="fas fa-check text-green-500 mr-2"></i>Associated with emotional stability and balance</li><li><i class="fas fa-check text-green-500 mr-2"></i>Promotes patience, endurance, and inner strength</li><li><i class="fas fa-check text-green-500 mr-2"></i>Encourages connection to nature and reflection</li><li><i class="fas fa-check text-green-500 mr-2"></i>Makes a unique intention-setting mindfulness wearable</li></ul>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                    <button class="btn-primary flex-1 py-4 text-base font-bold shadow-md rounded-xl" onclick="addToCart('Natural Mariyam Jasper Bracelet 8mm', 557, 'images/products/mariyam_jasper.png', 'product-mariyam-jasper.html')">
+                        <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                    </button>
+                    <button class="btn-gold flex-1 py-4 text-base font-bold shadow-md rounded-xl" onclick="buyOnWhatsApp('Natural Mariyam Jasper Bracelet 8mm', '₹557')">
+                        <i class="fab fa-whatsapp mr-2"></i> Buy on WhatsApp
+                    </button>
+                </div>
+                
+                <div class="flex items-center space-x-4 text-gray-600">
+                    <div class="flex items-center">
+                        <i class="fas fa-truck mr-2"></i>
+                        <span class="text-sm">Free Delivery</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        <span class="text-sm">Secure Payment</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-undo mr-2"></i>
+                        <span class="text-sm">7 Days Return</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Tabs -->
+<section class="py-12 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="border-b border-gray-200 mb-8">
+            <nav class="flex space-x-8">
+                <a href="index.html" class="hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="hover:gold-accent transition-colors">Shop</a>
+                <a href="shop.html?category=Bracelets" class="hover:gold-accent transition-colors">Bracelets</a>
+                <a href="shop.html?category=Crystals" class="hover:gold-accent transition-colors">Crystals</a>
+                <a href="shop.html?category=Magic of Numberss" class="hover:gold-accent transition-colors">Magic of Numberss</a>
+                <a href="shop.html?category=Yantras" class="hover:gold-accent transition-colors">Yantras</a>
+                <a href="shop.html?category=Rudraksha" class="hover:gold-accent transition-colors">Rudraksha</a>
+            </nav>
+        </div>
+        
+        <div id="details" class="tab-content active"><h3 class="text-xl font-semibold mb-4">Detailed Product Information</h3><p class="text-gray-600 mb-6">Mariyam Jasper is an earthy stone of protection and long-term grounding. The patterns are fossilized shells and foliage representing historical knowledge. To clean, wipe with a soft dry cloth and avoid overstretching the elastic cord.</p>
+                    
+                    <h4 class="font-semibold mb-2">Energization Process</h4>
+                    <p class="text-gray-600">Each strip is energized through traditional Vastu rituals and mantras to enhance its effectiveness. The energization process aligns the metal with positive cosmic energies.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">Technical Specifications</h4>
+                    <ul class="text-gray-600 space-y-1"><li><i class="fas fa-check text-green-500 mr-2"></i>Associated with emotional stability and balance</li><li><i class="fas fa-check text-green-500 mr-2"></i>Promotes patience, endurance, and inner strength</li><li><i class="fas fa-check text-green-500 mr-2"></i>Encourages connection to nature and reflection</li><li><i class="fas fa-check text-green-500 mr-2"></i>Makes a unique intention-setting mindfulness wearable</li></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="materials" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Material Selection Guide</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2 text-orange-600">Copper</h4>
+                    <p class="text-gray-600 text-sm mb-2">Best for general vastu corrections. Excellent conductor of positive energy.</p>
+                    <p class="text-gray-600 text-sm"><strong>Uses:</strong> Main vastu corrections, energy flow enhancement</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2 text-yellow-600">Brass</h4>
+                    <p class="text-gray-600 text-sm mb-2">Ideal for spiritual areas. Balances solar and lunar energies.</p>
+                    <p class="text-gray-600 text-sm"><strong>Uses:</strong> Prayer rooms, meditation spaces, entrance corrections</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2 text-gray-600">Aluminium</h4>
+                    <p class="text-gray-600 text-sm mb-2">Lightweight and versatile. Good for temporary corrections.</p>
+                    <p class="text-gray-600 text-sm"><strong>Uses:</strong> Quick fixes, rental properties, temporary solutions</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2 maroon-accent font-semibold tracking-wide ">Iron</h4>
+                    <p class="text-gray-600 text-sm mb-2">Strong grounding properties. Best for structural defects.</p>
+                    <p class="text-gray-600 text-sm"><strong>Uses:</strong> Foundation issues, corner corrections, stability</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2 text-blue-600">Stainless Steel</h4>
+                    <p class="text-gray-600 text-sm mb-2">Durable and rust-free. Ideal for outdoor and wet areas.</p>
+                    <p class="text-gray-600 text-sm"><strong>Uses:</strong> Outdoor applications, bathrooms, kitchens</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="installation" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Installation Guide</h3>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h4 class="font-semibold mb-3">Step-by-Step Installation:</h4>
+                <ol class="text-gray-600 space-y-2">
+                    <li><strong>Step 1:</strong> Clean the surface where strip will be applied</li>
+                    <li><strong>Step 2:</strong> Mark the areas requiring vastu correction</li>
+                    <li><strong>Step 3:</strong> Remove protective backing from self-adhesive strip</li>
+                    <li><strong>Step 4:</strong> Press firmly onto the marked areas</li>
+                    <li><strong>Step 5:</strong> Activate with Vastu mantras (provided)</li>
+                </ol>
+                
+                <h4 class="font-semibold mb-3 mt-4">Common Application Areas:</h4>
+                <ul class="text-gray-600 space-y-1"><li><i class="fas fa-check text-green-500 mr-2"></i>Associated with emotional stability and balance</li><li><i class="fas fa-check text-green-500 mr-2"></i>Promotes patience, endurance, and inner strength</li><li><i class="fas fa-check text-green-500 mr-2"></i>Encourages connection to nature and reflection</li><li><i class="fas fa-check text-green-500 mr-2"></i>Makes a unique intention-setting mindfulness wearable</li></ul>
+            </div>
+        </div>
+        
+        <div id="applications" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Vastu Applications</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2">Residential Properties</h4>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• Main entrance corrections</li>
+                        <li>• Room shape regularization</li>
+                        <li>• Kitchen vastu fixes</li>
+                        <li>• Bedroom alignment</li>
+                        <li>• Bathroom corrections</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2">Commercial Properties</h4>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• Office layout corrections</li>
+                        <li>• Shop entrance fixes</li>
+                        <li>• Factory vastu solutions</li>
+                        <li>• Warehouse corrections</li>
+                        <li>• Showroom enhancements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="reviews" class="tab-content">
+            <h3 class="text-xl font-semibold mb-4">Customer Reviews</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="review-card pl-4">
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">Mahesh Patel</span>
+                    </div>
+                    <p class="text-gray-600">Excellent vastu strips! Used copper strips for my home and the energy has improved significantly. Easy to install with clear instructions.</p>
+                </div>
+                <div class="review-card pl-4">
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">Anita Desai</span>
+                    </div>
+                    <p class="text-gray-600">Good quality product. Bought brass strips for my shop entrance and business has improved. Fast delivery and good packaging.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Products -->
+<section class="py-12 px-6 md:px-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold maroon-accent font-semibold tracking-wide  mb-8">Related Vastu Products</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=400" alt="Vastu Pyramid" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Vastu Pyramid</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹1,500</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=400" alt="Energy Protector" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Energy Protector</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹800</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=400" alt="Door Blocker" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Door Blocker</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹600</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+            <div class="product-card group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1600293245452-f94d07b53982?q=80&w=400" alt="Vastu Yantra" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold maroon-accent font-semibold tracking-wide  mb-2">Vastu Yantra</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-lg font-bold gold-accent">₹900</span>
+                    </div>
+                    <button class="btn-primary w-full text-sm">View Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-800 text-white py-8 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <h3 class="text-lg font-bold mb-4">Magic of Numbers</h3>
+            <p class="text-gray-400">Your one-stop solution for spiritual and holistic products.</p>
+        </div>
+        <div>
+            <h4 class="text-md font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+                <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-md font-semibold mb-4">Categories</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white">Crystals</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Vastu Remedies</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Astrology</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Bracelets</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-md font-semibold mb-4">Contact</h4>
+            <p class="text-gray-400">Email: info@magicofnumbers.com</p>
+            <p class="text-gray-400">Phone: +91 98765 43210</p>
+        </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
+            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+let selectedMaterial = 'Copper';
+let basePrice = 750;
+
+function changeImage(src, thumbnail) {
+    document.getElementById('main-image').src = src;
+    document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+    thumbnail.classList.add('active');
+}
+
+function showTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('gold-accent', 'border-gold-accent');
+        btn.classList.add('text-gray-500', 'border-transparent');
+    });
+    
+    document.getElementById(tabName).classList.add('active');
+    event.target.classList.remove('text-gray-500', 'border-transparent');
+    event.target.classList.add('gold-accent', 'border-gold-accent');
+}
+
+function selectMaterial(material, price, element) {
+    selectedMaterial = material;
+    basePrice = price;
+    updatePrice();
+    
+    document.querySelectorAll('.option-card').forEach(card => {
+        if (card.textContent.includes(material)) {
+            card.classList.add('selected');
+        } else if (card.textContent.includes('Aluminium') || card.textContent.includes('Brass') || 
+                   card.textContent.includes('Copper') || card.textContent.includes('Iron') || 
+                   card.textContent.includes('Stainless Steel')) {
+            card.classList.remove('selected');
+        }
+    });
+}
+
+function selectWidth(width, price, element) {
+    document.querySelectorAll('.option-card').forEach(card => {
+        if (card.textContent.includes(width)) {
+            card.classList.add('selected');
+        } else if (card.textContent.includes('18 mm') || card.textContent.includes('25 mm')) {
+            card.classList.remove('selected');
+        }
+    });
+}
+
+function selectSize(size, price, element) {
+    document.querySelectorAll('.option-card').forEach(card => {
+        if (card.textContent.includes(size)) {
+            card.classList.add('selected');
+        } else if (card.textContent.includes('08 FT') || card.textContent.includes('12 FT') || 
+                   card.textContent.includes('15 FT') || card.textContent.includes('20 FT')) {
+            card.classList.remove('selected');
+        }
+    });
+}
+
+function selectBundle(bundle, quantity, element) {
+    document.querySelectorAll('.option-card').forEach(card => {
+        if (card.textContent.includes(bundle)) {
+            card.classList.add('selected');
+        } else if (card.textContent.includes('Piece') && !card.textContent.includes(bundle)) {
+            card.classList.remove('selected');
+        }
+    });
+}
+
+function updatePrice() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const totalPrice = basePrice * quantity;
+    document.getElementById('price-display').textContent = `₹${totalPrice}`;
+}
+
+ ${selectedMaterial} Vastu Metal Strip to cart!`);
+}
+</script>
+</body>
+</html>

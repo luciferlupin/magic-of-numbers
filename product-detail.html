@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product Details - Magic of Numbers | Spiritual Remedies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sacred-grid-bg bg-[#FDFBF7] text-[#2C1E14] font-lora antialiased selection:bg-[#6B0000] selection:text-white">
+
+    <header class="sticky-header py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
+        <div class="flex items-center space-x-4">
+            <div class="text-2xl font-bold tracking-tight header-logo cursor-pointer" onclick="window.location.href='index.html'">Magic of Numbers</div>
+                                                <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+                <a href="index.html" class="hover:nav-link transition-colors">Home</a>
+                <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
+                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="hover:nav-link transition-colors">199 Store</a>
+                <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
+                <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="cart.html" class="relative cursor-pointer group">
+                <i class="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-[#6B0000] transition-colors"></i>
+                <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-12 px-6 md:px-12">
+        <!-- Breadcrumbs -->
+        <nav class="flex text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li><a href="index.html" class="hover:text-gray-900">Home</a></li>
+                <li><i class="fas fa-chevron-right text-xs mx-2"></i></li>
+                <li><a href="shop.html" class="hover:text-gray-900">Shop</a></li>
+                <li><i class="fas fa-chevron-right text-xs mx-2"></i></li>
+                <li class="text-gray-900 font-medium" id="breadcrumb-title">Product Details</li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <!-- Left Column: Product Gallery -->
+            <div class="space-y-4">
+                <div class="bg-white/80 backdrop-blur-md rounded-xl overflow-hidden shadow-sm border border-gray-200/50 p-4">
+                    <img src="" alt="" class="w-full h-auto max-h-[500px] object-contain mx-auto" id="main-image">
+                </div>
+                <div class="grid grid-cols-4 gap-4" id="thumbnails-container">
+                    <!-- Dynamic thumbnails will load here -->
+                </div>
+            </div>
+
+            <!-- Right Column: Product Actions & Details -->
+            <div class="flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded" id="product-badge">Energized</span>
+                        <span class="text-xs text-gray-500" id="product-sku">SKU: --</span>
+                    </div>
+                    
+                    <h1 class="text-3xl font-bold maroon-accent font-semibold tracking-wide mb-4" id="product-title">Loading Product...</h1>
+                    
+                    <!-- Review Panel -->
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="flex text-yellow-500 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-xs text-gray-600">(4.8 rating / 96 reviews)</span>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl font-bold gold-accent" id="product-price">₹0.00</span>
+                        <span class="text-lg text-gray-500 line-through ml-3 hidden" id="product-old-price">₹0.00</span>
+                        <span class="ml-3 bg-green-100 text-green-800 px-2 py-1 rounded text-sm hidden" id="product-discount">50% OFF</span>
+                    </div>
+
+                    <!-- Short Description -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold maroon-accent tracking-wide mb-2">Description:</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" id="product-description">...</p>
+                    </div>
+
+                    <!-- Key Benefits -->
+                    <div class="mb-6" id="benefits-section">
+                        <h3 class="font-semibold maroon-accent tracking-wide mb-2">Key Benefits:</h3>
+                        <ul class="text-gray-600 text-sm space-y-1.5 list-none" id="product-benefits">
+                            <!-- Dynamic benefits checklist will load here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Add to Cart & Buy Buttons -->
+                <div>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-6" id="actions-container">
+                        <!-- Dynamic buttons loaded here -->
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="flex items-center space-x-6 text-gray-600 text-xs border-t border-gray-200/50 pt-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-truck text-[#B8860B] mr-2"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-[#B8860B] mr-2"></i>
+                            <span>Certified Quality</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-sync text-[#B8860B] mr-2"></i>
+                            <span>Easy Returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Tabs -->
+        <div class="mb-16 bg-white/80 backdrop-blur-md rounded-xl border border-gray-200/50 p-8 shadow-sm">
+            <div class="flex space-x-6 border-b border-gray-200 mb-6">
+                <button class="pb-3 text-base font-bold maroon-accent border-b-2 border-[#6B0000] focus:outline-none">Detailed Information</button>
+            </div>
+            
+            <div id="details-tab-content">
+                <h3 class="text-xl font-semibold maroon-accent mb-4">Metaphysical Properties & Vastu Placement</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6" id="product-tab-description">...</p>
+                
+                <h3 class="text-lg font-semibold maroon-accent mb-3">Specifications Table:</h3>
+                <div class="overflow-x-auto max-w-lg">
+                    <table class="text-gray-600 text-sm w-full border-collapse" id="product-specs">
+                        <!-- Dynamic specs table lines will load here -->
+                    </table>
+                </div>
+                
+                <div class="mt-8 border-t border-gray-200/50 pt-8" id="product-handbook-section">
+                    <h3 class="text-xl font-semibold maroon-accent mb-4">Vedic Activation & Care Handbook</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed whitespace-pre-line" id="product-handbook-text">...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1C120C] text-[#FDFBF7] py-16 px-6 md:px-12 border-t-2 border-gold-accent">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-6 tracking-wider header-logo">Magic of Numbers</h3>
+                <p class="text-gray-400 font-light leading-relaxed text-sm">Your premium retail platform for authentic Vastu remedies, energized crystals, and spiritual products.</p>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
+                    <li><a href="shop.html?category=Bracelets" class="hover:text-white transition-colors">Bracelets</a></li>
+                    <li><a href="shop.html?category=Rudraksha" class="hover:text-white transition-colors">Rudraksha</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Customer Care</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Secure Payment</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Easy Returns</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Get in Touch</h4>
+                <p class="text-gray-400 text-sm">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400 text-sm">Phone: +91 98765 43210</p>
+                <p class="text-gray-400 text-sm mt-4"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
+            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+        </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product-detail-render.js"></script>
+</body>
+</html>
