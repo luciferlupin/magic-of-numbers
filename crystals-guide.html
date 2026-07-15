@@ -13,13 +13,13 @@
 </head>
 <body class="sacred-grid-bg bg-[#FDFBF7] text-[#2C1E14] font-lora antialiased selection:bg-[#6B0000] selection:text-white">
 
-    <header class="sticky-header py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
+    <header class="sticky-header backdrop-blur-xl bg-white/70 shadow-sm py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
         <div class="flex items-center space-x-4">
             <div class="text-2xl font-bold tracking-tight header-logo cursor-pointer" onclick="window.location.href='index.html'">Magic of Numbers</div>
-                        <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+            <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
                 <a href="index.html" class="hover:nav-link transition-colors">Home</a>
                 <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
-                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="services.html" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
                 <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
                 <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
                 <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
@@ -27,30 +27,52 @@
                 <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
                 <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
             </nav>
+            <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="services.html" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
         </div>
         <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
             <a href="cart.html" class="relative cursor-pointer group">
                 <i class="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-[#6B0000] transition-colors"></i>
                 <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
             </a>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto py-16 px-6 md:px-12">
-        <h1 class="text-3xl md:text-5xl font-bold maroon-accent tracking-wide mb-2 text-center">Sacred Crystals Encyclopedia</h1>
-        <p class="text-center text-gray-500 text-sm max-w-lg mx-auto font-light mb-4">Learn about the healing benefits, planetary links, and chakra balancing properties of sacred crystals.</p>
+    <main class="max-w-7xl mx-auto py-16 px-6 md:px-12 font-sans">
+        <h1 class="text-3xl md:text-5xl font-bold maroon-accent tracking-wide mb-2 text-center font-title">Sacred Crystals Encyclopedia</h1>
+        <p class="text-center text-gray-500 text-sm max-w-lg mx-auto font-light mb-4 leading-relaxed">Learn about the healing benefits, planetary links, and chakra balancing properties of sacred crystals.</p>
         <div class="traditional-divider-dot mb-16"></div>
 
         <div class="space-y-16">
             <!-- 1. Amethyst -->
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow">
-                    <img src="https://images.unsplash.com/photo-1590481878477-80512f45cc23?q=80&w=400&h=300&fit=crop" alt="Amethyst Crystal" class="w-full h-full object-cover">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/amethyst_bracelet_1773631520176.png" alt="Amethyst Crystal" class="w-full h-full object-contain">
                 </div>
                 <div class="lg:w-2/3 space-y-4">
                     <h3 class="text-2xl font-bold maroon-accent font-title">Amethyst (Katela)</h3>
                     <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2.5 py-1 rounded font-medium">Crown & Third-Eye Chakra | Rahu & Saturn Remedy</span>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
                         Amethyst, chemically known as a purple crystalline silicon dioxide quartz matrix, has been revered since 3000 BCE in ancient Egyptian, Greek, and Indian Vedic histories. In Vedic astrology, Amethyst (Katela) is regarded as a sub-stone (Uparatna) for Saturn (Shani) and is highly recommended to pacify the negative alignments of Rahu. Structurally, the purple hues of Amethyst arise from iron impurities irradiated by natural gamma rays inside rock pockets, establishing a high-frequency crystalline vibration.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed font-light">
@@ -68,13 +90,13 @@
 
             <!-- 2. Citrine -->
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow">
-                    <img src="https://images.unsplash.com/photo-1574737229562-b915dcc3ba09?q=80&w=400&h=300&fit=crop" alt="Citrine Crystal" class="w-full h-full object-cover">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/citrine_bracelet.png" alt="Citrine Crystal" class="w-full h-full object-contain">
                 </div>
                 <div class="lg:w-2/3 space-y-4">
                     <h3 class="text-2xl font-bold maroon-accent font-title">Citrine (Sunela)</h3>
                     <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2.5 py-1 rounded font-medium">Solar Plexus Chakra | Jupiter (Guru) Remedy</span>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
                         Citrine, traditionally known as Sunela, is the ultimate stone of financial manifestation, professional abundance, and intellectual expansion. Governed by the expansive planet Jupiter (Guru), Citrine aligns with the solar plexus chakra (Manipura), boosting metabolic heat and self-will. Its golden yellow frequencies carry solar energy directly into the user's aura, clearing blockages that cause lethargy and negative cash flow concerns.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed font-light">
@@ -92,13 +114,13 @@
 
             <!-- 3. Rose Quartz -->
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=400&h=300&fit=crop" alt="Rose Quartz Crystal" class="w-full h-full object-cover">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/rose_quartz_bracelet.png" alt="Rose Quartz Crystal" class="w-full h-full object-contain">
                 </div>
                 <div class="lg:w-2/3 space-y-4">
                     <h3 class="text-2xl font-bold maroon-accent font-title">Rose Quartz (Sphatik Pink)</h3>
                     <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2.5 py-1 rounded font-medium">Heart Chakra | Venus (Shukra) Remedy</span>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
                         Rose Quartz is the crystal of universal, unconditional love. Carrying Venus (Shukra) planetary frequencies, it activates the Heart Chakra (Anahata), soothing distress and restoring deep trust. Its pink crystal matrix works on the subtle layers of the energetic body, healing old emotional blockages and replacing them with feelings of self-acceptance and compassion.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed font-light">
@@ -116,13 +138,13 @@
 
             <!-- 4. Pyrite -->
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=400&h=300&fit=crop" alt="Pyrite Crystal" class="w-full h-full object-cover">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/pyrite_bracelet.png" alt="Pyrite Crystal" class="w-full h-full object-contain">
                 </div>
                 <div class="lg:w-2/3 space-y-4">
                     <h3 class="text-2xl font-bold maroon-accent font-title">Pyrite (Fool's Gold)</h3>
                     <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded font-medium">Solar Plexus Chakra | Sun & Mars Shield</span>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
                         Pyrite, an iron disulfide mineral with a brassy golden metallic luster, is a powerful shield against environmental stress, EMF radiation, and psychic drain. Known as a stone of action and willpower, Pyrite combines the fiery, courage-inducing frequencies of Mars with the vitalizing luck of the Sun. It encourages active leadership and clears creative blocks.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed font-light">
@@ -140,13 +162,13 @@
 
             <!-- 5. Black Obsidian -->
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow">
-                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=400&h=300&fit=crop" alt="Black Obsidian Crystal" class="w-full h-full object-cover">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/black_obsidian_bracelet.png" alt="Black Obsidian Crystal" class="w-full h-full object-contain">
                 </div>
                 <div class="lg:w-2/3 space-y-4">
                     <h3 class="text-2xl font-bold maroon-accent font-title">Black Obsidian</h3>
                     <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2.5 py-1 rounded font-medium">Root/Base Chakra | Saturn (Shani) Shield</span>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
                         Black Obsidian is a natural volcanic glass formed from rapid cooling lava. Astrologically linked with Saturn (Shani), it offers powerful grounding, absorption of negative vibrations, and protection against psychic drain. It acts as an energetic anchor, pulling unstable mental fields down into physical reality.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed font-light">
@@ -164,13 +186,13 @@
 
             <!-- 6. Tiger Eye -->
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow">
-                    <img src="https://images.unsplash.com/photo-1599643477874-bc27d142ab1d?q=80&w=400&h=300&fit=crop" alt="Tiger Eye Crystal" class="w-full h-full object-cover">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/tiger_eye_bracelet.png" alt="Tiger Eye Crystal" class="w-full h-full object-contain">
                 </div>
                 <div class="lg:w-2/3 space-y-4">
                     <h3 class="text-2xl font-bold maroon-accent font-title">Tiger Eye</h3>
                     <span class="inline-block bg-[#FFF5E6] text-[#B8860B] text-xs px-2.5 py-1 rounded font-medium">Solar Plexus & Sacral Chakra | Ketu & Sun Remedy</span>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
                         Tiger Eye is a metamorphic quartz displaying a beautiful chatoyancy flash. Governed by Ketu and the Sun, it provides courage, mental clarity, and protection during career transitions. It stimulates the lower chakras, helping the user make practical decisions without fear.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed font-light">
@@ -185,11 +207,132 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 7. Green Aventurine (New) -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/green_aventurine_bracelet.png" alt="Green Aventurine Crystal" class="w-full h-full object-contain">
+                </div>
+                <div class="lg:w-2/3 space-y-4">
+                    <h3 class="text-2xl font-bold maroon-accent font-title">Green Aventurine (Margaj)</h3>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2.5 py-1 rounded font-medium">Heart Chakra | Mercury (Budha) Remedy</span>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Green Aventurine, traditionally referred to as Margaj, is widely known as the "Stone of Opportunity." Resonating with the green ray of the Heart Chakra (Anahata), it releases old mental habits and emotional patterns, paving the way for fresh optimism, motivation, and luck. Astrologically, it aligns with Mercury (Budha) to support clever business calculations and intellect.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Metaphysical Activation:</strong> Cleanse your Green Aventurine by burying it in raw soil for 12 hours or placing it next to green leaves. Charge it in the morning sun. Program it with intentions of prosperity and professional success.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Vastu Placement Rules:</strong> Place raw aventurine or a green bracelet in the East zone of your living room to support family networks, or in the North zone to boost career gains.
+                    </p>
+                    <div class="border-t pt-4 flex justify-between items-center text-xs text-gray-500">
+                        <span>Chakra Focus: Heart (Anahata)</span>
+                        <a href="shop.html?search=Green+Aventurine" class="font-bold gold-accent hover:underline">Shop Aventurine Collection <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Selenite (New) -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/selenite_bracelet_1773631586439.png" alt="Selenite Crystal" class="w-full h-full object-contain">
+                </div>
+                <div class="lg:w-2/3 space-y-4">
+                    <h3 class="text-2xl font-bold maroon-accent font-title">Selenite (Sphatik Clear)</h3>
+                    <span class="inline-block bg-blue-50 text-blue-800 text-xs px-2.5 py-1 rounded font-medium">Crown & Higher Crown Chakra | Moon (Chandra) Remedy</span>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Selenite is a high-vibrational form of gypsum crystal, named after Selene, the Greek goddess of the Moon. Revered as a crystal of pure light, it clears congestion from the aura and naturally charges other crystal assets. Governed by the Moon (Chandra), it acts as a mental buffer, dissolving erratic emotions and restoring profound sleep.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Metaphysical Activation:</strong> Never cleanse Selenite with water as it is water-soluble. Cleanse it with incense smoke or place it in the moonlight. Hold it in your hands to calm racing thoughts.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Vastu Placement Rules:</strong> Place a Selenite plate, tower, or bracelet in the North-East zone of your home to establish a peaceful, clean sanctuary, free from toxic energy.
+                    </p>
+                    <div class="border-t pt-4 flex justify-between items-center text-xs text-gray-500">
+                        <span>Chakra Focus: Crown & Higher Crown</span>
+                        <a href="shop.html?search=Selenite" class="font-bold gold-accent hover:underline">Shop Selenite Collection <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Hematite (New) -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/hematite_bracelet_1773631570977.png" alt="Hematite Crystal" class="w-full h-full object-contain">
+                </div>
+                <div class="lg:w-2/3 space-y-4">
+                    <h3 class="text-2xl font-bold maroon-accent font-title">Hematite (Iron Ore Crystal)</h3>
+                    <span class="inline-block bg-blue-100 text-blue-900 text-xs px-2.5 py-1 rounded font-medium">Root Chakra | Saturn (Shani) Anchor</span>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Hematite is an iron oxide crystal with a metallic grey finish, known for its heavy anchoring properties. Governed by Saturn (Shani), it provides powerful protection against toxic EMF radiation and stabilizes erratic thoughts. It acts as an anchor for the Root Chakra (Muladhara), converting negative energy into stability and grounding.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Metaphysical Activation:</strong> Cleanse Hematite with a dry cloth and bury it in rock salt for 12 hours. Do not expose it to water to avoid oxidization. Charge it under twilight moon rays.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Vastu Placement Rules:</strong> Place Hematite near threshold entryways to ground visitor stress, or in the South-West zone of the home to stabilize family connections.
+                    </p>
+                    <div class="border-t pt-4 flex justify-between items-center text-xs text-gray-500">
+                        <span>Chakra Focus: Root (Muladhara)</span>
+                        <a href="shop.html?search=Hematite" class="font-bold gold-accent hover:underline">Shop Hematite Collection <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Lava Stone (New) -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/lava_stone_bracelet_1773631466162.png" alt="Lava Stone Crystal" class="w-full h-full object-contain">
+                </div>
+                <div class="lg:w-2/3 space-y-4">
+                    <h3 class="text-2xl font-bold maroon-accent font-title">Lava Stone (Volcanic Basalt)</h3>
+                    <span class="inline-block bg-red-100 text-red-800 text-xs px-2.5 py-1 rounded font-medium">Root Chakra | Mars (Mangal) Remedy</span>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Lava Stone is a vesicular basalt formed from rapid volcanic cooling. Carrying the core fiery properties of Mars (Mangal), it represents deep strength, courage, and grounding stability. It calms raw tempers, stimulates physical vitality, and grounds negative emotions in times of stress.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Metaphysical Activation:</strong> Rinse with fresh water and charge in direct sunlight for 30 minutes. You can add a drop of sandalwood essential oil to the porous stones to slowly diffuse calming scents.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Vastu Placement Rules:</strong> Place a Lava cluster or bracelet in the South direction (Fire element zone) of a room to stabilize high temperaments and secure energetic grounding.
+                    </p>
+                    <div class="border-t pt-4 flex justify-between items-center text-xs text-gray-500">
+                        <span>Chakra Focus: Root (Muladhara)</span>
+                        <a href="shop.html?search=Lava" class="font-bold gold-accent hover:underline">Shop Lava Collection <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Mariyam Jasper (New) -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/3 h-64 rounded-xl overflow-hidden shadow bg-gray-50 flex items-center justify-center p-4">
+                    <img src="images/products/mariyam_jasper.png" alt="Mariyam Jasper Crystal" class="w-full h-full object-contain">
+                </div>
+                <div class="lg:w-2/3 space-y-4">
+                    <h3 class="text-2xl font-bold maroon-accent font-title">Mariyam Jasper (Fossil Stone)</h3>
+                    <span class="inline-block bg-yellow-50 text-yellow-800 text-xs px-2.5 py-1 rounded font-medium">Solar Plexus & Root Chakra | Ketu & Earth Shield</span>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Mariyam Jasper, also known as Fossil Stone, contains ancient hematite, iron, and fossilized seashell patterns. Governed by Ketu and the Earth element, it is highly stabilizing. It aids in long-term decision making, balances digestive fire, and grounds geopathic radiation voids.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Metaphysical Activation:</strong> Cleanse using sage smudge and bury in dry rock salt for 24 hours. Program with intentions of grounding during professional career transitions.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        <strong>Vastu Placement Rules:</strong> Position in the South-West zone (Earth quadrant) of your office or home to build stable savings and guard against geopathic radiation lines.
+                    </p>
+                    <div class="border-t pt-4 flex justify-between items-center text-xs text-gray-500">
+                        <span>Chakra Focus: Solar Plexus & Root</span>
+                        <a href="shop.html?search=Mariyam" class="font-bold gold-accent hover:underline">Shop Mariyam Collection <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <!-- Massive FAQ Section -->
         <section class="mt-16 bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
             <h2 class="text-2xl font-bold maroon-accent font-title">Crystal Healing & Metaphysical FAQ</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 font-sans">
                 <div class="space-y-4">
                     <p><strong>Q1: What is crystal healing?</strong><br>
                     Crystal healing is an ancient holistic discipline that leverages the stable, structured electromagnetic field frequencies of natural mineral crystals to align and balance the human body's bio-electric field (Chakras and Nadis). Place or wear these talismans daily to shield your space and strengthen your aura.</p>
@@ -220,6 +363,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-[#1C120C] text-[#FDFBF7] py-16 px-6 md:px-12 border-t-2 border-gold-accent">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
@@ -228,16 +372,16 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                     <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
-                    <li><a href="shop.html?category=Bracelets" class="hover:text-white transition-colors">Bracelets</a></li>
-                    <li><a href="shop.html?category=Rudraksha" class="hover:text-white transition-colors">Rudraksha</a></li>
+                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="vastu-handbook.html" class="hover:text-white transition-colors">Vastu Handbook</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Customer Care</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="#" class="hover:text-white transition-colors">Secure Payment</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Easy Returns</a></li>
@@ -246,20 +390,20 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Get in Touch</h4>
-                <p class="text-gray-400 text-sm">Email: info@magicofnumbers.com</p>
-                <p class="text-gray-400 text-sm">Phone: +91 98765 43210</p>
-                <p class="text-gray-400 text-sm mt-4"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
+                <p class="text-gray-400 text-sm font-sans">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400 text-sm font-sans">Phone: +91 98765 43210</p>
+                <p class="text-gray-400 text-sm mt-4 font-sans"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
-            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
-            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
-        </div>
+        <div class="border-t border-gray-850 mt-12 pt-6">
+            <div class="text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4 font-sans">
+                <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebony wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+                <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/products.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/products.js?v=1.0.1"></script>
+    <script src="js/script.js?v=1.0.1"></script>
 </body>
 </html>

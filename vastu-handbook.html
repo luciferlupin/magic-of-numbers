@@ -10,16 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .zone-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .zone-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        .sidebar-nav-link {
+            transition: all 0.2s ease;
+        }
+        .faq-accordion-btn {
+            transition: background-color 0.2s ease;
+        }
+        .faq-icon {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
 </head>
 <body class="sacred-grid-bg bg-[#FDFBF7] text-[#2C1E14] font-lora antialiased selection:bg-[#6B0000] selection:text-white">
 
-    <header class="sticky-header py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
+    <header class="sticky-header backdrop-blur-xl bg-white/70 shadow-sm py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
         <div class="flex items-center space-x-4">
             <div class="text-2xl font-bold tracking-tight header-logo cursor-pointer" onclick="window.location.href='index.html'">Magic of Numbers</div>
             <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
                 <a href="index.html" class="hover:nav-link transition-colors">Home</a>
                 <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
-                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="services.html" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
                 <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
                 <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
                 <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
@@ -27,147 +45,420 @@
                 <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
                 <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
             </nav>
+            <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="services.html" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
         </div>
         <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
             <a href="cart.html" class="relative cursor-pointer group">
                 <i class="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-[#6B0000] transition-colors"></i>
                 <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
             </a>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto py-16 px-6 md:px-12 space-y-12">
-        <h1 class="text-3xl md:text-5xl font-bold maroon-accent tracking-wide mb-2 text-center">Vastu Shastra Classical Handbook</h1>
-        <p class="text-center text-gray-500 text-sm max-w-lg mx-auto font-light mb-4">A comprehensive guide to 16 directional zones, elemental remedies, and layout balancing without structural demolition.</p>
-        <div class="traditional-divider-dot mb-16"></div>
+    <!-- Page Title Header -->
+    <section class="text-center py-16 px-6 md:px-12 relative z-10">
+        <h1 class="text-3xl md:text-5xl font-bold maroon-accent tracking-wide mb-3 font-title">Vastu Shastra Classical Handbook</h1>
+        <p class="text-center text-gray-500 text-sm max-w-xl mx-auto font-light leading-relaxed font-sans">A comprehensive guide to 16 directional zones, elemental remedies, and layout balancing without structural demolition.</p>
+        <div class="traditional-divider-dot mt-8"></div>
+    </section>
 
-        <section class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold maroon-accent font-title">1. Introduction to the Vastu Purusha Mandala</h2>
-            <p class="text-gray-600 text-sm leading-relaxed">
-                The concept of Vastu Shastra is rooted in the Vastu Purusha Mandala—the metaphysical planning grid representing the cosmic body of the Vastu Purusha, who was pinned down by the gods to bring order to empty space. Every building, room, and apartment block possesses this subtle energetic grid. When architectural coordinate structures align perfectly with the cardinal directions (North, East, South, West) and their intermediate zones, it enables cosmic energy (Prana) to rotate smoothly.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                When elements are blocked or positioned in conflicting zones (for example, placing a fire element like a stove in a water zone like the North-East), it creates structural tension. This handbook provides simple, non-destructive Vastu remedies to correct these imbalances.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                Historically, Vedic architects (Sthapatis) designed palaces, public temples, and residences using these core mathematical proportions (Ayadi Shadvarga formulas) to sync structural volumes with the owner's birth stars. By balancing the five elements (Pancha Bhootas: Earth, Water, Fire, Air, and Space), Vastu establishes a harmonious resonance between human biological rhythms and nature's planetary grid lines.
-            </p>
-        </section>
+    <!-- Main Content Container with Sticky Sidebar Layout -->
+    <main class="max-w-7xl mx-auto pb-24 px-6 md:px-12 flex flex-col lg:flex-row gap-12 relative">
+        <!-- Sticky Sidebar Navigation -->
+        <aside class="lg:w-1/4 lg:sticky lg:top-28 h-fit space-y-6 hidden lg:block border-r border-gray-200/50 pr-6">
+            <h3 class="text-sm font-bold tracking-wider text-[#6B0000] uppercase font-sans border-b border-gray-200/60 pb-3">Handbook Index</h3>
+            <nav class="flex flex-col space-y-3 text-sm">
+                <a href="#section-purusha" class="sidebar-nav-link text-[#6B0000] font-bold border-l-2 border-[#6B0000] pl-3">1. Vastu Purusha Mandala</a>
+                <a href="#section-16-zones" class="sidebar-nav-link text-gray-600 pl-3 border-l border-transparent hover:text-gray-900">2. Guide to the 16 Zones</a>
+                <a href="#section-metal-strip" class="sidebar-nav-link text-gray-600 pl-3 border-l border-transparent hover:text-gray-900">3. Floor Metal Strip Remedies</a>
+                <a href="#section-geopathic" class="sidebar-nav-link text-gray-600 pl-3 border-l border-transparent hover:text-gray-900">4. Geopathic Stress & Radiation</a>
+                <a href="#section-sacred-geometry" class="sidebar-nav-link text-gray-600 pl-3 border-l border-transparent hover:text-gray-900">5. Sacred Geometry & Numbers</a>
+                <a href="#section-faqs" class="sidebar-nav-link text-gray-600 pl-3 border-l border-transparent hover:text-gray-900">6. Vastu FAQs</a>
+            </nav>
+        </aside>
 
-        <section class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold maroon-accent font-title">2. Detailed Guide to the 16 Vastu Zones</h2>
-            <div class="space-y-4 text-sm text-gray-600">
-                <p><strong>1. North (N) - Water Element:</strong> Governed by Lord Kuber. Represents new professional opportunities, wealth flow, and career growth. A bathroom or fire element here causes immediate financial blocks. Remedy: Use blue color tape or install a zinc/brass helix.</p>
-                <p><strong>2. North-North-East (NNE):</strong> Zone of health and healing. Keep this zone light, clean, and free of heavy storage blocks. Placing medication here increases healing speeds.</p>
-                <p><strong>3. North-East (NE) - Water Element:</strong> Governed by Lord Shiva. Represents wisdom, mental clarity, and meditation. Cuts in the NE direction lead to persistent headaches and business stagnation. Remedy: Place an Amethyst geode cluster or Vastu Energy Pyramid.</p>
-                <p><strong>4. East-North-East (ENE):</strong> Zone of recreation and fun. An ideal space for family gathering rooms.</p>
-                <p><strong>5. East (E) - Air Element:</strong> Governed by Lord Indra. Represents social connectivity, networks, and political relations. Remedy: Use green color tape or place a raw green aventurine cluster.</p>
-                <p><strong>6. East-South-East (ESE):</strong> Zone of anxiety and analytical churn. Avoid placing bedrooms or offices here as it increases nervous tension.</p>
-                <p><strong>7. South-East (SE) - Fire Element:</strong> Governed by Lord Agni. Represents liquid cash flow, power, and security. A cut in the SE zone causes sudden financial drain. Remedy: Install copper helix coils, red color tape, or a red triangular spring.</p>
-                <p><strong>8. South-South-East (SSE):</strong> Zone of confidence and physical strength. Place raw red jasper blocks here to bolster courage.</p>
-                <p><strong>9. South (S) - Fire Element:</strong> Governed by Lord Yama. Represents relaxation, fame, and reputation. Keep this area heavy and warm.</p>
-                <p><strong>10. South-South-West (SSW):</strong> Zone of disposal and waste. This is the ideal and only correct direction for toilets and dustbins. Placing bedrooms here drains personal energy.</p>
-                <p><strong>11. South-West (SW) - Earth Element:</strong> Governed by Lord Nairrutya. Represents relationship stability, family bonds, and skill development. A cut here causes constant family disputes. Remedy: Place brass studs, yellow clockwise square springs, or a Rose Quartz crystal block.</p>
-                <p><strong>12. West-South-West (WSW):</strong> Zone of savings and academic focus. Excellent placement direction for children's study desks and savings vaults.</p>
-                <p><strong>13. West (W) - Space Element:</strong> Governed by Lord Varuna. Represents gains, profits, and commercial success. Remedy: Install heavy cast iron helix elements or yellow/white border tapes.</p>
-                <p><strong>14. West-North-West (WNW):</strong> Zone of depression and emotional release. Ideal placement for laundry machines.</p>
-                <p><strong>15. North-West (NW) - Air Element:</strong> Governed by Lord Vayu. Represents support, banking help, and smooth logistics. Ensure air vents are clean and active here.</p>
-                <p><strong>16. North-West-North (NNW):</strong> Zone of attraction and marital harmony. Place family photos here to promote deep connections.</p>
-            </div>
-        </section>
+        <!-- Main Articles -->
+        <div class="lg:w-3/4 space-y-12">
+            <!-- Section 1 -->
+            <section id="section-purusha" class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6 scroll-mt-24">
+                <h2 class="text-2xl font-bold maroon-accent font-title flex items-center"><i class="fas fa-cubes mr-3 text-[#D4AF37]"></i> 1. Introduction to the Vastu Purusha Mandala</h2>
+                <div class="text-gray-650 text-sm leading-relaxed space-y-4 font-sans font-light">
+                    <p>
+                        The concept of Vastu Shastra is rooted in the Vastu Purusha Mandala—the metaphysical planning grid representing the cosmic body of the Vastu Purusha, who was pinned down by the gods to bring order to empty space. Every building, room, and apartment block possesses this subtle energetic grid. When architectural coordinate structures align perfectly with the cardinal directions (North, East, South, West) and their intermediate zones, it enables cosmic energy (Prana) to rotate smoothly.
+                    </p>
+                    <p>
+                        When elements are blocked or positioned in conflicting zones (for example, placing a fire element like a stove in a water zone like the North-East), it creates structural tension. This handbook provides simple, non-destructive Vastu remedies to correct these imbalances.
+                    </p>
+                    <p>
+                        Historically, Vedic architects (Sthapatis) designed palaces, public temples, and residences using these core mathematical proportions (Ayadi Shadvarga formulas) to sync structural volumes with the owner's birth stars. By balancing the five elements (Pancha Bhootas: Earth, Water, Fire, Air, and Space), Vastu establishes a harmonious resonance between human biological rhythms and nature's planetary grid lines.
+                    </p>
+                </div>
+            </section>
 
-        <section class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold maroon-accent font-title">3. Floor Metal Strip Correction Method</h2>
-            <p class="text-gray-600 text-sm leading-relaxed">
-                The floor metal strip correction method is a modern application of traditional metallurgical Vastu. In antiquity, copper plates and iron bars were buried under structural stone foundations. For completed structures where concrete cannot be broken, we place custom 1-inch metal strips along the skirtings of tile floors.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                <strong>Copper Strips:</strong> Used exclusively in the South-East (SE) fire zones to balance kitchen placements or toilets located in wrong quadrants. Copper acts as an electrical ground, neutralizing toxic drainage currents.<br>
-                <strong>Brass Strips:</strong> Used in the South-West (SW) and South zones to add weight and Earth element qualities, stabilizing home entries.<br>
-                <strong>Iron/Steel Strips:</strong> Used in the West (W) to correct cuts in the profit zones.<br>
-                <strong>Aluminium/Zinc Strips:</strong> Installed in the North-East (NE) and North zones to restore water flow properties.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                By inserting these metal dividers directly into the concrete floor joins or tile boundaries, we introduce an energetic barrier. This barrier prevents the low-frequency energetic pull of bad bathroom quadrants or directional cuts from leaking into healthy living zones, establishing a localized grid reset.
-            </p>
-        </section>
+            <!-- Section 2 -->
+            <section id="section-16-zones" class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-8 scroll-mt-24">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold maroon-accent font-title flex items-center"><i class="fas fa-compass mr-3 text-[#D4AF37]"></i> 2. Detailed Guide to the 16 Vastu Zones</h2>
+                    <p class="text-gray-500 text-xs md:text-sm leading-relaxed font-sans font-light">Filter the zones below by element to see their elemental properties, planetary rulers, and recommended remedies.</p>
+                </div>
 
-        <section class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold maroon-accent font-title">4. Geopathic Stress & Radiation Correction</h2>
-            <p class="text-gray-600 text-sm leading-relaxed">
-                Geopathic stress arises from natural electromagnetic field disruptions caused by underground water lines, tectonic fault zones, and grid networks (Hartmann & Curry Grids). When a person sleeps or works directly over a geopathic line crossing point, it can lead to chronic fatigue, insomnia, headaches, and a gradual reduction of the body's immune boundaries.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                To identify these lines, Vastu consultants use copper dowsing rods or Lecher antennas. Once identified, geopathic stress lines are blocked using brass boundary rods, Shungite spheres, or copper coils positioned along coordinate threshold paths. Placing Selenite plates or Amethyst geodes on nightstands helps neutralize these subtle radiation nodes, restoring deep sleep cycles and positive health vibrations.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                In commercial buildings and warehouses, geopathic lines can cause constant mechanical failures, employee disputes, and inventory shrinkage. Installing structural zinc grids or heavy brass coils neutralizes these energetic faults, transforming low-vibration environments into thriving places of business success.
-            </p>
-        </section>
+                <!-- Element Tabs Filter -->
+                <div class="flex flex-wrap gap-2 border-b border-gray-100 pb-4">
+                    <button class="zone-filter-tab px-4 py-2 rounded-lg text-xs font-semibold border bg-[#6B0000] text-white border-[#6B0000] transition-colors" data-element="All">All Zones</button>
+                    <button class="zone-filter-tab px-4 py-2 rounded-lg text-xs font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-colors" data-element="Water">Water Element</button>
+                    <button class="zone-filter-tab px-4 py-2 rounded-lg text-xs font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-colors" data-element="Air">Air/Wood Element</button>
+                    <button class="zone-filter-tab px-4 py-2 rounded-lg text-xs font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-colors" data-element="Fire">Fire Element</button>
+                    <button class="zone-filter-tab px-4 py-2 rounded-lg text-xs font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-colors" data-element="Earth">Earth Element</button>
+                    <button class="zone-filter-tab px-4 py-2 rounded-lg text-xs font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-colors" data-element="Space">Space/Metal Element</button>
+                </div>
 
-        <section class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold maroon-accent font-title">5. Sacred Geometry & the Energy of Numbers</h2>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                Every numerical coordinate matches a geometric shape: 1 represents the point (Bindu), 2 represents the line, 3 represents the triangle, and 4 represents the square (the foundation of Vastu). By aligning your personal numerology Destiny Number with your Vastu home coordinates, you create a personalized spiritual circuit.
-            </p>
-            <p class="text-gray-600 text-sm leading-relaxed font-light">
-                For instance, if your Lucky Numerology Calculator reveals your Destiny Number is 3 (Jupiter), placing a yellow Vastu clockwise spring or a Citrine wealth tree in your North-East (Jupiter zone) will amplify your professional gains. This holistic connection between numbers, shapes, and directions is the ultimate secret of Vedic remediation, allowing you to manifest positive health, harmony, and material success.
-            </p>
-        </section>
-        <section class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold maroon-accent font-title">6. Frequently Asked Questions (FAQ)</h2>
-            <div class="space-y-4 text-sm text-gray-600">
-                <p><strong>Q1: What is the Vastu Purusha Mandala?</strong><br>
-                The Vastu Purusha Mandala is a metaphysical planning grid that represents the cosmic body of the Vastu Purusha, who was pinned down by the gods to bring order to empty space. Every building, room, and apartment block possesses this subtle energetic grid. When architectural coordinate structures align perfectly with the cardinal directions (North, East, South, West) and their intermediate zones, it enables cosmic energy (Prana) to rotate smoothly.</p>
+                <!-- Interactive Zones Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="zones-grid-container">
+                    <!-- Zone 1 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Water">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">1. North (N)</h4>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Water</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Kuber. Represents new professional opportunities, wealth flow, and career growth.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Avoid bathrooms or fire here. Use blue color tape or install a zinc/brass helix.</p>
+                    </div>
+                    <!-- Zone 2 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Water">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">2. North-North-East (NNE)</h4>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Water</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of health and healing. Supports biological strength and immune recovery fields.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Keep this zone light, clean, and free of heavy storage blocks. Place medication here to speed recovery.</p>
+                    </div>
+                    <!-- Zone 3 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Water">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">3. North-East (NE)</h4>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Water</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Shiva. Represents wisdom, mental clarity, and meditation.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Floor cuts cause headaches. Place an Amethyst geode cluster or Vastu Energy Pyramid.</p>
+                    </div>
+                    <!-- Zone 4 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Air">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">4. East-North-East (ENE)</h4>
+                            <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Air</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of recreation, mental rejuvenation, and family fun.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> An ideal direction for family gathering rooms, children's play areas, or green plant arrays.</p>
+                    </div>
+                    <!-- Zone 5 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Air">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">5. East (E)</h4>
+                            <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Air</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Indra. Represents social connectivity, professional networks, and outer relations.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Keep open. Use green color tape or place a raw green aventurine cluster to boost connections.</p>
+                    </div>
+                    <!-- Zone 6 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Air">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">6. East-South-East (ESE)</h4>
+                            <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Air</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of anxiety, analysis, and mental churn. Governs daily decisions.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Avoid placing bedrooms or main offices here as it increases nervous tension. Ideal for washing machines.</p>
+                    </div>
+                    <!-- Zone 7 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Fire">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">7. South-East (SE)</h4>
+                            <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Fire</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Agni. Represents liquid cash flow, power, inner drive, and security.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Cuts block wealth. Install copper helix coils, red color tape, or a red triangular spring.</p>
+                    </div>
+                    <!-- Zone 8 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Fire">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">8. South-South-East (SSE)</h4>
+                            <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Fire</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of confidence, assertiveness, and physical strength.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Keep active. Place raw red jasper blocks or copper studs here to bolster courage.</p>
+                    </div>
+                    <!-- Zone 9 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Fire">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">9. South (S)</h4>
+                            <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Fire</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Yama. Represents relaxation, fame, public reputation, and sleep quality.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Keep this area heavy, warm, and elevated. Excellent zone for master bedroom headboards.</p>
+                    </div>
+                    <!-- Zone 10 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Earth">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">10. South-South-West (SSW)</h4>
+                            <span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Earth</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of disposal, waste elimination, and drainage.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> The only correct spot for toilets. Avoid beds here as it drains health and vitality.</p>
+                    </div>
+                    <!-- Zone 11 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Earth">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">11. South-West (SW)</h4>
+                            <span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Earth</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Nairrutya. Represents relationship stability, family bonds, and skill mastery.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Cuts cause disputes. Place brass studs, yellow clockwise square springs, or a Rose Quartz block.</p>
+                    </div>
+                    <!-- Zone 12 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Space">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">12. West-South-West (WSW)</h4>
+                            <span class="bg-gray-100 text-gray-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Space</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of savings, academic focus, and knowledge storage.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Excellent placement direction for children's study desks, books, and savings vaults.</p>
+                    </div>
+                    <!-- Zone 13 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Space">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">13. West (W)</h4>
+                            <span class="bg-gray-100 text-gray-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Space</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Varuna. Represents gains, material profits, and commercial success.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Install heavy cast iron helix elements, raw white quartz, or yellow/white border tapes.</p>
+                    </div>
+                    <!-- Zone 14 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Space">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">14. West-North-West (WNW)</h4>
+                            <span class="bg-gray-100 text-gray-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Space</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of depression, emotional detox, and release of blocked feelings.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Ideal placement for laundry machines. Avoid sleeping here as it induces negative thoughts.</p>
+                    </div>
+                    <!-- Zone 15 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Air">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">15. North-West (NW)</h4>
+                            <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Air</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Governed by Lord Vayu. Represents support, banking help, smooth logistics, and legal partnerships.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Ensure air vents are clean and active. Correct with brass/copper studs near entrance fault lines.</p>
+                    </div>
+                    <!-- Zone 16 -->
+                    <div class="zone-card bg-[#FDFBF7]/40 rounded-xl p-5 border border-gray-200/50 space-y-3 font-sans" data-element="Water">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-gray-800 text-sm">16. North-West-North (NNW)</h4>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Water</span>
+                        </div>
+                        <p class="text-xs text-gray-550 leading-relaxed font-light"><strong>Governance & Meaning:</strong> Zone of attraction, marital harmony, and relationships.</p>
+                        <p class="text-xs text-[#6B0000] font-light"><strong>Remedy:</strong> Place family photos or couple figurines here to promote deep emotional connections.</p>
+                    </div>
+                </div>
+            </section>
 
-                <p><strong>Q2: Can we balance directions without breaking concrete floor sections?</strong><br>
-                Yes, classical metallurgical remedies use custom 1-inch metal strips positioned along floor skirtings or tile joints. Placing copper, brass, iron, or zinc dividers blocks the energy sink, correcting entrance cuts and toilet energy voids without any house demolition or reconstruction.</p>
+            <!-- Section 3 -->
+            <section id="section-metal-strip" class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6 scroll-mt-24">
+                <h2 class="text-2xl font-bold maroon-accent font-title flex items-center"><i class="fas fa-layer-group mr-3 text-[#D4AF37]"></i> 3. Floor Metal Strip Correction Method</h2>
+                <div class="text-gray-650 text-sm leading-relaxed space-y-4 font-sans font-light">
+                    <p>
+                        The floor metal strip correction method is a modern application of traditional metallurgical Vastu. In antiquity, copper plates and iron bars were buried under structural stone foundations. For completed structures where concrete cannot be broken, we place custom 1-inch metal strips along the skirtings of tile floors.
+                    </p>
+                    <p>
+                        <strong>Copper Strips:</strong> Used exclusively in the South-East (SE) fire zones to balance kitchen placements or toilets located in wrong quadrants. Copper acts as an electrical ground, neutralizing toxic drainage currents.<br>
+                        <strong>Brass Strips:</strong> Used in the South-West (SW) and South zones to add weight and Earth element qualities, stabilizing home entries.<br>
+                        <strong>Iron/Steel Strips:</strong> Used in the West (W) to correct cuts in the profit zones.<br>
+                        <strong>Aluminium/Zinc Strips:</strong> Installed in the North-East (NE) and North zones to restore water flow properties.
+                    </p>
+                    <p>
+                        By inserting these metal dividers directly into the concrete floor joins or tile boundaries, we introduce an energetic barrier. This barrier prevents the low-frequency energetic pull of bad bathroom quadrants or directional cuts from leaking into healthy living zones, establishing a localized grid reset.
+                    </p>
+                </div>
+            </section>
 
-                <p><strong>Q3: How do dowsing rods verify Vastu changes?</strong><br>
-                Vastu consultants use copper dowsing rods or Lecher antennas to measure electromagnetic fields (EMF) and ambient radiation. When a remedy like a copper helix or crystal pyramid is correctly placed, the dowsing rods will cross or swing open, indicating that the energetic void has been balanced and the local field has returned to a positive frequency.</p>
+            <!-- Section 4 -->
+            <section id="section-geopathic" class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6 scroll-mt-24">
+                <h2 class="text-2xl font-bold maroon-accent font-title flex items-center"><i class="fas fa-bezier-curve mr-3 text-[#D4AF37]"></i> 4. Geopathic Stress & Radiation Correction</h2>
+                <div class="text-gray-650 text-sm leading-relaxed space-y-4 font-sans font-light">
+                    <p>
+                        Geopathic stress arises from natural electromagnetic field disruptions caused by underground water lines, tectonic fault zones, and grid networks (Hartmann & Curry Grids). When a person sleeps or works directly over a geopathic line crossing point, it can lead to chronic fatigue, insomnia, headaches, and a gradual reduction of the body's immune boundaries.
+                    </p>
+                    <p>
+                        To identify these lines, Vastu consultants use copper dowsing rods or Lecher antennas. Once identified, geopathic stress lines are blocked using brass boundary rods, Shungite spheres, or copper coils positioned along coordinate threshold paths. Placing Selenite plates or Amethyst geodes on nightstands helps neutralize these subtle radiation nodes, restoring deep sleep cycles and positive health vibrations.
+                    </p>
+                    <p>
+                        In commercial buildings and warehouses, geopathic lines can cause constant mechanical failures, employee disputes, and inventory shrinkage. Installing structural zinc grids or heavy brass coils neutralizes these energetic faults, transforming low-vibration environments into thriving places of business success.
+                    </p>
+                </div>
+            </section>
 
-                <p><strong>Q4: Where should I place a Citrine wealth tree?</strong><br>
-                Position a Citrine Wealth Tree or geode cluster in the South-East corner (Fire and Wealth Zone) of your workplace or home office. This placement attracts consistent retail sales, clears accumulated business debt, and stimulates career opportunities.</p>
+            <!-- Section 5 -->
+            <section id="section-sacred-geometry" class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-6 scroll-mt-24">
+                <h2 class="text-2xl font-bold maroon-accent font-title flex items-center"><i class="fas fa-percentage mr-3 text-[#D4AF37]"></i> 5. Sacred Geometry & the Energy of Numbers</h2>
+                <div class="text-gray-650 text-sm leading-relaxed space-y-4 font-sans font-light">
+                    <p>
+                        Every numerical coordinate matches a geometric shape: 1 represents the point (Bindu), 2 represents the line, 3 represents the triangle, and 4 represents the square (the foundation of Vastu). By aligning your personal numerology Destiny Number with your Vastu home coordinates, you create a personalized spiritual circuit.
+                    </p>
+                    <p>
+                        For instance, if your Lucky Numerology Calculator reveals your Destiny Number is 3 (Jupiter), placing a yellow Vastu clockwise spring or a Citrine wealth tree in your North-East (Jupiter zone) will amplify your professional gains. This holistic connection between numbers, shapes, and directions is the ultimate secret of Vedic remediation, allowing you to manifest positive health, harmony, and material success.
+                    </p>
+                </div>
+            </section>
 
-                <p><strong>Q5: What is geopathic stress?</strong><br>
-                Geopathic stress arises from natural electromagnetic field disruptions caused by underground water lines, tectonic fault zones, and grid networks (Hartmann & Curry Grids). When a person sleeps or works directly over a geopathic line crossing point, it can lead to chronic fatigue, insomnia, headaches, and a gradual reduction of the body's immune boundaries.</p>
-
-                <p><strong>Q6: How do I clean and charge my Amethyst geodes?</strong><br>
-                To activate your Amethyst cluster or bracelet, submerge it in dry rock salt for 12 hours, then wash with cold spring water. Expose it to the full moon rays to charge its intuitive nodes. Meditate with it on your forehead to stimulate the crown center. It works as an energy filter, converting ambient worries into peaceful thoughts.</p>
-
-                <p><strong>Q7: What is the significance of the 16 Vastu zones?</strong><br>
-                The 16 Vastu zones represent distinct elemental frequencies of a building. Each zone governs a specific aspect of human life—from career opportunities in the North to relationship stability in the South-West. Aligning elements within these zones ensures overall household prosperity and health.</p>
-
-                <p><strong>Q8: What elements correct South-West entrance defects?</strong><br>
-                South-West entrance defects can cause relationship instability. Remedy this by placing brass studs, yellow clockwise square springs, or a Rose Quartz crystal block near the threshold.</p>
-
-                <p><strong>Q9: How do I identify genuine Ebony wood (Karungali)?</strong><br>
-                Authentic Karungali wood has a natural, deep dark brown to pitch-black color, a heavy weight, and sinks in water. Fake pieces are often lightweight, display artificial paint lines, and float.</p>
-
-                <p><strong>Q10: Can Vastu springs help restore element flows?</strong><br>
-                Yes, clockwise Vastu springs act as energy anchors. Yellow square springs represent the Earth element and correct South-West defects, while red triangular springs represent the Fire element and correct South-East cuts.</p>
-            </div>
-        </section>
+            <!-- Section 6 -->
+            <section id="section-faqs" class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-sm space-y-8 scroll-mt-24">
+                <h2 class="text-2xl font-bold maroon-accent font-title flex items-center"><i class="fas fa-question-circle mr-3 text-[#D4AF37]"></i> 6. Frequently Asked Questions (FAQ)</h2>
+                
+                <div class="space-y-4 font-sans text-sm">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>What is the Vastu Purusha Mandala?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            The Vastu Purusha Mandala is a metaphysical planning grid that represents the cosmic body of the Vastu Purusha, who was pinned down by the gods to bring order to empty space. Every building, room, and apartment block possesses this subtle energetic grid. When architectural coordinate structures align perfectly with the cardinal directions (North, East, South, West) and their intermediate zones, it enables cosmic energy (Prana) to rotate smoothly.
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>Can we balance directions without breaking concrete floor sections?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            Yes, classical metallurgical remedies use custom 1-inch metal strips positioned along floor skirtings or tile joints. Placing copper, brass, iron, or zinc dividers blocks the energy sink, correcting entrance cuts and toilet energy voids without any house demolition or reconstruction.
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>How do dowsing rods verify Vastu changes?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            Vastu consultants use copper dowsing rods or Lecher antennas to measure electromagnetic fields (EMF) and ambient radiation. When a remedy like a copper helix or crystal pyramid is correctly placed, the dowsing rods will cross or swing open, indicating that the energetic void has been balanced and the local field has returned to a positive frequency.
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>Where should I place a Citrine wealth tree?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            Position a Citrine Wealth Tree or geode cluster in the South-East corner (Fire and Wealth Zone) of your workplace or home office. This placement attracts consistent retail sales, clears accumulated business debt, and stimulates career opportunities.
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>What is geopathic stress?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            Geopathic stress arises from natural electromagnetic field disruptions caused by underground water lines, tectonic fault zones, and grid networks (Hartmann & Curry Grids). When a person sleeps or works directly over a geopathic line crossing point, it can lead to chronic fatigue, insomnia, headaches, and a gradual reduction of the body's immune boundaries.
+                        </div>
+                    </div>
+                    <!-- FAQ 6 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>How do I clean and charge my Amethyst geodes?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            To activate your Amethyst cluster or bracelet, submerge it in dry rock salt for 12 hours, then wash with cold spring water. Expose it to the full moon rays to charge its intuitive nodes. Meditate with it on your forehead to stimulate the crown center. It works as an energy filter, converting ambient worries into peaceful thoughts.
+                        </div>
+                    </div>
+                    <!-- FAQ 7 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>What is the significance of the 16 Vastu zones?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            The 16 Vastu zones represent distinct elemental frequencies of a building. Each zone governs a specific aspect of human life—from career opportunities in the North to relationship stability in the South-West. Aligning elements within these zones ensures overall household prosperity and health.
+                        </div>
+                    </div>
+                    <!-- FAQ 8 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>What elements correct South-West entrance defects?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            South-West entrance defects can cause relationship instability. Remedy this by placing brass studs, yellow clockwise square springs, or a Rose Quartz crystal block near the threshold.
+                        </div>
+                    </div>
+                    <!-- FAQ 9 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>How do I identify genuine Ebony wood (Karungali)?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            Authentic Karungali wood has a natural, deep dark brown to pitch-black color, a heavy weight, and sinks in water. Fake pieces are often lightweight, display artificial paint lines, and float.
+                        </div>
+                    </div>
+                    <!-- FAQ 10 -->
+                    <div class="border border-gray-200/50 rounded-xl overflow-hidden shadow-sm bg-[#FDFBF7]/30">
+                        <button class="faq-accordion-btn w-full p-5 text-left font-bold text-gray-800 hover:bg-[#FDFBF7]/80 flex justify-between items-center">
+                            <span>Can Vastu springs help restore element flows?</span>
+                            <i class="fas fa-chevron-down faq-icon text-xs text-gray-400"></i>
+                        </button>
+                        <div class="p-5 border-t border-gray-100 text-gray-550 leading-relaxed font-light hidden">
+                            Yes, clockwise Vastu springs act as energy anchors. Yellow square springs represent the Earth element and correct South-West defects, while red triangular springs represent the Fire element and correct South-East cuts.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-[#1C120C] text-[#FDFBF7] py-16 px-6 md:px-12 border-t-2 border-gold-accent">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
                 <h3 class="text-xl font-bold mb-6 tracking-wider header-logo">Magic of Numbers</h3>
-                <p class="text-gray-400 font-light leading-relaxed text-sm">Your premium retail platform for authentic Vastu remedies, energized crystals, and spiritual products.</p>
+                <p class="text-gray-400 font-light leading-relaxed text-sm font-sans">Your premium retail platform for authentic Vastu remedies, energized crystals, and spiritual products.</p>
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                     <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
-                    <li><a href="shop.html?category=Services" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
                     <li><a href="vastu-handbook.html" class="hover:text-white transition-colors">Vastu Handbook</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Customer Care</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="#" class="hover:text-white transition-colors">Secure Payment</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Easy Returns</a></li>
@@ -176,20 +467,21 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Get in Touch</h4>
-                <p class="text-gray-400 text-sm">Email: info@magicofnumbers.com</p>
-                <p class="text-gray-400 text-sm">Phone: +91 98765 43210</p>
-                <p class="text-gray-400 text-sm mt-4"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
+                <p class="text-gray-400 text-sm font-sans">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400 text-sm font-sans">Phone: +91 98765 43210</p>
+                <p class="text-gray-400 text-sm mt-4 font-sans"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
-            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
-            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
-        </div>
+        <div class="border-t border-gray-850 mt-12 pt-6">
+            <div class="text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4 font-sans">
+                <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebony wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+                <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/products.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=1.0.1"></script>
+    <script src="js/products.js?v=1.0.1"></script>
+    <script src="js/vastu-handbook.js?v=1.0.1"></script>
 </body>
 </html>

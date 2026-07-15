@@ -313,22 +313,40 @@ h1, h2, h3, h4, h5, h6, .font-title {
 /* High Contrast & Visibility Overrides for Maximum Readability */
 body {
     font-weight: 500;
-    color: #2C1E14 !important;
+    color: #2C1E14;
 }
 p, span, li, a {
     color: #3D2B1F;
 }
-.text-gray-600, .text-gray-500 {
+
+/* High-contrast colors for text on light backgrounds */
+.text-gray-500, .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-650, .text-gray-655, .text-gray-750, .text-gray-755, .text-gray-505 {
     color: #2C1E14 !important;
-    font-weight: 500 !important;
 }
 .text-gray-400 {
     color: #4A3525 !important;
 }
+
+/* Headings contrast defaults */
 h1, h2, h3, h4, h5, h6 {
-    color: #6B0000 !important;
-    font-weight: 700 !important;
+    color: #6B0000;
+    font-weight: 700;
 }
+
+/* Headings and text inside dark wrappers must remain white/cream */
+.bg-gradient-to-r h1, .bg-gradient-to-r h2, .bg-gradient-to-r h3,
+.bg-gradient-to-br h1, .bg-gradient-to-br h2, .bg-gradient-to-br h3,
+footer h1, footer h2, footer h3, footer h4,
+.bg-[#1C120C] h1, .bg-[#1C120C] h2, .bg-[#1C120C] h3, .bg-[#1C120C] h4,
+.bg-[#1C120C] p, .bg-[#1C120C] span, .bg-[#1C120C] li, .bg-[#1C120C] a,
+footer p, footer span, footer li, footer a,
+.bg-gradient-to-r p, .bg-gradient-to-r span, .bg-gradient-to-r li,
+.bg-gradient-to-br p, .bg-gradient-to-br span, .bg-gradient-to-br li,
+.bg-gradient-to-r .text-gray-300, .bg-gradient-to-br .text-gray-300, footer .text-gray-400,
+.bg-gradient-to-r .text-gray-200, .bg-gradient-to-br .text-gray-200 {
+    color: #EAE3D2 !important;
+}
+
 input, select, textarea {
     color: #2C1E14 !important;
     font-weight: 500 !important;

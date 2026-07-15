@@ -13,13 +13,13 @@
 </head>
 <body class="sacred-grid-bg bg-[#FDFBF7] text-[#2C1E14] font-lora antialiased selection:bg-[#6B0000] selection:text-white">
 
-    <header class="sticky-header py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
+    <header class="sticky-header backdrop-blur-xl bg-white/70 shadow-sm py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200/50 transition-all duration-300" id="main-header">
         <div class="flex items-center space-x-4">
             <div class="text-2xl font-bold tracking-tight header-logo cursor-pointer" onclick="window.location.href='index.html'">Magic of Numbers</div>
-                        <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
+            <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
                 <a href="index.html" class="hover:nav-link transition-colors">Home</a>
                 <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
-                <a href="shop.html?category=Services" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
+                <a href="services.html" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
                 <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
                 <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
                 <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
@@ -27,21 +27,43 @@
                 <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
                 <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
             </nav>
+            <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
+                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
+                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
+                <a href="services.html" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
+                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
+                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
+                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
+                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
+                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
+                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
+            </div>
         </div>
         <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <form action="shop.html" method="GET" class="m-0 p-0">
+                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
+                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
             <a href="cart.html" class="relative cursor-pointer group">
                 <i class="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-[#6B0000] transition-colors"></i>
                 <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
             </a>
+            
+            <div class="md:hidden cursor-pointer">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto py-16 px-6 md:px-12">
-        <div class="h-64 rounded-2xl overflow-hidden mb-12 shadow-sm border border-gray-200/50">
-            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=800&h=300&fit=crop" alt="Numerology Sacred Geometry" class="w-full h-full object-cover">
+        <div class="h-48 md:h-72 rounded-2xl overflow-hidden mb-12 shadow-sm border border-gray-200/50 relative">
+            <img src="images/sacred_numerology_banner.png" alt="Numerology Sacred Geometry" class="w-full h-full object-cover object-center">
         </div>
         <h1 class="text-3xl md:text-5xl font-bold maroon-accent tracking-wide mb-2 text-center">Lucky Calculator</h1>
-        <p class="text-center text-gray-500 text-sm italic font-light mb-4">Discover your destiny path and recommended planetary remedies based on Vedic numerology.</p>
+        <p class="text-center text-gray-500 text-sm max-w-lg mx-auto font-light leading-relaxed mb-4">Discover your destiny path and recommended planetary remedies based on Vedic numerology.</p>
         <div class="traditional-divider-dot mb-12"></div>
 
         <!-- Calculator Tabs -->
@@ -55,16 +77,16 @@
         </div>
 
         <!-- Main Form Card -->
-        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 shadow-md mandala-frame max-w-xl mx-auto mb-16">
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 shadow-md mandala-frame max-w-xl mx-auto mb-16" id="calculator-card">
             <form id="calculator-form" onsubmit="calculateRemedy(event)">
                 <div class="space-y-6">
                     <div>
                         <label for="calc-name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                        <input type="text" id="calc-name" class="w-full px-4 py-3 bg-[#FDFBF7]/80 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B0000] text-gray-800" placeholder="Enter your name" required>
+                        <input type="text" id="calc-name" class="w-full px-4 py-3 bg-[#FDFBF7]/80 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B0000] text-gray-800 text-sm font-sans" placeholder="Enter your name" required>
                     </div>
                     <div>
                         <label for="calc-dob" class="block text-sm font-semibold text-gray-700 mb-2">Date of Birth</label>
-                        <input type="date" id="calc-dob" class="w-full px-4 py-3 bg-[#FDFBF7]/80 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B0000] text-gray-800" required>
+                        <input type="date" id="calc-dob" class="w-full px-4 py-3 bg-[#FDFBF7]/80 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B0000] text-gray-800 text-sm font-sans" required>
                     </div>
                     
                     <button type="submit" class="btn-primary w-full py-4 rounded-xl text-base font-bold shadow-md">
@@ -72,6 +94,18 @@
                     </button>
                 </div>
             </form>
+        </div>
+
+        <!-- Cosmic Loading State (Hidden initially) -->
+        <div id="calculator-loading" class="hidden text-center py-16 bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/50 max-w-xl mx-auto shadow-md space-y-6 mb-16">
+            <div class="relative w-20 h-20 mx-auto">
+                <div class="absolute inset-0 bg-[#D4AF37] rounded-full opacity-20 animate-ping"></div>
+                <div class="w-20 h-20 rounded-full border-4 border-t-[#6B0000] border-r-[#D4AF37] border-b-[#6B0000] border-l-[#D4AF37] animate-spin flex items-center justify-center">
+                    <i class="fas fa-compass text-2xl text-[#6B0000]"></i>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 font-sans">Chanting Planetary Mantras...</h3>
+            <p class="text-sm text-gray-500 max-w-xs mx-auto font-light font-sans">Consulting coordinate charts and cosmic grids to align your destiny numbers.</p>
         </div>
 
         <!-- Result Container (Hidden initially) -->
@@ -82,10 +116,25 @@
                 <div class="w-20 h-20 bg-gradient-to-tr from-[#6B0000] to-[#990000] text-white text-4xl font-extrabold flex items-center justify-center rounded-full mx-auto shadow-md mb-6" id="result-destiny-num">
                     --
                 </div>
-                <div class="space-y-2">
+                <div class="space-y-4">
                     <p class="text-gray-800 font-semibold" id="result-ruling-planet">Ruling Planet: --</p>
-                    <div class="text-left bg-[#FDFBF7] p-6 rounded-xl border border-gray-100 space-y-6 text-sm text-gray-700 leading-relaxed overflow-y-auto max-h-96" id="result-reading-box">
-                        <!-- Massive programmatic reading renders here -->
+                    
+                    <!-- Reading Interactive Tabs -->
+                    <div class="flex flex-wrap gap-1.5 border-b border-gray-100 pb-3 font-sans" id="reading-tabs-bar">
+                        <button class="reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-[#6B0000] text-white border-[#6B0000] transition-all" data-tab="personality">Personality</button>
+                        <button class="reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-all" data-tab="finance">Career & Wealth</button>
+                        <button class="reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-all" data-tab="health">Health & Vitality</button>
+                        <button class="reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-all" data-tab="relations">Relationships</button>
+                        <button class="reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-all" data-tab="routine">Vedic Routine</button>
+                    </div>
+
+                    <!-- Reading Content Display Box -->
+                    <div class="text-left bg-[#FDFBF7] p-6 rounded-xl border border-gray-100 text-sm text-gray-700 leading-relaxed font-sans font-light overflow-y-auto max-h-96" id="result-reading-box">
+                        <div id="tab-content-personality" class="reading-tab-content space-y-4"></div>
+                        <div id="tab-content-finance" class="reading-tab-content space-y-4 hidden"></div>
+                        <div id="tab-content-health" class="reading-tab-content space-y-4 hidden"></div>
+                        <div id="tab-content-relations" class="reading-tab-content space-y-4 hidden"></div>
+                        <div id="tab-content-routine" class="reading-tab-content space-y-4 hidden"></div>
                     </div>
                 </div>
             </div>
@@ -94,20 +143,25 @@
             <div class="bg-white rounded-2xl p-8 border border-gray-200/50 shadow-md">
                 <h3 class="text-xl font-bold maroon-accent font-title mb-6 text-center">Recommended Remedy for You</h3>
                 
-                <div class="flex flex-col sm:flex-row gap-6 items-center">
-                    <div class="w-32 h-32 rounded-lg bg-gray-50 border p-2 flex-shrink-0">
-                        <img src="" alt="Recommended Remedy" class="w-full h-full object-contain" id="rec-image">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-36 h-36 rounded-2xl bg-[#FDFBF7] border border-gray-100 p-3 flex-shrink-0 shadow-inner flex items-center justify-center">
+                        <img src="" alt="Recommended Remedy" class="w-full h-full object-contain rounded-xl" id="rec-image">
                     </div>
-                    <div class="flex-1 text-center sm:text-left">
-                        <span class="bg-[#FF9933]/10 text-[#FF9933] text-xs font-semibold px-2 py-1 rounded" id="rec-category">Category</span>
-                        <h4 class="text-xl font-bold text-gray-800 mt-2 mb-2" id="rec-title">Product Name</h4>
-                        <p class="text-sm text-gray-500 mb-4" id="rec-desc">...</p>
+                    <div class="flex-1 text-center md:text-left space-y-3 font-sans">
+                        <span class="bg-[#FF9933]/10 text-[#FF9933] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider" id="rec-category">Category</span>
+                        <h4 class="text-xl font-bold text-gray-800 leading-snug" id="rec-title">Product Name</h4>
+                        <p class="text-sm text-gray-550 leading-relaxed font-light" id="rec-desc">...</p>
                         
-                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
                             <span class="text-2xl font-bold gold-accent" id="rec-price">₹0</span>
-                            <a href="" class="btn-primary px-6 py-2.5 rounded-lg text-sm font-bold inline-block shadow-sm" id="rec-link">
-                                View Details <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                            </a>
+                            <div class="flex w-full sm:w-auto gap-3">
+                                <a href="" class="btn-secondary px-5 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center transition-all border border-gray-300 hover:bg-gray-50" id="rec-link">
+                                    View Details
+                                </a>
+                                <button onclick="addRecommendedToCart()" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 shadow-md flex-1 sm:flex-initial">
+                                    <i class="fas fa-shopping-cart text-[10px]"></i> <span>Add to Cart</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,11 +173,11 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
                 <h3 class="text-xl font-bold mb-6 tracking-wider header-logo">Magic of Numbers</h3>
-                <p class="text-gray-400 font-light leading-relaxed text-sm">Your premium retail platform for authentic Vastu remedies, energized crystals, and spiritual products.</p>
+                <p class="text-gray-400 font-light leading-relaxed text-sm font-sans">Your premium retail platform for authentic Vastu remedies, energized crystals, and spiritual products.</p>
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                     <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
                     <li><a href="shop.html?category=Bracelets" class="hover:text-white transition-colors">Bracelets</a></li>
@@ -132,7 +186,7 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Customer Care</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="#" class="hover:text-white transition-colors">Secure Payment</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Easy Returns</a></li>
@@ -141,23 +195,24 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Get in Touch</h4>
-                <p class="text-gray-400 text-sm">Email: info@magicofnumbers.com</p>
-                <p class="text-gray-400 text-sm">Phone: +91 98765 43210</p>
-                <p class="text-gray-400 text-sm mt-4"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
+                <p class="text-gray-400 text-sm font-sans">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400 text-sm font-sans">Phone: +91 98765 43210</p>
+                <p class="text-gray-400 text-sm mt-4 font-sans"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
-            <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebomy wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
-            <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
-        </div>
+        <div class="border-t border-gray-850 mt-12 pt-6">
+            <div class="text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4 font-sans">
+                <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebony wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+                <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/products.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/products.js?v=1.0.1"></script>
+    <script src="js/script.js?v=1.0.1"></script>
     <script>
         let currentMode = 'rudraksha'; // 'rudraksha' or 'bracelet'
+        let activeRecommendedProduct = null;
 
         function switchCalculator(mode) {
             currentMode = mode;
@@ -181,6 +236,14 @@
             const name = document.getElementById('calc-name').value;
             if (!dob) return;
 
+            // Hide previous results & show cosmic loading
+            document.getElementById('result-container').classList.add('hidden');
+            document.getElementById('calculator-card').classList.add('hidden');
+            
+            const loading = document.getElementById('calculator-loading');
+            loading.classList.remove('hidden');
+            loading.scrollIntoView({ behavior: 'smooth' });
+
             const digits = dob.replace(/[^0-9]/g, '');
             let sum = 0;
             for (let char of digits) {
@@ -196,7 +259,13 @@
             }
 
             const destinyNum = sum;
-            displayResults(destinyNum, name);
+
+            // Introduce 1.5s delay to simulate calculation/Vedic grids scan
+            setTimeout(() => {
+                loading.classList.add('hidden');
+                document.getElementById('calculator-card').classList.remove('hidden');
+                displayResults(destinyNum, name);
+            }, 1500);
         }
 
         // Helper to programmatically output high word-count Vedic profiles for each number
@@ -207,47 +276,40 @@
             };
             const planet = planet_names[num];
             
-            let html = `
-                <p class="font-semibold text-base mb-2">Namaste ${name},</p>
-                <p>Welcome to your comprehensive Vedic Numerology Profile for <strong>Destiny Number ${num}</strong>, governed by the cosmic forces of the planet <strong>${planet}</strong>. Below is your complete detailed life path analysis spanning personality, wellness, finances, relationships, and remedies.</p>
-                
-                <h4 class="font-bold maroon-accent mt-4">1. Core Personality & Astrological Blueprint</h4>
-                <p>Individuals possessing Destiny Number ${num} are under the direct influence of the planetary grid of ${planet}. Under Vedic cosmology, this specific planetary vibration configures the subtle energy bodies (Koshas) at birth. Your auric boundary matches this coordinate layout, granting you unique structural traits. You hold a natural resonance with authority, leadership, and analytical thinking, allowing you to resolve complex disputes effortlessly. However, when this frequency is blocked by negative alignments, you may experience impatience, pride, or a sudden lack of focus.</p>
+            const personality = `
+                <p class="font-bold text-gray-800 text-base mb-2">Namaste ${name},</p>
+                <p>Welcome to your personality profile for <strong>Destiny Number ${num}</strong>, governed by the cosmic forces of <strong>${planet}</strong>.</p>
+                <p>Individuals possessing Destiny Number ${num} are under the direct influence of the planetary grid of ${planet}. Under Vedic cosmology, this planetary vibration configures the subtle energy bodies (Koshas) at birth. Your auric boundary matches this layout, granting you unique structural traits. You hold a natural resonance with authority, leadership, and analytical thinking, allowing you to resolve complex disputes. When this frequency is blocked by negative alignments, you may experience impatience, pride, or a sudden lack of focus.</p>
                 <p>Historically, Vedic texts like the Brihat Samhita describe this specific path as one of deep karmic tests. The soul's primary trajectory in this incarnation is to balance power with humility, learning to channel cosmic insights into earthly productivity.</p>
-                
-                <h4 class="font-bold maroon-accent mt-4">2. Professional Destiny & Finance Abundance</h4>
-                <p>In terms of career and money flow, your Destiny Number points toward professional leadership. You operate best in roles that require strategic decision-making, creative independence, or specialized advisory expertise. You have an inherent ability to detect structural flaws in projects or commercial plans, making you an exceptional Vastu expert, financial consultant, or entrepreneur.</p>
-                <p>To avoid recurring blocks in cash flow, it is advised to never start major projects or sign legal agreements on days that clash with your destiny frequency. Keeping a Kuber Yantra or Citrine cluster in your South-East zone activates the wealth channels associated with ${planet}.</p>
-                
-                <h4 class="font-bold maroon-accent mt-4">3. Health Guidelines & Physical Vitality</h4>
+            `;
+
+            const finance = `
+                <p>In terms of career and money flow, your Destiny Number points toward professional leadership and strategic decisions. You operate best in roles that require strategic decision-making, creative independence, or specialized advisory expertise. You have an inherent ability to detect structural flaws in projects or plans, making you an exceptional Vastu expert, financial consultant, or entrepreneur.</p>
+                <p>To avoid recurring blocks in cash flow, it is advised to never start major projects or sign legal agreements on days that clash with your destiny frequency. Keeping a Kuber Yantra or Citrine wealth tree in your South-East zone activates the wealth channels associated with ${planet}.</p>
+            `;
+
+            const health = `
                 <p>Vedic medicine (Ayurveda) teaches that each planet governs specific physical systems in the body. For Destiny Number ${num}, special care must be taken regarding digestive fire (Agni) and blood circulation. Emotional stress easily translates into physical acidity or pressure cuts. Maintain a daily routine consisting of fresh herbs, cooling spices, and mindful breathing exercises (Pranayama).</p>
                 <p>We advise avoiding heavy, processed foods during sunset hours. Integrate copper-infused water (stored overnight in a copper vessel) to regulate metabolic paths.</p>
-                
-                <h4 class="font-bold maroon-accent mt-4">4. Relationship Harmony & Cosmic Compatibility</h4>
+            `;
+
+            const relations = `
                 <p>Your relationship grid is highly active, seeking deep intellectual partnerships rather than simple superficial matches. You require a partner who respects your boundaries, understands your passion for growth, and acts as a calming anchor when your planetary energies surge. You share excellent spiritual compatibility with individuals whose destiny numbers are 1, 3, and 5. Avoid entering into intense arguments during Saturn planetary shifts.</p>
-                
-                <h4 class="font-bold maroon-accent mt-4">5. Complete Daily Vedic Activation Routine</h4>
+            `;
+
+            const routine = `
                 <p>To manifest the highest potential of your ruling planet, establish this morning ritual:
-                    <ul class="list-disc list-inside space-y-1 ml-4 mt-2">
+                    <ul class="list-disc list-inside space-y-1.5 ml-2 mt-2 font-light">
                         <li>Wake up during the Brahma Muhurta (4:00 AM - 5:30 AM).</li>
                         <li>Wash your face with cold water, rinse your eyes, and sit facing East.</li>
                         <li>Light a brass ghee lamp and chant the Gayatri Mantra or planetary mantra 108 times.</li>
                         <li>Hold your recommended energized talisman in your right hand to transfer your intention.</li>
                     </ul>
                 </p>
-                <p>By practicing this daily alignment, you cleanse your bio-electric field, strengthen your aura, and welcome continuous luck into your household.</p>
+                <p class="mt-4">By practicing this daily alignment, you cleanse your bio-electric field, strengthen your aura, and welcome continuous luck into your household.</p>
             `;
-            
-            // To ensure we get a massive word count per profile (~1,500 words), we'll append large, detailed educational paragraphs dynamically
-            for (let i = 0; i < 5; i++) {
-                html += `
-                    <h4 class="font-bold maroon-accent mt-4">6. Deep Dive Vedic Appendix (Volume ${i + 1})</h4>
-                    <p>The cosmic resonance of ${planet} is not limited to name digits; it exists in the geometric structures of temples, the crystal lattice of stones, and the frequency of mantras. Modern quantum physics is beginning to observe what Vedic rishis documented thousands of years ago: that solid matter is primarily condensed vibration. When you wear a gemstone like a certified crystal or a Nepalese Rudraksha bead, you are placing an energetic lens over your skin. This lens filters the ambient planetary noise, focusing only the purest rays into your energy channels (Nadis).</p>
-                    <p>If you are experiencing a transition phase, you must focus on clearing the subconscious blockages that hinder your progress. Dedicate 20 minutes daily to quiet visualization. Imagine the light of the Sun or Moon clearing your chakras from the root to the crown. Keep your surroundings clean, sweep your home thresholds daily, and place Vastu metal strips to prevent energy drains. This continuous care creates a high-vibrational sanctuary where abundance and health flourish naturally.</p>
-                `;
-            }
-            
-            return html;
+
+            return { personality, finance, health, relations, routine };
         }
 
         const planetMetadata = {
@@ -262,15 +324,57 @@
             9: { planet: "Mars (Mangal)", lord: "Lord Hanuman" }
         };
 
+        let profileData = {};
+
+        function switchReadingTab(tabId) {
+            const tabs = document.querySelectorAll('.reading-tab');
+            const contents = document.querySelectorAll('.reading-tab-content');
+            
+            tabs.forEach(tab => {
+                if (tab.dataset.tab === tabId) {
+                    tab.className = "reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-[#6B0000] text-white border-[#6B0000] transition-all";
+                } else {
+                    tab.className = "reading-tab px-3 py-1.5 rounded-lg text-[11px] font-semibold border bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transition-all";
+                }
+            });
+
+            // Set content in target tab container
+            const targetContainer = document.getElementById(`tab-content-${tabId}`);
+            if (targetContainer) {
+                targetContainer.innerHTML = profileData[tabId] || '';
+            }
+
+            contents.forEach(content => {
+                if (content.id === `tab-content-${tabId}`) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        function addRecommendedToCart() {
+            if (activeRecommendedProduct) {
+                addToCart(
+                    activeRecommendedProduct.name, 
+                    activeRecommendedProduct.price, 
+                    activeRecommendedProduct.image, 
+                    activeRecommendedProduct.link
+                );
+            }
+        }
+
         function displayResults(num, name) {
             const data = planetMetadata[num];
             
             document.getElementById('result-destiny-num').innerText = num;
             document.getElementById('result-ruling-planet').innerText = `Ruling Planet: ${data.planet} (Divine Protector: ${data.lord})`;
             
-            // Generate massive 1,500+ word profile
-            const readingBox = document.getElementById('result-reading-box');
-            readingBox.innerHTML = getVedicProfile(num, name);
+            // Generate profile tabs content
+            profileData = getVedicProfile(num, name);
+            
+            // Set initial tab (personality)
+            switchReadingTab('personality');
 
             // Pick recommended products based on the database
             let recProduct = null;
@@ -294,6 +398,8 @@
                 }
             }
 
+            activeRecommendedProduct = recProduct;
+
             if (recProduct) {
                 document.getElementById('rec-title').innerText = recProduct.name;
                 document.getElementById('rec-desc').innerText = recProduct.description;
@@ -307,6 +413,16 @@
             container.classList.remove('hidden');
             container.scrollIntoView({ behavior: 'smooth' });
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Bind tab click events
+            const tabs = document.querySelectorAll('.reading-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    switchReadingTab(tab.dataset.tab);
+                });
+            });
+        });
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - Magic of Numbers</title>
+    <title>Blog Post - Magic of Numbers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -58,69 +58,47 @@
         </div>
     </header>
 
-    <section class="text-center py-3 px-6 md:px-12 relative z-40 bg-[#6B0000]" id="flash-banner">
-        <p class="text-xs font-semibold tracking-wide text-white">🔥 DIRECT ORDER: WhatsApp to place orders directly & get Free Shipping on all orders! 🔥</p>
-        <button class="absolute top-2 right-4 text-white/70 hover:text-white transition-colors" id="close-banner">✕</button>
-    </section>
-
-    <section class="py-16 px-6 md:px-12 bg-gray-50/50">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-3xl md:text-4xl font-bold text-center maroon-accent font-semibold tracking-wide mb-12">Shop Our Collection</h1>
-            <div class="flex flex-col md:flex-row gap-8">
-                <!-- Filters Sidebar -->
-                <div class="md:w-1/4 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-24">
-                    <h3 class="text-xl font-bold maroon-accent font-semibold tracking-wide mb-6 pb-4 border-b border-gray-100">Filters</h3>
-                    <div class="space-y-8">
-                        <div>
-                            <label class="block text-base font-semibold text-gray-800 mb-4">Category</label>
-                            <ul class="space-y-3" id="category-filter-list">
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="All Categories">All Categories</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Bracelets">Bracelets</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Crystals">Crystals</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Yantras">Yantras</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Rudraksha">Rudraksha</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu">Vastu Remedies</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu Helix">Vastu Helix</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu Springs">Vastu Springs</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Vastu Studs">Vastu Studs</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Pendants">Pendants</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Rings">Rings</button></li>
-                                <li><button class="text-left w-full text-gray-600 hover:text-[#D4AF37] font-medium transition-colors category-btn" data-category="Services">Consultations & Services</button></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <label class="block text-base font-semibold text-gray-800 mb-4">Price Range</label>
-                            <div class="flex items-center space-x-3 mb-4">
-                                <input type="number" id="min-price" placeholder="Min ₹" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:bg-white transition-all text-sm">
-                                <span class="text-gray-400">-</span>
-                                <input type="number" id="max-price" placeholder="Max ₹" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:bg-white transition-all text-sm">
-                            </div>
-                            <button id="apply-price-filter" class="w-full btn-primary w-full py-2.5 shadow-sm text-sm">Apply Filter</button>
-                            <button id="clear-price-filter" class="w-full bg-white text-gray-500 font-medium py-2 rounded-lg hover:text-gray-800 transition-colors mt-2 text-sm hidden">Clear Price Filter</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Grid Area -->
-                <div class="md:w-3/4">
-                    <!-- Search query display banner -->
-                    <div id="search-query-display" class="mb-6 flex items-center justify-between bg-yellow-50 border border-yellow-200/50 rounded-xl p-4 hidden shadow-sm">
-                        <span class="text-sm text-yellow-800">Showing results for: <strong id="search-query-text">""</strong></span>
-                        <button id="clear-search-btn" class="text-xs text-yellow-700 underline font-semibold hover:text-yellow-900 transition-colors">Clear Search</button>
-                    </div>
-
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 product-grid" id="shop-product-grid">
-                        <!-- Products will be dynamically injected here by shop-render.js -->
-                    </div>
-                    
-                    <!-- Dynamic Pagination Container -->
-                    <div class="flex justify-center items-center space-x-2 mt-12" id="pagination-container">
-                        <!-- Rendered by JavaScript -->
-                    </div>
-                </div>
+    <!-- Blog Header Banner -->
+    <section class="max-w-4xl mx-auto pt-12 pb-6 px-6" id="blog-header-section">
+        <button onclick="window.location.href='blog.html'" class="text-xs font-semibold text-gray-500 hover:text-[#6B0000] flex items-center mb-6 font-sans">
+            <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+        </button>
+        <div class="space-y-4" id="post-meta-container">
+            <span class="bg-[#FF9933]/10 text-[#FF9933] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider font-sans" id="post-category">Category</span>
+            <h1 class="text-3xl md:text-5xl font-bold maroon-accent font-title leading-tight" id="post-title">Loading Article...</h1>
+            <div class="flex items-center text-xs text-gray-400 font-sans border-b border-gray-150 pb-6 pt-2">
+                <span class="font-semibold text-gray-600 flex items-center mr-6"><i class="fas fa-feather-alt mr-2 text-[#D4AF37]"></i> By <span id="post-author">Magic of Numbers</span></span>
+                <span id="post-date">July 14, 2026</span>
             </div>
         </div>
     </section>
 
+    <!-- Main Content Body -->
+    <main class="max-w-4xl mx-auto pb-24 px-6">
+        <!-- Post Cover Image -->
+        <div class="h-64 md:h-[400px] rounded-3xl overflow-hidden shadow-md border border-gray-250 mb-12" id="cover-image-container">
+            <img src="" alt="Post Cover" class="w-full h-full object-cover" id="post-cover">
+        </div>
+
+        <!-- Text and Inline Photos container -->
+        <article class="max-w-3xl mx-auto space-y-8 text-sm md:text-base text-gray-700 leading-relaxed font-sans font-light" id="post-body">
+            <!-- Article introduction -->
+            <p id="post-intro" class="text-base md:text-lg text-gray-800 leading-relaxed font-lora italic font-normal mb-8"></p>
+            
+            <!-- Dynamic Sections with Inline Images will inject here -->
+            <div id="post-sections" class="space-y-8"></div>
+        </article>
+    </main>
+
+    <!-- Error State Display (Hidden initially) -->
+    <div id="error-container" class="hidden text-center py-24 max-w-md mx-auto space-y-6">
+        <i class="fas fa-exclamation-triangle text-4xl text-red-500"></i>
+        <h2 class="text-2xl font-bold text-gray-800 font-title">Article Not Found</h2>
+        <p class="text-sm text-gray-500 font-sans font-light">The requested blog post could not be loaded. Please return to the blog feed.</p>
+        <button onclick="window.location.href='blog.html'" class="btn-primary px-6 py-2.5 rounded-xl font-bold text-sm shadow-md font-sans">Return to Blog</button>
+    </div>
+
+    <!-- Footer -->
     <footer class="bg-[#1C120C] text-[#FDFBF7] py-16 px-6 md:px-12 border-t-2 border-gold-accent">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
@@ -129,16 +107,16 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                     <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
-                    <li><a href="shop.html?category=Bracelets" class="hover:text-white transition-colors">Bracelets</a></li>
-                    <li><a href="shop.html?category=Rudraksha" class="hover:text-white transition-colors">Rudraksha</a></li>
+                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="vastu-handbook.html" class="hover:text-white transition-colors">Vastu Handbook</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Customer Care</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <ul class="space-y-2 text-sm text-gray-400 font-sans">
                     <li><a href="#" class="hover:text-white transition-colors">Secure Payment</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Easy Returns</a></li>
@@ -147,21 +125,82 @@
             </div>
             <div>
                 <h4 class="text-md font-semibold mb-4 maroon-accent font-title">Get in Touch</h4>
-                <p class="text-gray-400 text-sm">Email: info@magicofnumbers.com</p>
-                <p class="text-gray-400 text-sm">Phone: +91 98765 43210</p>
-                <p class="text-gray-400 text-sm mt-4"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
+                <p class="text-gray-400 text-sm font-sans">Email: info@magicofnumbers.com</p>
+                <p class="text-gray-400 text-sm font-sans">Phone: +91 98765 43210</p>
+                <p class="text-gray-400 text-sm mt-4 font-sans"><i class="fab fa-whatsapp text-green-500 mr-2 text-base"></i> WhatsApp Support available 24/7</p>
             </div>
         </div>
         <div class="border-t border-gray-850 mt-12 pt-6">
-            <div class="text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4">
+            <div class="text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4 font-sans">
                 <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebony wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
                 <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js?v=1.0.1"></script>
+    <script src="js/blog-posts.js?v=1.0.1"></script>
     <script src="js/products.js?v=1.0.1"></script>
-    <script src="js/shop-render.js?v=1.0.1"></script>
+    <script src="js/script.js?v=1.0.1"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const postId = parseInt(params.get('id'));
+            
+            if (!postId || typeof blogPostsData === 'undefined') {
+                showErrorState();
+                return;
+            }
+            
+            const post = blogPostsData.find(p => p.id === postId);
+            if (!post) {
+                showErrorState();
+                return;
+            }
+            
+            renderPost(post);
+        });
+
+        function showErrorState() {
+            document.getElementById('blog-header-section').classList.add('hidden');
+            document.querySelector('main').classList.add('hidden');
+            document.getElementById('error-container').classList.remove('hidden');
+        }
+
+        function renderPost(post) {
+            // Set basic meta fields
+            document.getElementById('post-category').innerText = post.category;
+            document.getElementById('post-title').innerText = post.title;
+            document.getElementById('post-author').innerText = post.author;
+            document.getElementById('post-date').innerText = post.date;
+            document.getElementById('post-cover').src = post.coverImage;
+            document.getElementById('post-intro').innerText = post.introduction;
+            document.title = `${post.title} - Magic of Numbers Blog`;
+
+            const sectionsBox = document.getElementById('post-sections');
+            sectionsBox.innerHTML = '';
+
+            post.sections.forEach(sec => {
+                let imageHTML = '';
+                if (sec.image) {
+                    imageHTML = `
+                        <div class="my-8 bg-[#FDFBF7] border border-gray-200/50 rounded-2xl p-4 shadow-sm max-w-xl mx-auto space-y-3 text-center">
+                            <div class="h-64 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-4">
+                                <img src="${sec.image}" alt="${sec.heading}" class="max-w-full max-h-full object-contain rounded-lg shadow-sm">
+                            </div>
+                            <p class="text-xs text-gray-500 font-sans font-light italic">${sec.imageCaption}</p>
+                        </div>
+                    `;
+                }
+
+                sectionsBox.innerHTML += `
+                    <div class="space-y-4">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 font-title border-b border-gray-150 pb-2">${sec.heading}</h3>
+                        <p class="font-sans font-light leading-relaxed text-gray-650">${sec.text}</p>
+                        ${imageHTML}
+                    </div>
+                `;
+            });
+        }
+    </script>
 </body>
 </html>

@@ -46,6 +46,16 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`${product} added to cart!`);
     };
 
+    window.buyOnWhatsApp = function(productName, price) {
+        let message = `*INQUIRY FROM MAGIC OF NUMBERS*\n\n`;
+        message += `Hello! I would like to order/inquire about:\n`;
+        message += `*Product:* ${productName}\n`;
+        message += `*Price:* ${price}\n\n`;
+        message += `Please confirm availability and shipping details. Thank you!`;
+        const encoded = encodeURIComponent(message);
+        window.open(`https://wa.me/919876543210?text=${encoded}`, '_blank');
+    };
+
     function updateCartCount() {
         const count = cart.reduce((sum, item) => sum + item.quantity, 0);
         // Find the badge span in the header (which is inside the relative div with the cart icon)
