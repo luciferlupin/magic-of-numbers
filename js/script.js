@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         message += `*Price:* ${price}\n\n`;
         message += `Please confirm availability and shipping details. Thank you!`;
         const encoded = encodeURIComponent(message);
-        window.open(`https://wa.me/919876543210?text=${encoded}`, '_blank');
+        window.open(`https://wa.me/919257925785?text=${encoded}`, '_blank');
     };
 
     function updateCartCount() {
