@@ -6,7 +6,7 @@
     <title>Magic of Numbers - Spiritual E-Commerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -28,17 +28,6 @@
                 <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
                 <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
             </nav>
-            <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
-                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
-                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
-                <a href="services.html" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
-                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
-                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
-                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
-                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
-                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
-                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
-            </div>
         </div>
         <div class="flex items-center space-x-4">
             <div class="relative hidden md:block">
@@ -53,11 +42,27 @@
                 <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
             </a>
             
-            <div class="md:hidden cursor-pointer">
+            <div class="mobile-menu-toggle md:hidden" id="mobile-menu-btn">
                 <i class="fas fa-bars text-xl"></i>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-close" id="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="index.html" class="block py-3 hover:text-[#6B0000] transition-colors">Home</a>
+        <a href="shop.html" class="block py-3 hover:text-[#6B0000] transition-colors">Shop</a>
+        <a href="services.html" class="block py-3 hover:text-[#6B0000] text-[#6B0000] font-semibold transition-colors">Services</a>
+        <a href="vastu-handbook.html" class="block py-3 hover:text-[#6B0000] transition-colors">Vastu Handbook</a>
+        <a href="crystals-guide.html" class="block py-3 hover:text-[#6B0000] transition-colors">Crystals Guide</a>
+        <a href="lucky-calculator.html" class="block py-3 hover:text-[#6B0000] transition-colors">Lucky Calculator</a>
+        <a href="store-199.html" class="block py-3 hover:text-[#6B0000] transition-colors">199 Store</a>
+        <a href="blog.html" class="block py-3 hover:text-[#6B0000] transition-colors">Blog</a>
+        <a href="contact.html" class="block py-3 hover:text-[#6B0000] transition-colors">Contact</a>
+    </div>
 
     <section class="text-center py-3 px-6 md:px-12 relative z-40 bg-white" id="flash-banner">
         <p class="text-xs font-semibold tracking-wide text-[#1D1D1F] font-sans">🔥 DIRECT ORDER: WhatsApp to place orders directly & get Free Shipping on all orders! 🔥</p>

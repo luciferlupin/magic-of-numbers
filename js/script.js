@@ -179,11 +179,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Mobile menu
-    const mobileMenuBtn = document.querySelector('.md\\:hidden.cursor-pointer');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavClose = document.getElementById('mobile-nav-close');
+    
     if (mobileMenuBtn && mobileNav) {
         mobileMenuBtn.addEventListener('click', function() {
-            mobileNav.classList.toggle('hidden');
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    if (mobileNavClose && mobileNav) {
+        mobileNavClose.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close mobile nav when clicking on a link
+    if (mobileNav) {
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         });
     }
 
