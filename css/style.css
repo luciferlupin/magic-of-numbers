@@ -211,9 +211,9 @@ h1, h2, h3, h4, h5, h6, .font-title {
     transition: all 0.3s var(--apple-easing);
 }
 .product-card:hover {
-    box-shadow: var(--medium-shadow);
-    transform: translateY(-2px);
-    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: var(--elegant-shadow), var(--gold-glow);
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.5);
 }
 
 /* Category Cards styling */
@@ -226,9 +226,9 @@ h1, h2, h3, h4, h5, h6, .font-title {
     transition: all 0.3s var(--apple-easing);
 }
 .category-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--medium-shadow);
-    border-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: var(--elegant-shadow), var(--gold-glow);
+    border-color: rgba(212, 175, 55, 0.5);
 }
 
 /* Saffron / Orange Flashed Banner */
@@ -876,3 +876,71 @@ html {
 }
 
 
+
+/* Traditional Design Enhancements */
+.traditional-title {
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 2.5rem !important;
+}
+.traditional-title::after {
+    content: '◆';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-gold);
+    font-size: 14px;
+    background: #FDFBF7;
+    padding: 0 10px;
+    z-index: 2;
+}
+.traditional-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--primary-gold) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.traditional-title-left {
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 2.5rem !important;
+}
+.traditional-title-left::after {
+    content: '◆';
+    position: absolute;
+    bottom: -8px;
+    left: 40px;
+    color: var(--primary-gold);
+    font-size: 14px;
+    background: #FDFBF7;
+    padding: 0 10px;
+    z-index: 2;
+}
+.traditional-title-left::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary-gold) 0%, transparent 100%);
+    z-index: 1;
+}
+
+/* Subtle Shimmer for Primary Buttons on Hover */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+.btn-primary:hover {
+    background: linear-gradient(120deg, #8A0000 0%, #B8860B 50%, var(--royal-maroon-dark) 100%);
+    background-size: 200% auto;
+    animation: shimmer 2s linear infinite;
+}
