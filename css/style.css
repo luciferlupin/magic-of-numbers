@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
     --royal-maroon: #6B0000;
@@ -52,8 +52,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .font-title {
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif;
-    letter-spacing: -0.02em;
+    font-family: 'Philosopher', 'Cinzel', 'Lora', serif;
+    letter-spacing: -0.01em;
     line-height: 1.2;
 }
 
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, .font-title {
 
 /* Header Text Styling */
 .header-logo {
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif;
+    font-family: 'Philosopher', 'Cinzel', 'Lora', serif;
     font-weight: 700;
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--royal-maroon) 0%, var(--saffron) 50%, var(--brass-gold) 100%);
