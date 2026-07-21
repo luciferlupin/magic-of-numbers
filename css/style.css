@@ -375,6 +375,55 @@ input, select, textarea {
     color: var(--primary-gold);
 }
 
+/* Instagram Card */
+.instagram-card {
+    background: #FFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--medium-shadow);
+    transition: all 0.3s var(--apple-easing);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.instagram-card:hover {
+    box-shadow: var(--elegant-shadow);
+    transform: translateY(-2px);
+}
+
+.instagram-card iframe {
+    border-radius: 16px;
+}
+
+.instagram-section {
+    padding: 80px 24px;
+    background: var(--cream-bg);
+}
+
+.instagram-section h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+.instagram-section p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* ============================================
    MOBILE RESPONSIVE STYLES
    ============================================ */
