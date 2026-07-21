@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedic Consulting & Services - Magic of Numbers</title>
+    <title>Vedic Consulting & Services - Remedy Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
@@ -43,62 +43,103 @@
 </head>
 <body class="sacred-grid-bg bg-[#FDFBF7] text-[#2C1E14] font-lora antialiased selection:bg-[#6B0000] selection:text-white">
 
-    <header class="sticky-header backdrop-blur-xl bg-white/70 shadow-sm py-4 px-6 md:px-12 border-b border-gray-200/50 transition-all duration-300" id="main-header">
-        <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
-        <div class="flex items-center space-x-4">
-            <div class="text-2xl font-bold tracking-tight header-logo cursor-pointer" onclick="window.location.href='index.html'">Magic of Numbers</div>
-            <nav class="hidden md:flex space-x-4 lg:space-x-6 text-xs lg:text-sm font-semibold text-gray-600">
-                <a href="index.html" class="hover:nav-link transition-colors">Home</a>
-                <a href="shop.html" class="hover:nav-link transition-colors">Shop</a>
-                <a href="services.html" class="hover:nav-link transition-colors text-[#6B0000]">Services</a>
-                <a href="vastu-handbook.html" class="hover:nav-link transition-colors">Vastu Handbook</a>
-                <a href="crystals-guide.html" class="hover:nav-link transition-colors">Crystals Guide</a>
-                <a href="lucky-calculator.html" class="hover:nav-link transition-colors">Lucky Calculator</a>
-                <a href="store-199.html" class="hover:nav-link transition-colors">199 Store</a>
-                <a href="blog.html" class="hover:nav-link transition-colors">Blog</a>
-                <a href="contact.html" class="hover:nav-link transition-colors">Contact</a>
-            </nav>
-            <div class="md:hidden hidden bg-white shadow-lg py-4 px-6 absolute top-full left-0 w-full z-40" id="mobile-nav">
-                <a href="index.html" class="block py-2 hover:gold-accent transition-colors">Home</a>
-                <a href="shop.html" class="block py-2 hover:gold-accent transition-colors">Shop</a>
-                <a href="services.html" class="block py-2 hover:gold-accent text-[#6B0000] font-semibold transition-colors">Services</a>
-                <a href="vastu-handbook.html" class="block py-2 hover:gold-accent transition-colors">Vastu Handbook</a>
-                <a href="crystals-guide.html" class="block py-2 hover:gold-accent transition-colors">Crystals Guide</a>
-                <a href="lucky-calculator.html" class="block py-2 hover:gold-accent transition-colors">Lucky Calculator</a>
-                <a href="store-199.html" class="block py-2 hover:gold-accent transition-colors">199 Store</a>
-                <a href="blog.html" class="block py-2 hover:gold-accent transition-colors">Blog</a>
-                <a href="contact.html" class="block py-2 hover:gold-accent transition-colors">Contact</a>
-            </div>
-        </div>
-        <div class="flex items-center space-x-4">
-            <div class="relative hidden md:block">
-                <form action="shop.html" method="GET" class="m-0 p-0">
-                    <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-64 text-sm" required autocomplete="off">
-                    <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-            
-            <a href="cart.html" class="relative cursor-pointer group">
-                <i class="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-[#6B0000] transition-colors"></i>
-                <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
-            </a>
-            
-            <div class="md:hidden cursor-pointer">
-                <i class="fas fa-bars text-xl"></i>
-            </div>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="top-bar-info">
+            <span class="top-bar-item"><i class="fas fa-phone-alt"></i><a href="tel:+919257925785">+91 92579 25785</a></span>
+            <span class="top-bar-item"><i class="fas fa-envelope"></i><a href="mailto:magicofnumbers4141@gmail.com">magicofnumbers4141@gmail.com</a></span>
         </div>
     </div>
+
+    <!-- Main Header -->
+    <header class="main-header-bar" id="main-header">
+        <div class="main-header-inner">
+            <!-- Logo -->
+            <div class="text-2xl font-bold tracking-tight header-logo cursor-pointer flex-shrink-0" onclick="window.location.href='index.html'">Remedy Store</div>
+
+            <!-- Desktop Nav -->
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="services.html">Services</a>
+                <a href="store-199.html" class="nav-remedy-store">Remedy Store</a>
+                <!-- Free Tools Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-trigger">Free Tools <i class="fas fa-chevron-down dropdown-caret"></i></button>
+                    <div class="nav-dropdown-menu">
+                        <a href="lucky-calculator.html">
+                            <span class="menu-icon">🔢</span>
+                            <span class="menu-text"><span class="menu-label">Lucky Calculator</span><span class="menu-sub">Find your lucky number</span></span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="vastu-handbook.html">
+                            <span class="menu-icon">🏛️</span>
+                            <span class="menu-text"><span class="menu-label">Vastu Guide</span><span class="menu-sub">Vastu shastra handbook</span></span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="crystals-guide.html">
+                            <span class="menu-icon">💎</span>
+                            <span class="menu-text"><span class="menu-label">Crystal Guide</span><span class="menu-sub">Crystal healing encyclopedia</span></span>
+                        </a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center space-x-3 flex-shrink-0">
+                <div class="relative hidden md:block">
+                    <form action="shop.html" method="GET" class="m-0 p-0">
+                        <input type="text" name="search" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent w-48 lg:w-64 text-sm" required autocomplete="off">
+                        <button type="submit" class="absolute left-3 top-2.5 text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <a href="cart.html" class="relative cursor-pointer group">
+                    <i class="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-[#6B0000] transition-colors"></i>
+                    <span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-sm">0</span>
+                </a>
+                <!-- Mobile Hamburger -->
+                <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" id="mobile-menu-btn-v2" aria-label="Open menu">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay-v2"></div>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-v2" id="mobile-nav-v2">
+        <div class="mobile-nav-header">
+            <span class="mobile-logo">Remedy Store</span>
+            <button class="mobile-close" id="mobile-nav-close-v2"><i class="fas fa-times"></i></button>
+        </div>
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🛍️ Shop</a>
+        <a href="services.html">✨ Services</a>
+        <a href="store-199.html">🏪 Remedy Store</a>
+        <!-- Free Tools accordion -->
+        <button class="mobile-tools-trigger" id="mobile-tools-btn">🔮 Free Tools <i class="fas fa-chevron-down" style="font-size:11px;color:#9CA3AF"></i></button>
+        <div class="mobile-tools-sub" id="mobile-tools-sub">
+            <a href="lucky-calculator.html">🔢 Lucky Calculator</a>
+            <a href="vastu-handbook.html">🏛️ Vastu Guide</a>
+            <a href="crystals-guide.html">💎 Crystal Guide</a>
+        </div>
+        <a href="blog.html">📰 Blog</a>
+        <a href="contact.html">📞 Contact</a>
+    </div>
+
+
     <!-- Services Hero Banner -->
-    <section class="relative bg-gradient-to-br from-[#2C1E14] to-[#1C120C] text-[#FDFBF7] py-24 px-6 md:px-12 text-center overflow-hidden border-b-2 border-gold-accent">
+    <section class="relative text-[#FDFBF7] py-24 px-6 md:px-12 text-center overflow-hidden" style="background: linear-gradient(135deg, #0f2d1a 0%, #1a3a24 50%, #0f2317 100%);">
         <div class="absolute inset-0 opacity-10 pointer-events-none">
-            <div class="w-full h-full bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="w-full h-full" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 22px 22px;"></div>
         </div>
         <div class="relative max-w-4xl mx-auto z-10 space-y-6">
-            <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold border-b border-[#D4AF37]/50 pb-2 inline-block">Sacred Vedic Sciences</span>
-            <h1 class="text-4xl md:text-6xl font-bold tracking-wide font-title leading-tight traditional-title">Vedic Consultation & Energy Audits</h1>
-            <p class="text-gray-300 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed font-sans">
+            <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold border-b border-[#D4AF37]/50 pb-2 inline-block font-sans">Sacred Vedic Sciences</span>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-wide font-title leading-tight" style="color:#F5ECD7;">Vedic Consultation &amp; Energy Audits</h1>
+            <p class="text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed font-sans" style="color:rgba(245,236,215,0.75);">
                 Harmonize your environment, discover your soul numbers, align your signature vibration, and neutralize geopathic stress under the guidance of certified Vedic experts.
             </p>
             <div class="flex justify-center pt-4">
@@ -107,276 +148,196 @@
         </div>
     </section>
 
-    <!-- Vedic Consultation Process -->
-    <section class="py-20 px-6 md:px-12 bg-white/50 backdrop-blur-sm border-b border-gray-200/30">
-        <div class="max-w-7xl mx-auto text-center space-y-16">
-            <div class="space-y-4">
-                <h2 class="text-2xl md:text-4xl font-bold maroon-accent tracking-wide font-title">Our Consultation Process</h2>
-                <p class="text-gray-500 text-sm max-w-xl mx-auto leading-relaxed">How we align your numbers, name vibration, and environmental energies in four simple steps.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
-                <div class="process-step space-y-4 flex flex-col items-center">
-                    <div class="relative z-10 w-16 h-16 rounded-full bg-[#6B0000] text-white flex items-center justify-center font-bold text-lg border-4 border-[#FDFBF7] shadow-md">1</div>
-                    <h4 class="font-bold text-gray-800 text-lg">Select & Book</h4>
-                    <p class="text-xs text-gray-500 max-w-xs leading-relaxed font-sans">Choose your required analysis report or map audit service and checkout securely online.</p>
+    <!-- Consultation Process -->
+    <section class="py-16 px-6 md:px-12 bg-white border-b border-gray-100">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="service-section-title mb-3">Our Consultation Process</h2>
+            <hr class="section-gold-rule" style="margin-bottom:48px;">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl text-white shadow-md" style="background:#1B4332;border:3px solid #D4AF37;">1</div>
+                    <h4 class="font-bold text-gray-800 text-base font-title">Select &amp; Book</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-sans">Choose your required analysis report or map audit service and checkout securely online.</p>
                 </div>
-                <!-- Step 2 -->
-                <div class="process-step space-y-4 flex flex-col items-center">
-                    <div class="relative z-10 w-16 h-16 rounded-full bg-[#6B0000] text-white flex items-center justify-center font-bold text-lg border-4 border-[#FDFBF7] shadow-md">2</div>
-                    <h4 class="font-bold text-gray-800 text-lg">Submit Details</h4>
-                    <p class="text-xs text-gray-500 max-w-xs leading-relaxed font-sans">Submit inputs such as birth date, full name, or marked layout coordinates via WhatsApp/Email.</p>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl text-white shadow-md" style="background:#1B4332;border:3px solid #D4AF37;">2</div>
+                    <h4 class="font-bold text-gray-800 text-base font-title">Submit Details</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-sans">Submit inputs such as birth date, full name, or marked layout coordinates via WhatsApp/Email.</p>
                 </div>
-                <!-- Step 3 -->
-                <div class="process-step space-y-4 flex flex-col items-center">
-                    <div class="relative z-10 w-16 h-16 rounded-full bg-[#6B0000] text-white flex items-center justify-center font-bold text-lg border-4 border-[#FDFBF7] shadow-md">3</div>
-                    <h4 class="font-bold text-gray-800 text-lg">Expert Auditing</h4>
-                    <p class="text-xs text-gray-500 max-w-xs leading-relaxed font-sans">Senior Vedic Acharyas scan coordinate directions or name spellings using Vedic principles.</p>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl text-white shadow-md" style="background:#1B4332;border:3px solid #D4AF37;">3</div>
+                    <h4 class="font-bold text-gray-800 text-base font-title">Expert Auditing</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-sans">Senior Vedic Acharyas scan coordinate directions or name spellings using Vedic principles.</p>
                 </div>
-                <!-- Step 4 -->
-                <div class="process-step space-y-4 flex flex-col items-center">
-                    <div class="relative z-10 w-16 h-16 rounded-full bg-[#6B0000] text-white flex items-center justify-center font-bold text-lg border-4 border-[#FDFBF7] shadow-md">4</div>
-                    <h4 class="font-bold text-gray-800 text-lg">Online Session & PDF</h4>
-                    <p class="text-xs text-gray-500 max-w-xs leading-relaxed font-sans">Receive your detailed custom report and coordinate corrections with an online consulting session.</p>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl text-white shadow-md" style="background:#1B4332;border:3px solid #D4AF37;">4</div>
+                    <h4 class="font-bold text-gray-800 text-base font-title">Session &amp; PDF</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-sans">Receive your detailed custom report and coordinate corrections with an online consulting session.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="py-20 px-6 md:px-12 max-w-7xl mx-auto" id="services-grid font-sans">
-        <h2 class="text-3xl md:text-4xl font-bold maroon-accent tracking-wide font-title text-center mb-16">Choose Your Consultation</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Service 1: Numerology -->
-            <div class="service-card bg-white rounded-3xl overflow-hidden border border-gray-200/50 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden relative bg-gray-50 flex items-center justify-center p-4">
-                        <img src="images/products/vastu_pyramid.png" alt="Numerology Consultation" class="w-full h-full object-contain">
-                        <span class="absolute top-4 right-4 bg-[#6B0000] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md font-sans">Expert Report</span>
-                    </div>
-                    <div class="p-8 space-y-5">
-                        <h3 class="text-xl font-bold text-gray-900 font-title leading-snug">Personalized Numerology Consultation Report (PDF)</h3>
-                        <div class="flex items-center space-x-2 font-sans">
-                            <span class="text-2xl font-extrabold text-[#b8860b]">₹1,100</span>
-                            <span class="text-xs text-gray-400 line-through">₹2,200</span>
-                            <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">50% OFF</span>
-                        </div>
-                        <p class="text-xs text-gray-600 leading-relaxed font-sans font-light">Comprehensive 35-page PDF Numerology Report prepared by senior acharyas based on birth dates and name spelling reviews.</p>
-                        
-                        <div class="border-t border-gray-100 pt-4 space-y-2">
-                            <h5 class="text-[11px] font-bold text-gray-800 uppercase tracking-wide font-sans">Key Deliverables</h5>
-                            <ul class="text-xs text-gray-500 space-y-1.5 list-none font-sans font-light">
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Complete name spelling correction analysis</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Maps life path, destiny, and soul numbers</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Pinpoints lucky career lines and gemstones</li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Our Services — Dark Green Cards (4-col, reference photo 2) -->
+    <section class="services-section-bg" id="services-grid">
+        <h2 class="service-section-title">Our Services</h2>
+        <hr class="section-gold-rule">
+        <div class="grid-4">
+            <!-- Card 1: Numerology -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><polygon points="24,4 28,18 42,18 31,27 35,41 24,32 13,41 17,27 6,18 20,18" stroke="#D4AF37" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="6" stroke="#D4AF37" stroke-width="1.2" fill="none"/></svg>
                 </div>
-                <div class="p-8 pt-0 flex gap-3 font-sans">
-                    <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors" onclick="window.location.href='product-detail.html?id=1101'">Details</button>
-                    <button class="btn-gold hover:opacity-90 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="addToCart('Personalized Numerology Consultation Report (PDF)', 1100, 'images/products/vastu_pyramid.png', 'product-detail.html?id=1101')">
-                        <i class="fas fa-shopping-cart text-[9px]"></i> <span>Book Now</span>
-                    </button>
-                </div>
+                <h3>Numerology</h3>
+                <div class="card-divider"></div>
+                <p>Comprehensive 35-page PDF Numerology Report prepared by senior acharyas. Maps life path, destiny, and soul numbers. Name spelling alignment to maximize vibration.</p>
+                <a href="product-detail.html?id=1101" class="read-more">Read More</a>
             </div>
- 
-            <!-- Service 2: Vastu Map Audit -->
-            <div class="service-card bg-white rounded-3xl overflow-hidden border border-gray-200/50 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden relative bg-gray-50 flex items-center justify-center p-4">
-                        <img src="images/products/vastu_pyramid.png" alt="Vastu Energy Audit" class="w-full h-full object-contain">
-                        <span class="absolute top-4 right-4 bg-[#6B0000] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md font-sans">Zoom Audit</span>
-                    </div>
-                    <div class="p-8 space-y-5">
-                        <h3 class="text-xl font-bold text-gray-900 font-title leading-snug">Vastu Map Energy Audit & Online Consultation</h3>
-                        <div class="flex items-center space-x-2 font-sans">
-                            <span class="text-2xl font-extrabold text-[#b8860b]">₹7,500</span>
-                            <span class="text-xs text-gray-400 line-through">₹15,000</span>
-                            <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">50% OFF</span>
-                        </div>
-                        <p class="text-xs text-gray-600 leading-relaxed font-sans font-light">Professional structural Vastu audit of your home or office floor plan by senior Vastu consultants with a direct online consulting session.</p>
-                        
-                        <div class="border-t border-gray-100 pt-4 space-y-2">
-                            <h5 class="text-[11px] font-bold text-gray-800 uppercase tracking-wide font-sans">Key Deliverables</h5>
-                            <ul class="text-xs text-gray-500 space-y-1.5 list-none font-sans font-light">
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Highlights exact coordinate cuts and doshas</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Non-demolition tapes, spirals, and blocker remedies</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Detailed written report & 30-min Zoom session</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- Card 2: Vastu Audit -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" stroke="#D4AF37" stroke-width="1.3" fill="none"/><line x1="24" y1="6" x2="24" y2="42" stroke="#D4AF37" stroke-width="1"/><line x1="6" y1="24" x2="42" y2="24" stroke="#D4AF37" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#D4AF37"/><line x1="13" y1="13" x2="35" y2="35" stroke="#D4AF37" stroke-width="0.8"/><line x1="35" y1="13" x2="13" y2="35" stroke="#D4AF37" stroke-width="0.8"/></svg>
                 </div>
-                <div class="p-8 pt-0 flex gap-3 font-sans">
-                    <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors" onclick="window.location.href='product-detail.html?id=1102'">Details</button>
-                    <button class="btn-gold hover:opacity-90 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="addToCart('Vastu Map Energy Audit & Online Consultation', 7500, 'images/products/vastu_pyramid.png', 'product-detail.html?id=1102')">
-                        <i class="fas fa-shopping-cart text-[9px]"></i> <span>Book Now</span>
-                    </button>
-                </div>
+                <h3>Vastu Map Audit</h3>
+                <div class="card-divider"></div>
+                <p>Professional structural Vastu audit of your home or office floor plan by senior Vastu consultants. Highlights exact coordinate cuts, doshas, and non-demolition remedies.</p>
+                <a href="product-detail.html?id=1102" class="read-more">Read More</a>
             </div>
+            <!-- Card 3: Geopathic Stress -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><polygon points="24,4 28,18 42,18 31,27 35,41 24,32 13,41 17,27 6,18 20,18" stroke="#D4AF37" stroke-width="1.5" fill="none"/><polygon points="24,14 26,20 32,20 28,24 30,30 24,26 18,30 20,24 16,20 22,20" stroke="#D4AF37" stroke-width="0.8" fill="none"/></svg>
+                </div>
+                <h3>Geopathic Scan</h3>
+                <div class="card-divider"></div>
+                <p>Expert consultation to scan and neutralize geopathic radiation lines (Hartmann &amp; Curry Grids) under your bedroom or workplace. Detailed grid map and copper rod placement advice.</p>
+                <a href="product-detail.html?id=1103" class="read-more">Read More</a>
+            </div>
+            <!-- Card 4: Kundali Milan -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" stroke="#D4AF37" stroke-width="1.3" fill="none"/><circle cx="24" cy="24" r="10" stroke="#D4AF37" stroke-width="1" fill="none"/><circle cx="24" cy="24" r="4" stroke="#D4AF37" stroke-width="0.8" fill="none"/><line x1="24" y1="6" x2="24" y2="14" stroke="#D4AF37" stroke-width="1"/><line x1="24" y1="34" x2="24" y2="42" stroke="#D4AF37" stroke-width="1"/><line x1="6" y1="24" x2="14" y2="24" stroke="#D4AF37" stroke-width="1"/><line x1="34" y1="24" x2="42" y2="24" stroke="#D4AF37" stroke-width="1"/></svg>
+                </div>
+                <h3>Kundali Milan</h3>
+                <div class="card-divider"></div>
+                <p>Complete horoscope matchmaking, Guna Milan compatibility audit, and relational remedies by senior Vedic astrologers. Includes live 40-minute Zoom counseling session.</p>
+                <a href="product-detail.html?id=1106" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
 
-            <!-- Service 3: Geopathic Stress Scan -->
-            <div class="service-card bg-white rounded-3xl overflow-hidden border border-gray-200/50 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden relative bg-gray-50 flex items-center justify-center p-4">
-                        <img src="images/products/vastu_pyramid.png" alt="Geopathic Stress Scan" class="w-full h-full object-contain">
-                        <span class="absolute top-4 right-4 bg-[#6B0000] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md font-sans">Energy Scan</span>
-                    </div>
-                    <div class="p-8 space-y-5">
-                        <h3 class="text-xl font-bold text-gray-900 font-title leading-snug">Geopathic Stress Scan & Correction Service</h3>
-                        <div class="flex items-center space-x-2 font-sans">
-                            <span class="text-2xl font-extrabold text-[#b8860b]">₹12,000</span>
-                            <span class="text-xs text-gray-400 line-through">₹18,000</span>
-                            <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">33% OFF</span>
-                        </div>
-                        <p class="text-xs text-gray-600 leading-relaxed font-sans font-light">Expert consultation to scan and neutralize geopathic radiation lines (Hartmann & Curry Grids) under your bedroom or workplace.</p>
-                        
-                        <div class="border-t border-gray-100 pt-4 space-y-2">
-                            <h5 class="text-[11px] font-bold text-gray-800 uppercase tracking-wide font-sans">Key Deliverables</h5>
-                            <ul class="text-xs text-gray-500 space-y-1.5 list-none font-sans font-light">
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Neutralizes sleep disturbances and fatigue voids</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Detailed grid map of radiation spots in property</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Layout advice for placements of copper rods</li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- How Vastu Can Change Your Life — 3-col dark green (reference photo 3) -->
+    <section class="services-section-bg" style="padding-top: 0;">
+        <h2 class="service-section-title">How Vastu Can Change Your Life?</h2>
+        <hr class="section-gold-rule">
+        <div class="grid-3">
+            <!-- Commercial Vastu -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><polygon points="24,4 28,18 42,18 31,27 35,41 24,32 13,41 17,27 6,18 20,18" stroke="#D4AF37" stroke-width="1.5" fill="none"/><circle cx="24" cy="22" r="5" stroke="#D4AF37" stroke-width="1.2" fill="none"/></svg>
                 </div>
-                <div class="p-8 pt-0 flex gap-3 font-sans">
-                    <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors" onclick="window.location.href='product-detail.html?id=1103'">Details</button>
-                    <button class="btn-gold hover:opacity-90 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="addToCart('Geopathic Stress Scan & Correction Service', 12000, 'images/products/vastu_pyramid.png', 'product-detail.html?id=1103')">
-                        <i class="fas fa-shopping-cart text-[9px]"></i> <span>Book Now</span>
-                    </button>
-                </div>
+                <h3>Commercial Vastu</h3>
+                <div class="card-divider"></div>
+                <p>An office should be in the North, North-East or North-West facing direction. North, North-East or North-West directions are considered to bring good fortune and positivity for business.</p>
+                <a href="vastu-handbook.html" class="read-more">Read More</a>
             </div>
-
-            <!-- Service 4: Vedic Name Correction (New) -->
-            <div class="service-card bg-white rounded-3xl overflow-hidden border border-gray-200/50 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden relative bg-gray-50 flex items-center justify-center p-4">
-                        <img src="images/products/shree_yantra.png" alt="Name Correction" class="w-full h-full object-contain">
-                        <span class="absolute top-4 right-4 bg-[#6B0000] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md font-sans">Alphabet Sync</span>
-                    </div>
-                    <div class="p-8 space-y-5">
-                        <h3 class="text-xl font-bold text-gray-900 font-title leading-snug">Vedic Name Spelling Alignment & Signature Correction</h3>
-                        <div class="flex items-center space-x-2 font-sans">
-                            <span class="text-2xl font-extrabold text-[#b8860b]">₹1,500</span>
-                            <span class="text-xs text-gray-400 line-through">₹3,000</span>
-                            <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">50% OFF</span>
-                        </div>
-                        <p class="text-xs text-gray-600 leading-relaxed font-sans font-light">Astrological alignment of full names and signatures to match planetary transits and invite Venus/Jupiter prosperity vibrations.</p>
-                        
-                        <div class="border-t border-gray-100 pt-4 space-y-2">
-                            <h5 class="text-[11px] font-bold text-gray-800 uppercase tracking-wide font-sans">Key Deliverables</h5>
-                            <ul class="text-xs text-gray-500 space-y-1.5 list-none font-sans font-light">
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Analysis of name spelling vibrations</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Lucky signature orientation guidelines</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Lucky letter additions & spelling modifications</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- Residential Vastu -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><polygon points="24,4 28,18 42,18 31,27 35,41 24,32 13,41 17,27 6,18 20,18" stroke="#D4AF37" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="6" stroke="#D4AF37" stroke-width="1" fill="none"/><line x1="24" y1="18" x2="24" y2="30" stroke="#D4AF37" stroke-width="0.8"/><line x1="18" y1="24" x2="30" y2="24" stroke="#D4AF37" stroke-width="0.8"/></svg>
                 </div>
-                <div class="p-8 pt-0 flex gap-3 font-sans">
-                    <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors" onclick="window.location.href='product-detail.html?id=1104'">Details</button>
-                    <button class="btn-gold hover:opacity-90 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="addToCart('Vedic Name Spelling Alignment & Signature Correction', 1500, 'images/products/shree_yantra.png', 'product-detail.html?id=1104')">
-                        <i class="fas fa-shopping-cart text-[9px]"></i> <span>Book Now</span>
-                    </button>
-                </div>
+                <h3>Residential Vastu</h3>
+                <div class="card-divider"></div>
+                <p>As per Vastu, the best and most auspicious direction and place for the Pooja room is the north-east corner of your house. If north-east placement is not feasible, it can be set up in the east.</p>
+                <a href="vastu-handbook.html" class="read-more">Read More</a>
             </div>
-
-            <!-- Service 5: Business Vastu Layout (New) -->
-            <div class="service-card bg-white rounded-3xl overflow-hidden border border-gray-200/50 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden relative bg-gray-50 flex items-center justify-center p-4">
-                        <img src="images/products/vastu_pyramid.png" alt="Business Vastu" class="w-full h-full object-contain">
-                        <span class="absolute top-4 right-4 bg-[#6B0000] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md font-sans">Commercial</span>
-                    </div>
-                    <div class="p-8 space-y-5">
-                        <h3 class="text-xl font-bold text-gray-900 font-title leading-snug">Business & Commercial Vastu Layout Audit</h3>
-                        <div class="flex items-center space-x-2 font-sans">
-                            <span class="text-2xl font-extrabold text-[#b8860b]">₹15,000</span>
-                            <span class="text-xs text-gray-400 line-through">₹25,000</span>
-                            <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">40% OFF</span>
-                        </div>
-                        <p class="text-xs text-gray-600 leading-relaxed font-sans font-light">Specialized Vastu audit for showrooms, corporate offices, and factory setups to ensure cash flows, lock safety, and team productivity.</p>
-                        
-                        <div class="border-t border-gray-100 pt-4 space-y-2">
-                            <h5 class="text-[11px] font-bold text-gray-800 uppercase tracking-wide font-sans">Key Deliverables</h5>
-                            <ul class="text-xs text-gray-500 space-y-1.5 list-none font-sans font-light">
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Machinery placement & seating configurations</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Safe box, accounts desk positioning directions</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Zoom blueprint reviews with Senior consultants</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- Industrial Vastu -->
+            <div class="dark-service-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" stroke="#D4AF37" stroke-width="1.3" fill="none"/><polygon points="24,8 27,18 37,18 29,25 32,35 24,28 16,35 19,25 11,18 21,18" stroke="#D4AF37" stroke-width="1" fill="none"/></svg>
                 </div>
-                <div class="p-8 pt-0 flex gap-3 font-sans">
-                    <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors" onclick="window.location.href='product-detail.html?id=1105'">Details</button>
-                    <button class="btn-gold hover:opacity-90 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="addToCart('Business & Commercial Vastu Layout Audit', 15000, 'images/products/vastu_pyramid.png', 'product-detail.html?id=1105')">
-                        <i class="fas fa-shopping-cart text-[9px]"></i> <span>Book Now</span>
-                    </button>
-                </div>
+                <h3>Industrial Vastu</h3>
+                <div class="card-divider"></div>
+                <p>Vastu for industries recommends North West as the best direction for the placement of finished goods. This is the direction that ensures continuous movement and flow of the finished goods.</p>
+                <a href="vastu-handbook.html" class="read-more">Read More</a>
             </div>
+        </div>
+    </section>
 
-            <!-- Service 6: Horoscope Matchmaking (New) -->
-            <div class="service-card bg-white rounded-3xl overflow-hidden border border-gray-200/50 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden relative bg-gray-50 flex items-center justify-center p-4">
-                        <img src="images/products/rose_quartz_bracelet.png" alt="Kundali Milan" class="w-full h-full object-contain">
-                        <span class="absolute top-4 right-4 bg-[#6B0000] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md font-sans">Horoscope</span>
-                    </div>
-                    <div class="p-8 space-y-5">
-                        <h3 class="text-xl font-bold text-gray-900 font-title leading-snug">Kundali Milan & Relationship Harmony Consultation</h3>
-                        <div class="flex items-center space-x-2 font-sans">
-                            <span class="text-2xl font-extrabold text-[#b8860b]">₹2,100</span>
-                            <span class="text-xs text-gray-400 line-through">₹4,200</span>
-                            <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">50% OFF</span>
-                        </div>
-                        <p class="text-xs text-gray-600 leading-relaxed font-sans font-light">Complete horoscope matchmaking, Guna Milan compatibility audit, and relational remedies by senior Vedic astrologers.</p>
-                        
-                        <div class="border-t border-gray-100 pt-4 space-y-2">
-                            <h5 class="text-[11px] font-bold text-gray-800 uppercase tracking-wide font-sans">Key Deliverables</h5>
-                            <ul class="text-xs text-gray-500 space-y-1.5 list-none font-sans font-light">
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Complete 8-fold Guna Milan matching analysis</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Identification of Mangal doshas & blocks</li>
-                                <li><i class="fas fa-check text-green-500 mr-2 text-[10px]"></i>Includes live 40-minute Zoom counseling call</li>
-                            </ul>
+    <!-- Premium Consultation Packages -->
+    <section class="py-20 px-6 md:px-12 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="service-section-title">Premium Consultation Packages</h2>
+            <hr class="section-gold-rule">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Name Correction -->
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:rgba(27,67,50,0.08);">✍️</div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-gray-900 font-title mb-1">Vedic Name Spelling Alignment</h3>
+                            <div class="flex items-center gap-2 mb-3 font-sans">
+                                <span class="text-xl font-extrabold" style="color:#B8860B;">₹1,500</span>
+                                <span class="text-xs text-gray-400 line-through">₹3,000</span>
+                                <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">50% OFF</span>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed font-sans font-light mb-4">Astrological alignment of full names and signatures to match planetary transits and invite Venus/Jupiter prosperity vibrations.</p>
+                            <div class="flex gap-3">
+                                <button class="btn-gold text-xs font-semibold py-2 px-5 rounded-xl transition-colors" onclick="addToCart('Vedic Name Spelling Alignment &amp; Signature Correction', 1500, 'images/products/shree_yantra.png', 'product-detail.html?id=1104')">Book Now</button>
+                                <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold py-2 px-5 rounded-xl transition-colors" onclick="window.location.href='product-detail.html?id=1104'">Details</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="p-8 pt-0 flex gap-3 font-sans">
-                    <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors" onclick="window.location.href='product-detail.html?id=1106'">Details</button>
-                    <button class="btn-gold hover:opacity-90 text-xs font-semibold py-2.5 px-4 rounded-xl flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="addToCart('Kundali Milan & Relationship Harmony Consultation', 2100, 'images/products/rose_quartz_bracelet.png', 'product-detail.html?id=1106')">
-                        <i class="fas fa-shopping-cart text-[9px]"></i> <span>Book Now</span>
-                    </button>
+                <!-- Business Vastu -->
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:rgba(27,67,50,0.08);">🏢</div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-gray-900 font-title mb-1">Business &amp; Commercial Vastu Layout</h3>
+                            <div class="flex items-center gap-2 mb-3 font-sans">
+                                <span class="text-xl font-extrabold" style="color:#B8860B;">₹15,000</span>
+                                <span class="text-xs text-gray-400 line-through">₹25,000</span>
+                                <span class="text-[10px] bg-green-100 text-green-800 font-semibold px-2 py-0.5 rounded">40% OFF</span>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed font-sans font-light mb-4">Specialized Vastu audit for showrooms, corporate offices, and factory setups to ensure cash flows, lock safety, and team productivity.</p>
+                            <div class="flex gap-3">
+                                <button class="btn-gold text-xs font-semibold py-2 px-5 rounded-xl transition-colors" onclick="addToCart('Business &amp; Commercial Vastu Layout Audit', 15000, 'images/products/vastu_pyramid.png', 'product-detail.html?id=1105')">Book Now</button>
+                                <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold py-2 px-5 rounded-xl transition-colors" onclick="window.location.href='product-detail.html?id=1105'">Details</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services FAQs -->
-    <section class="py-20 px-6 md:px-12 bg-gray-50/50">
+    <!-- FAQs -->
+    <section class="py-20 px-6 md:px-12 bg-gray-50">
         <div class="max-w-4xl mx-auto space-y-12 font-sans">
-            <h2 class="text-3xl font-bold maroon-accent tracking-wide font-title text-center">Frequently Asked Questions</h2>
-            
-            <div class="space-y-6">
+            <div class="text-center">
+                <h2 class="service-section-title">Frequently Asked Questions</h2>
+                <hr class="section-gold-rule">
+            </div>
+            <div class="space-y-4">
                 <div class="bg-white p-6 rounded-2xl border border-gray-200/50 shadow-sm">
-                    <h4 class="font-bold text-gray-800 text-lg mb-2">What is required for the Vastu Floor Plan Audit?</h4>
+                    <h4 class="font-bold text-gray-800 text-base mb-2 font-title">What is required for the Vastu Floor Plan Audit?</h4>
                     <p class="text-sm text-gray-500 leading-relaxed font-light">We require a clear North-marked floor plan of your property. It can be a CAD drawing, a JPEG sketch, or a scanned blueprint. You can send it via email or WhatsApp once you complete booking.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl border border-gray-200/50 shadow-sm">
-                    <h4 class="font-bold text-gray-800 text-lg mb-2">How do Vastu corrections work without demolition?</h4>
-                    <p class="text-sm text-gray-505 leading-relaxed font-light">Vastu is based on energy channels and directions. In modern apartments, demolition is often impossible. We utilize organic metals (copper, brass, iron spirals), Vastu blocker studs, elemental color strip tapes, and crystals to adjust energy directions and elemental channels effectively.</p>
+                    <h4 class="font-bold text-gray-800 text-base mb-2 font-title">How do Vastu corrections work without demolition?</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed font-light">Vastu is based on energy channels and directions. In modern apartments, demolition is often impossible. We utilize organic metals (copper, brass, iron spirals), Vastu blocker studs, elemental color strip tapes, and crystals to adjust energy directions and elemental channels effectively.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl border border-gray-200/50 shadow-sm">
-                    <h4 class="font-bold text-gray-800 text-lg mb-2">How long does it take to prepare the Numerology Report?</h4>
-                    <p class="text-sm text-gray-505 leading-relaxed font-light">Each Numerology Consultation PDF is prepared individually by our senior scholars. The typical delivery turnaround time is 48 to 72 hours max after receiving your birth inputs.</p>
+                    <h4 class="font-bold text-gray-800 text-base mb-2 font-title">How long does it take to prepare the Numerology Report?</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed font-light">Each Numerology Consultation PDF is prepared individually by our senior scholars. The typical delivery turnaround time is 48 to 72 hours max after receiving your birth inputs.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl border border-gray-200/50 shadow-sm">
-                    <h4 class="font-bold text-gray-800 text-lg mb-2">What is geopathic stress?</h4>
-                    <p class="text-sm text-gray-505 leading-relaxed font-light">Geopathic stress is earth radiation caused by underground water lines, tectonic cracks, or grid fields (Hartmann and Curry grids). It vibrates at an unhealthy frequency and can interfere with sleep quality, stress levels, and overall wellness. Our scans detect these radiation lines and neutralize them.</p>
+                    <h4 class="font-bold text-gray-800 text-base mb-2 font-title">What is geopathic stress?</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed font-light">Geopathic stress is earth radiation caused by underground water lines, tectonic cracks, or grid fields (Hartmann and Curry grids). It vibrates at an unhealthy frequency and can interfere with sleep quality, stress levels, and overall wellness. Our scans detect these radiation lines and neutralize them.</p>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     </section>
@@ -385,7 +346,7 @@
     <footer class="bg-[#1C120C] text-[#FDFBF7] py-16 px-6 md:px-12 border-t-2 border-gold-accent">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h3 class="text-xl font-bold mb-6 tracking-wider header-logo">Magic of Numbers</h3>
+                <h3 class="text-xl font-bold mb-6 tracking-wider header-logo">Remedy Store</h3>
                 <p class="text-gray-400 font-light leading-relaxed text-sm">Your premium retail platform for authentic Vastu remedies, energized crystals, and spiritual products.</p>
             </div>
             <div>
@@ -415,13 +376,31 @@
         </div>
         <div class="border-t border-gray-855 mt-12 pt-6">
             <div class="text-center text-xs text-gray-500 max-w-5xl mx-auto space-y-4 font-sans">
-                <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebony wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Magic of Numbers are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Magic of Numbers makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
-                <p>&copy; 2026 Magic of Numbers. All rights reserved. Spiritual remedies crafted with devotion.</p>
+                <p><strong>Vedic Disclaimer & Metaphysical Policies:</strong> The products, yantras, crystal clusters, kadas, Ebony wood malas, and consulting services (such as numerology calculations, Vastu plan coordinates auditing, and geopathic scan corrections) offered by Remedy Store are designed to support spiritual wellness, energetic shielding, and holistic balance. In Vedic heritage, these traditional remedies are used to harmonise planetary rays and elemental directional channels. However, these practices are metaphysical in nature and do not substitute for professional medical, legal, financial, or psychological consulting services. Remedy Store makes no explicit claims of guaranteed material gains, physical cures, or sudden life transformations. We encourage customers to approach these ancient sciences with open hearts, mindful practices, and practical actions.</p>
+                <p>&copy; 2026 Remedy Store. All rights reserved. Spiritual remedies crafted with devotion.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/products.js?v=1.0.1"></script>
     <script src="js/script.js?v=1.0.1"></script>
+
+    <script>
+    // Mobile Nav v2
+    (function() {
+        var btn = document.getElementById('mobile-menu-btn-v2');
+        var nav = document.getElementById('mobile-nav-v2');
+        var overlay = document.getElementById('mobile-nav-overlay-v2');
+        var closeBtn = document.getElementById('mobile-nav-close-v2');
+        var toolsBtn = document.getElementById('mobile-tools-btn');
+        var toolsSub = document.getElementById('mobile-tools-sub');
+        function openNav() { if(nav) nav.classList.add('open'); if(overlay) overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+        function closeNav() { if(nav) nav.classList.remove('open'); if(overlay) overlay.classList.remove('open'); document.body.style.overflow=''; }
+        if(btn) btn.addEventListener('click', openNav);
+        if(closeBtn) closeBtn.addEventListener('click', closeNav);
+        if(overlay) overlay.addEventListener('click', closeNav);
+        if(toolsBtn && toolsSub) toolsBtn.addEventListener('click', function() { toolsSub.classList.toggle('open'); });
+    })();
+    </script>
 </body>
 </html>
