@@ -142,20 +142,21 @@ h1, h2, h3, h4, h5, h6, .font-title {
 
 /* Primary Traditional Button */
 .btn-primary {
-    background: linear-gradient(135deg, var(--royal-maroon) 0%, #8A0000 50%, var(--royal-maroon-dark) 100%);
-    color: var(--cream-bg) !important;
-    border: 1px solid var(--primary-gold);
+    background: linear-gradient(135deg, #6B0000 0%, #8A0000 50%, #4A0000 100%);
+    color: #FFFFFF !important;
+    border: 1px solid #D4AF37;
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
     border-radius: 12px;
-    box-shadow: var(--soft-shadow);
+    box-shadow: 0 4px 12px rgba(107, 0, 0, 0.25);
     transition: all 0.3s var(--apple-easing);
 }
 .btn-primary:hover {
-    box-shadow: var(--medium-shadow);
-    transform: translateY(-1px);
-    background: linear-gradient(135deg, #8A0000 0%, var(--royal-maroon-dark) 100%);
+    box-shadow: 0 6px 16px rgba(107, 0, 0, 0.35);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #8A0000 0%, #6B0000 100%);
+    color: #FFFFFF !important;
 }
 .btn-primary:active {
     transform: scale(0.98);
@@ -168,7 +169,7 @@ h1, h2, h3, h4, h5, h6, .font-title {
     color: var(--royal-maroon) !important;
     border: 1px solid var(--border-gold);
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.02em;
     border-radius: 12px;
     transition: all 0.3s var(--apple-easing);
@@ -178,7 +179,7 @@ h1, h2, h3, h4, h5, h6, .font-title {
     border-color: var(--primary-gold);
     color: var(--royal-maroon-dark) !important;
     box-shadow: var(--medium-shadow);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 .btn-secondary:active {
     transform: scale(0.98);
@@ -186,19 +187,22 @@ h1, h2, h3, h4, h5, h6, .font-title {
 
 /* Golden Accent Button */
 .btn-gold {
-    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--brass-gold) 100%);
-    color: var(--royal-maroon-dark) !important;
-    border: 1px solid var(--bright-gold);
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+    color: #2C1E14 !important;
+    border: 1px solid #F3E5AB;
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     border-radius: 12px;
-    box-shadow: var(--soft-shadow);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
     transition: all 0.3s var(--apple-easing);
 }
 .btn-gold:hover {
-    box-shadow: var(--medium-shadow);
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #B8860B 0%, #996515 100%);
+    color: #FFFFFF !important;
+    border-color: #D4AF37;
+    box-shadow: 0 6px 16px rgba(184, 134, 11, 0.35);
+    transform: translateY(-2px);
 }
 
 /* Traditional Product Cards */
@@ -375,54 +379,7 @@ input, select, textarea {
     color: var(--primary-gold);
 }
 
-/* Instagram Card */
-.instagram-card {
-    background: #FFF;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--medium-shadow);
-    transition: all 0.3s var(--apple-easing);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-}
 
-.instagram-card:hover {
-    box-shadow: var(--elegant-shadow);
-    transform: translateY(-2px);
-}
-
-.instagram-card iframe {
-    border-radius: 16px;
-}
-
-.instagram-section {
-    padding: 80px 24px;
-    background: var(--cream-bg);
-}
-
-.instagram-section h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: var(--text-dark);
-}
-
-.instagram-section p {
-    text-align: center;
-    color: var(--text-muted);
-    margin-bottom: 48px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* ============================================
    MOBILE RESPONSIVE STYLES

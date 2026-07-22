@@ -6,7 +6,7 @@
     <title>Vedic Numerology Calculator - Remedy Store | Spiritual Remedies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -110,11 +110,11 @@
         <div class="traditional-divider-dot mb-12"></div>
 
         <!-- Calculator Tabs -->
-        <div class="flex justify-center space-x-4 mb-8 bg-white/60 p-1.5 rounded-xl border border-gray-200/50 max-w-md mx-auto">
-            <button class="flex-1 py-3 text-sm font-semibold rounded-lg transition-all focus:outline-none bg-[#6B0000] text-white shadow-sm" id="tab-rudraksha" onclick="switchCalculator('rudraksha')">
+        <div class="flex justify-center space-x-4 mb-8 bg-white/90 p-2 rounded-xl border border-gray-300 max-w-md mx-auto shadow-sm">
+            <button class="flex-1 py-3 text-sm font-bold rounded-lg transition-all focus:outline-none bg-[#6B0000] text-white shadow-md" id="tab-rudraksha" onclick="switchCalculator('rudraksha')">
                 <i class="fas fa-leaf mr-2"></i>Rudraksha
             </button>
-            <button class="flex-1 py-3 text-sm font-semibold text-gray-600 hover:text-gray-900 rounded-lg transition-all focus:outline-none" id="tab-bracelet" onclick="switchCalculator('bracelet')">
+            <button class="flex-1 py-3 text-sm font-bold text-gray-800 bg-white hover:bg-gray-100 rounded-lg transition-all focus:outline-none border border-gray-300" id="tab-bracelet" onclick="switchCalculator('bracelet')">
                 <i class="fas fa-gem mr-2"></i>Lucky Bracelet
             </button>
         </div>
@@ -172,7 +172,7 @@
                     </div>
 
                     <!-- Reading Content Display Box -->
-                    <div class="text-left bg-[#FDFBF7] p-6 rounded-xl border border-gray-100 text-sm text-gray-700 leading-relaxed font-sans font-light overflow-y-auto max-h-96" id="result-reading-box">
+                    <div class="text-left bg-[#FDFBF7] p-6 rounded-xl border border-gray-200 text-sm text-gray-900 leading-relaxed font-sans font-normal overflow-y-auto max-h-96" id="result-reading-box">
                         <div id="tab-content-personality" class="reading-tab-content space-y-4"></div>
                         <div id="tab-content-finance" class="reading-tab-content space-y-4 hidden"></div>
                         <div id="tab-content-health" class="reading-tab-content space-y-4 hidden"></div>
@@ -187,22 +187,22 @@
                 <h3 class="text-xl font-bold maroon-accent font-title mb-6 text-center">Recommended Remedy for You</h3>
                 
                 <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="w-36 h-36 rounded-2xl bg-[#FDFBF7] border border-gray-100 p-3 flex-shrink-0 shadow-inner flex items-center justify-center">
+                    <div class="w-36 h-36 rounded-2xl bg-[#FDFBF7] border border-gray-200 p-3 flex-shrink-0 shadow-inner flex items-center justify-center">
                         <img src="" alt="Recommended Remedy" class="w-full h-full object-contain rounded-xl" id="rec-image">
                     </div>
                     <div class="flex-1 text-center md:text-left space-y-3 font-sans">
-                        <span class="bg-[#FF9933]/10 text-[#FF9933] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider" id="rec-category">Category</span>
-                        <h4 class="text-xl font-bold text-gray-800 leading-snug" id="rec-title">Product Name</h4>
-                        <p class="text-sm text-gray-550 leading-relaxed font-light" id="rec-desc">...</p>
+                        <span class="bg-[#6B0000] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm inline-block" id="rec-category">Category</span>
+                        <h4 class="text-xl font-bold text-gray-900 leading-snug" id="rec-title">Product Name</h4>
+                        <p class="text-sm text-gray-800 leading-relaxed font-normal" id="rec-desc">...</p>
                         
                         <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
                             <span class="text-2xl font-bold gold-accent" id="rec-price">₹0</span>
                             <div class="flex w-full sm:w-auto gap-3">
-                                <a href="" class="btn-secondary px-5 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center transition-all border border-gray-300 hover:bg-gray-50" id="rec-link">
+                                <a href="" class="btn-secondary px-5 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center transition-all border border-gray-300 hover:bg-gray-50" id="rec-link">
                                     View Details
                                 </a>
                                 <button onclick="addRecommendedToCart()" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 shadow-md flex-1 sm:flex-initial">
-                                    <i class="fas fa-shopping-cart text-[10px]"></i> <span>Add to Cart</span>
+                                    <i class="fas fa-shopping-cart text-[11px]"></i> <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
@@ -263,11 +263,11 @@
             const tabBracelet = document.getElementById('tab-bracelet');
             
             if (mode === 'rudraksha') {
-                tabRudraksha.className = "flex-1 py-3 text-sm font-semibold rounded-lg transition-all focus:outline-none bg-[#6B0000] text-white shadow-sm";
-                tabBracelet.className = "flex-1 py-3 text-sm font-semibold text-gray-600 hover:text-gray-900 rounded-lg transition-all focus:outline-none";
+                tabRudraksha.className = "flex-1 py-3 text-sm font-bold rounded-lg transition-all focus:outline-none bg-[#6B0000] text-white shadow-md";
+                tabBracelet.className = "flex-1 py-3 text-sm font-bold text-gray-800 bg-white hover:bg-gray-100 rounded-lg transition-all focus:outline-none border border-gray-300";
             } else {
-                tabBracelet.className = "flex-1 py-3 text-sm font-semibold rounded-lg transition-all focus:outline-none bg-[#6B0000] text-white shadow-sm";
-                tabRudraksha.className = "flex-1 py-3 text-sm font-semibold text-gray-600 hover:text-gray-900 rounded-lg transition-all focus:outline-none";
+                tabBracelet.className = "flex-1 py-3 text-sm font-bold rounded-lg transition-all focus:outline-none bg-[#6B0000] text-white shadow-md";
+                tabRudraksha.className = "flex-1 py-3 text-sm font-bold text-gray-800 bg-white hover:bg-gray-100 rounded-lg transition-all focus:outline-none border border-gray-300";
             }
             
             document.getElementById('result-container').classList.add('hidden');

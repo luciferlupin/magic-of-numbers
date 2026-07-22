@@ -85,9 +85,9 @@ function renderShopProducts(products, category = 'All Categories', minPrice = nu
                         </div>
                     </div>
                     <div class="flex space-x-2 mt-auto">
-                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium py-2.5 px-3 rounded-lg flex-1 transition-colors" onclick="event.stopPropagation(); window.location.href='${link}'">Details</button>
-                        <button class="btn-gold hover:opacity-90 text-sm font-medium py-2.5 px-3 rounded-lg flex-1 transition-colors flex items-center justify-center space-x-1 shadow-sm" onclick="event.stopPropagation(); addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}', '${link}')">
-                            <i class="fas fa-shopping-cart text-[11px]"></i><span class="md:hidden lg:inline"> Add</span>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold py-2.5 px-3 rounded-lg transition-colors border border-gray-300" onclick="event.stopPropagation(); window.location.href='${link}'">Details</button>
+                        <button class="btn-primary text-xs font-bold py-2.5 px-3 rounded-lg flex-1 transition-all flex items-center justify-center space-x-1.5 shadow-md" onclick="event.stopPropagation(); addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}', '${link}')">
+                            <i class="fas fa-shopping-cart text-xs"></i><span>Add to Cart</span>
                         </button>
                     </div>
                 </div>
