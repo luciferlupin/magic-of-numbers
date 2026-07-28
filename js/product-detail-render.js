@@ -72,14 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const thumbs = document.getElementById('thumbnails-container');
     if (thumbs) {
-        thumbs.innerHTML = '';
-        for (let i = 0; i < 4; i++) {
-            thumbs.innerHTML += `
-                <div class="bg-white rounded-lg p-2 border border-gray-200/50 cursor-pointer thumbnail ${i === 0 ? 'selected' : ''}" onclick="changeImage('${product.image}', this)">
-                    <img src="${product.image}" alt="${product.name}" class="rounded-lg w-full h-12 object-contain">
-                </div>
-            `;
-        }
+        thumbs.innerHTML = `
+            <div class="bg-white rounded-lg p-2 border border-gray-200/50 cursor-pointer thumbnail selected" onclick="changeImage('${product.image}', this)">
+                <img src="${product.image}" alt="${product.name}" class="rounded-lg w-full h-12 object-contain">
+            </div>
+        `;
     }
 
     // Descriptions

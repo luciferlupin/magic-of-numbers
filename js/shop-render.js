@@ -24,6 +24,12 @@ function renderShopProducts(products, category = 'All Categories', minPrice = nu
     // 2. Apply Category Filter
     if (category !== 'All Categories') {
         filteredProducts = products.filter(p => p.category === category);
+        if (category === 'Vastu') {
+            filteredProducts = [
+                ...filteredProducts.filter(p => p.vastuType),
+                ...filteredProducts.filter(p => !p.vastuType)
+            ];
+        }
     }
     
     // 3. Apply Price Filters
@@ -66,6 +72,7 @@ function renderShopProducts(products, category = 'All Categories', minPrice = nu
     // 7. Render Products for Current Page
     paginatedProducts.forEach(product => {
         const badgeHTML = product.badge ? `<span class="absolute top-3 right-3 bg-red-500 text-white text-xs px-2.5 py-1 rounded shadow-sm z-10">${product.badge}</span>` : '';
+        const collectionHTML = product.vastuType ? `<p class="text-[11px] uppercase tracking-wider text-gray-500 font-semibold mb-1">${product.vastuType}</p>` : '';
         const oldPriceHTML = product.oldPrice ? `<span class="text-sm text-gray-500 line-through ml-2">₹${product.oldPrice.toLocaleString('en-IN')}</span>` : '';
         
         let link = product.link || 'shop.html';
@@ -73,11 +80,12 @@ function renderShopProducts(products, category = 'All Categories', minPrice = nu
         const cardHTML = `
             <div class="product-card group cursor-pointer relative fade-in-up" onclick="window.location.href='${link}'">
                 ${badgeHTML}
-                <div class="overflow-hidden h-48 rounded-t-lg">
-                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="overflow-hidden h-48 rounded-t-lg bg-white p-3">
+                    <img src="${product.image}" alt="${product.name}" loading="lazy" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                 </div>
                 <div class="p-5 flex flex-col justify-between h-[160px]">
                     <div>
+                        ${collectionHTML}
                         <h3 class="text-lg font-semibold text-gray-800 mb-2 truncate" title="${product.name}">${product.name}</h3>
                         <div class="flex items-center mb-4">
                             <span class="text-lg font-bold gold-accent">₹${product.price.toLocaleString('en-IN')}</span>
@@ -86,8 +94,8 @@ function renderShopProducts(products, category = 'All Categories', minPrice = nu
                     </div>
                     <div class="flex space-x-2 mt-auto">
                         <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold py-2.5 px-3 rounded-lg transition-colors border border-gray-300" onclick="event.stopPropagation(); window.location.href='${link}'">Details</button>
-                        <button class="btn-primary text-xs font-bold py-2.5 px-3 rounded-lg flex-1 transition-all flex items-center justify-center space-x-1.5 shadow-md" onclick="event.stopPropagation(); addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}', '${link}')">
-                            <i class="fas fa-shopping-cart text-xs"></i><span>Add to Cart</span>
+                        <button class="btn-primary text-white text-xs font-bold py-2.5 px-3 rounded-lg flex-1 transition-all flex items-center justify-center space-x-1.5 shadow-md" onclick="event.stopPropagation(); addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}', '${link}')">
+                            <i class="fas fa-shopping-cart text-xs"></i><span style="color:#fff">Add to Cart</span>
                         </button>
                     </div>
                 </div>
@@ -174,10 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateCategoryHighlight(targetCategory) {
             categoryBtns.forEach(btn => {
                 if(btn.dataset.category === targetCategory) {
-                    btn.classList.add('text-[#D4AF37]', 'font-bold');
+                    btn.classList.add('is-active', 'font-bold');
                     btn.classList.remove('text-gray-600', 'font-medium');
                 } else {
-                    btn.classList.remove('text-[#D4AF37]', 'font-bold');
+                    btn.classList.remove('is-active', 'font-bold');
                     btn.classList.add('text-gray-600', 'font-medium');
                 }
             });

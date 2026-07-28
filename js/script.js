@@ -1,6 +1,22 @@
 // script.js - Interactivity for Magic of Numbers Website
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Give every page a visible, accessible current navigation state.
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.main-nav a[href]').forEach((link) => {
+        const linkFile = link.getAttribute('href').split('?')[0].split('#')[0];
+        if (linkFile === currentFile) link.setAttribute('aria-current', 'page');
+    });
+
+    // Keep the support email while removing any public phone item.
+    document.querySelectorAll('.top-contact-bar .top-bar-item').forEach((item) => {
+        if (item.querySelector('a[href^="tel:"]')) item.remove();
+    });
+
+    // The direct-order WhatsApp announcement is no longer part of the header.
+    const flashBanner = document.getElementById('flash-banner');
+    if (flashBanner) flashBanner.remove();
+
     // Initialize AOS Animation Library
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -18,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.scrollY > 20) {
                 header.classList.add('shadow-md', 'py-3');
                 header.classList.remove('shadow-sm', 'py-4');
-                header.style.background = 'rgba(255, 255, 255, 0.85)';
+                header.style.background = '#0B1F33';
             } else {
                 header.classList.add('shadow-sm', 'py-4');
                 header.classList.remove('shadow-md', 'py-3');
-                header.style.background = 'rgba(255, 255, 255, 0.7)';
+                header.style.background = '#0B1F33';
             }
         });
     }
@@ -207,4 +223,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+});
+
+/*
+ * Keep the hand-authored legacy detail pages aligned with the audited shop
+ * catalogue. These pages previously repeated the same placeholder four times
+ * in their thumbnail gallery. Until multi-angle photography is available, show
+ * one accurate product image instead of presenting duplicates as other views.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    const detailPageImages = {
+        'product-7-chakra-bracelet.html': 'images/products/catalog/101.jpg',
+        'product-tiger-eye-bracelet.html': 'images/products/catalog/102.jpg',
+        'product-aries-bracelet.html': 'images/products/catalog/103.jpg',
+        'product-rose-quartz-bracelet.html': 'images/products/catalog/104.jpg',
+        'product-evil-eye-bracelet.html': 'images/products/catalog/105.jpg',
+        'product-navratna-bracelet.html': 'images/products/catalog/106.jpg',
+        'product-emerald-bracelet.html': 'images/products/catalog/107.jpg',
+        'product-manifestation-bracelet.html': 'images/products/catalog/108.jpg',
+        'product-copper-brass-kada.html': 'images/products/catalog/109.jpg',
+        'product-mariyam-jasper.html': 'images/products/catalog/110.jpg',
+        'product-amethyst-geode.html': 'images/products/catalog/201.jpg',
+        'product-citrine-tree.html': 'images/products/catalog/202.jpg',
+        'product-shree-yantra.html': 'images/products/catalog/301.jpg',
+        'product-1-mukhi-rudraksha.html': 'images/products/catalog/401.jpg',
+        'product-5-mukhi-rudraksha.html': 'images/products/catalog/402.jpg',
+        'product-amber-mala.html': 'images/products/catalog/403.jpg',
+        'product-karungali-mala.html': 'images/products/catalog/404.jpg',
+        'product-vastu-metal-strip.html': 'images/products/catalog/501.jpg',
+        'product-vastu-pyramid.html': 'images/products/catalog/502.jpg',
+        'product-toilet-blocker.html': 'images/products/catalog/503.jpg',
+        'product-color-tape.html': 'images/products/catalog/504.jpg',
+        'product-shriparni-pyramid.html': 'images/products/catalog/505.jpg'
+    };
+
+    const pageName = window.location.pathname.split('/').pop();
+    const accurateImage = detailPageImages[pageName];
+    if (!accurateImage) return;
+
+    const mainImage = document.getElementById('main-image');
+    if (mainImage) {
+        mainImage.src = accurateImage;
+    }
+
+    const thumbnails = Array.from(document.querySelectorAll('img.thumbnail'));
+    if (thumbnails.length === 0) return;
+
+    const firstThumbnail = thumbnails[0];
+    firstThumbnail.src = accurateImage;
+    firstThumbnail.alt = `${mainImage?.alt || 'Product'} image`;
+    firstThumbnail.onclick = function() {
+        if (typeof window.changeImage === 'function') {
+            window.changeImage(accurateImage, firstThumbnail);
+        }
+    };
+
+    thumbnails.slice(1).forEach((thumbnail) => thumbnail.remove());
+
+    const thumbnailGrid = firstThumbnail.parentElement;
+    if (thumbnailGrid) {
+        thumbnailGrid.classList.remove('grid-cols-4');
+        thumbnailGrid.classList.add('grid-cols-1');
+        thumbnailGrid.style.maxWidth = '7rem';
+    }
 });
