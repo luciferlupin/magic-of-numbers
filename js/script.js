@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (linkFile === currentFile) link.setAttribute('aria-current', 'page');
     });
 
-    // Keep the support email while removing any public phone item.
+    // Keep the header free of contact clutter; support details remain in the footer.
     document.querySelectorAll('.top-contact-bar .top-bar-item').forEach((item) => {
-        if (item.querySelector('a[href^="tel:"]')) item.remove();
+        item.remove();
     });
 
     // The direct-order WhatsApp announcement is no longer part of the header.

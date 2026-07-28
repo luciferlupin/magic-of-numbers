@@ -1660,34 +1660,20 @@ section[style*="linear-gradient"] p {
     outline-offset: 3px;
 }
 
-/* Email-only heritage support strip; phone and WhatsApp promotion stay removed. */
+/* Thin heritage band in place of promotional contact clutter. */
 .top-contact-bar {
-    display: flex !important;
-    min-height: 36px;
-    padding: 6px clamp(22px, 3vw, 46px) !important;
+    display: block !important;
+    height: 8px;
+    min-height: 8px;
+    overflow: hidden;
+    padding: 0 !important;
     background: var(--midnight-blue) !important;
     border-top: 2px solid var(--old-gold);
     border-bottom: 1px solid var(--old-gold);
 }
 
 .top-contact-bar > * {
-    display: flex !important;
-}
-
-.top-contact-bar .top-bar-info,
-.top-contact-bar .top-bar-item {
-    align-items: center;
-}
-
-.top-contact-bar .top-bar-item,
-.top-contact-bar .top-bar-item a,
-.top-contact-bar .top-bar-item i {
-    color: #E5DDCF !important;
-    font-size: 13px;
-}
-
-.top-contact-bar .top-bar-item a:hover {
-    color: var(--old-gold) !important;
+    display: none !important;
 }
 
 /* Midnight header and clear shopping actions. */
