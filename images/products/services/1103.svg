@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Geopathic stress scan</title>
+  <desc id="desc">A location scanner detecting energy waves beneath a home.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6fbf2"/><stop offset="1" stop-color="#d9eadc"/></linearGradient>
+    <filter id="s3" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0f2d1a" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="800" height="800" rx="56" fill="url(#bg3)"/>
+  <g filter="url(#s3)">
+    <path d="M185 347l215-169 215 169v242H185z" fill="#fff" stroke="#1b4332" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M306 588V429h188v159" fill="#e8f5e9" stroke="#2d5a3d" stroke-width="8"/>
+    <path d="M144 355L400 154l256 201" fill="none" stroke="#1b4332" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M115 628c86-64 143 64 229 0s143 64 229 0 143 64 229 0" stroke="#d0a64a" stroke-width="12"/>
+    <path d="M75 682c98-68 163 68 261 0s163 68 261 0 163 68 261 0" stroke="#2d5a3d" stroke-width="8" opacity=".75"/>
+  </g>
+  <g transform="translate(590 216)">
+    <circle r="94" fill="#1b4332"/>
+    <circle r="58" fill="none" stroke="#f4fbf1" stroke-width="5" opacity=".8"/>
+    <circle r="28" fill="none" stroke="#f4fbf1" stroke-width="5" opacity=".8"/>
+    <circle r="9" fill="#d0a64a"/>
+    <path d="M0 0l48-45" stroke="#d0a64a" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="400" y="758" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="3" fill="#1b4332">GEOPATHIC ENERGY SCAN</text>
+</svg>
